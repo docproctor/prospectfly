@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+site/node_modules/
+
+# Build outputs
+dist/
+site/build/
+site/.react-router/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+site/.env
+site/.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
+.vite/
