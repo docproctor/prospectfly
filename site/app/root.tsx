@@ -17,23 +17,25 @@ export const links: LinksFunction = () => [
 
 function Header() {
   return (
-    <header className="bg-[#0a0a0a] w-full">
-      <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="/" className="text-white text-xl font-semibold font-display">
-          ProspectFly
+    <header className="sticky top-0 z-50 bg-[#0a0a0a]/92 backdrop-blur-md border-b border-[#1e2229]">
+      <nav className="max-w-[1100px] mx-auto px-10 h-[68px] flex items-center justify-between">
+        <a href="/" className="text-white text-[22px] font-extrabold font-display tracking-tight">
+          Prospect <span className="text-amber-500">Fly</span>
         </a>
-        <div className="flex items-center gap-6">
-          <a href="/services" className="text-white hover:text-gray-300 text-sm">Services</a>
-          <a href="/case-studies" className="text-white hover:text-gray-300 text-sm">Case Studies</a>
-          <a href="/blog" className="text-white hover:text-gray-300 text-sm">Blog</a>
-          <a href="/contact" className="text-white hover:text-gray-300 text-sm">Contact</a>
-          <a
-            href="/contact"
-            className="bg-amber-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-amber-600 transition-colors"
-          >
-            Book a Call
-          </a>
-        </div>
+        <ul className="flex items-center gap-9">
+          <li><a href="#services" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">Services</a></li>
+          <li><a href="#process" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">Process</a></li>
+          <li><a href="#results" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">Results</a></li>
+          <li><a href="#faq" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">FAQ</a></li>
+          <li>
+            <a
+              href="#contact"
+              className="bg-lime-400 text-black px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-lime-300 transition-colors cursor-pointer"
+            >
+              Book a Call
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
   );
@@ -41,51 +43,20 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] text-white py-16">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          {/* Brand */}
-          <div>
-            <h3 className="text-xl font-semibold font-display mb-4">ProspectFly</h3>
-            <p className="text-gray-400 text-sm">
-              AI automation consultancy for growing SaaS businesses. We help teams do more with less.
-            </p>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="/services#audit" className="hover:text-white">Process Audit</a></li>
-              <li><a href="/services#build" className="hover:text-white">Automation Build</a></li>
-              <li><a href="/services#training" className="hover:text-white">Team Training</a></li>
-              <li><a href="/services#fractional" className="hover:text-white">Fractional AI Lead</a></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="/about" className="hover:text-white">About</a></li>
-              <li><a href="/case-studies" className="hover:text-white">Case Studies</a></li>
-              <li><a href="/blog" className="hover:text-white">Blog</a></li>
-              <li><a href="/contact" className="hover:text-white">Contact</a></li>
-            </ul>
-          </div>
-
-          {/* Social */}
-          <div>
-            <h4 className="font-semibold mb-4">Connect</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="https://linkedin.com" className="hover:text-white">LinkedIn</a></li>
-              <li><a href="https://twitter.com" className="hover:text-white">Twitter</a></li>
-            </ul>
-          </div>
+    <footer className="bg-[#0a0a0a] text-white border-t border-[#1e2229]">
+      <div className="max-w-[1100px] mx-auto px-10 py-10 flex flex-wrap items-center justify-between gap-5">
+        <a href="/" className="text-lg font-extrabold font-display tracking-tight">
+          Prospect <span className="text-amber-500">Fly</span>
+        </a>
+        <div className="flex gap-7">
+          <a href="#services" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Services</a>
+          <a href="#process" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Process</a>
+          <a href="#results" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Results</a>
+          <a href="#faq" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">FAQ</a>
+          <a href="#contact" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Contact</a>
         </div>
-
-        <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
-          &copy; 2026 ProspectFly. All rights reserved.
+        <div className="text-[13px] text-[#8a9099]">
+          &copy; 2026 ProspectFly. All rights reserved. UK-based.
         </div>
       </div>
     </footer>
