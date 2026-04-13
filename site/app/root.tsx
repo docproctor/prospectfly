@@ -26,7 +26,7 @@ function Header() {
           <li><a href="#services" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">Services</a></li>
           <li><a href="#process" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">Process</a></li>
           <li><a href="#results" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">Results</a></li>
-          <li><a href="#faq" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">FAQ</a></li>
+          <li><a href="#about" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">About</a></li>
           <li>
             <a
               href="#contact"
@@ -52,7 +52,7 @@ function Footer() {
           <a href="#services" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Services</a>
           <a href="#process" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Process</a>
           <a href="#results" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Results</a>
-          <a href="#faq" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">FAQ</a>
+          <a href="#about" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">About</a>
           <a href="#contact" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Contact</a>
         </div>
         <div className="text-[13px] text-[#8a9099]">
