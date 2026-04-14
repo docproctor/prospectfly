@@ -3,7 +3,7 @@ import type { MetaFunction } from "react-router";
 export const meta: MetaFunction = () => {
   return [
     { title: "ProspectFly | LinkedIn Engagement Intelligence for B2B Founders" },
-    { name: "description", content: "We run LinkedIn thought leader ads for B2B founders - then scrape every like and comment to tell you who engaged, their job title, company and LinkedIn profile. Weekly. Done for you." },
+    { name: "description", content: "We help B2B founders get more leads from LinkedIn. Get warm prospects direct to your inbox. Weekly. Done for you." },
   ];
 };
 
@@ -42,7 +42,7 @@ export default function Index() {
     {
       num: 4,
       title: "Deliver",
-      description: "Monthly warm prospect dashboard. Named contacts who've already seen you — ready for outreach.",
+      description: "Monthly warm prospect dashboard. Named contacts who've already seen you - ready for outreach.",
     },
   ];
 
@@ -52,7 +52,7 @@ export default function Index() {
       price: "£299",
       period: "/month",
       features: [
-        "We scrape likes and comments from your existing posts weekly",
+        "We identify who engages with your existing posts weekly",
         "Engager identification: name, job title, LinkedIn URL",
         "ICP scoring and priority flagging",
         "Weekly email digest of warm prospects",
@@ -82,7 +82,7 @@ export default function Index() {
         "Everything in Amplified",
         "Enhanced engager enrichment",
         "ICP scoring (job title, company size, seniority)",
-        "Monthly warm prospect dashboard — named contacts with LinkedIn profiles and email where available",
+        "Monthly warm prospect dashboard - named contacts with LinkedIn profiles and email where available",
       ],
       note: "Minimum recommended client ad spend: £500/month",
       highlight: true,
@@ -110,7 +110,7 @@ export default function Index() {
               Know Exactly Who's Watching Your LinkedIn Content
             </h1>
             <p className="text-lg text-[#8a9099] leading-relaxed mb-9 max-w-[560px]">
-              We run LinkedIn thought leader ads for B2B founders — then scrape every like and comment to tell you who engaged, their job title, company and LinkedIn profile. Weekly. Done for you.
+              We help B2B founders get more leads from LinkedIn. Get warm prospects direct to your inbox. Weekly. Done for you.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a href="#contact" className="bg-lime-400 text-black px-7 py-3.5 rounded-lg font-bold text-[15px] hover:bg-lime-300 transition-all hover:-translate-y-0.5 cursor-pointer">
@@ -275,7 +275,7 @@ export default function Index() {
           </div>
           <div className="text-center">
             <p className="text-[#8a9099] mb-6">
-              Testimonials coming April 2026 — running pilot programmes now
+              Testimonials coming April 2026 - running pilot programmes now
             </p>
             <a
               href="/beta"
@@ -295,7 +295,7 @@ export default function Index() {
             Built by a B2B product leader
           </h2>
           <p className="text-lg text-[#8a9099] leading-relaxed">
-            Built by a B2B product leader with 27 years of experience across Hearst, Tesco, Harvey Nichols and Informa. ProspectFly exists because LinkedIn paid amplification works — but most B2B founders are running it wrong. Most founders post and move on. We build the system that tells you who stopped scrolling — and why it matters.
+            Built by a B2B product leader with 27 years of experience across Hearst, Tesco, Harvey Nichols and Informa. ProspectFly exists because LinkedIn paid amplification works - but most B2B founders are running it wrong. Most founders post and move on. We build the system that tells you who stopped scrolling - and why it matters.
           </p>
         </div>
       </section>
@@ -307,7 +307,7 @@ export default function Index() {
             Ready to turn your LinkedIn content into warm prospects?
           </h2>
           <p className="text-[17px] text-[#8a9099] mb-10">
-            Book a free 30-minute discovery call. No hard sell — just an honest conversation about whether this is right for your business.
+            Book a free 30-minute discovery call. No hard sell - just an honest conversation about whether this is right for your business.
           </p>
           <a
             href="#contact"
