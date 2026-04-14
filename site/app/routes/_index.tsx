@@ -2,8 +2,8 @@ import type { MetaFunction } from "react-router";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Prospect Fly | UK LinkedIn Thought Leadership Agency" },
-    { name: "description", content: "We write your LinkedIn posts, boost the best ones as thought leader ads to your exact ICP, then identify everyone who engages. You get a monthly dashboard of warm prospects." },
+    { title: "ProspectFly | LinkedIn Ads Management for B2B SaaS" },
+    { name: "description", content: "We run LinkedIn thought leader ad campaigns for B2B SaaS founders and marketers. Precision targeting, engager identification, and a monthly dashboard of warm prospects." },
   ];
 };
 
@@ -14,73 +14,64 @@ export default function Index() {
       description: "Response rates are plummeting. Decision-makers are drowning in generic connection requests and InMails. Your message disappears into the noise.",
     },
     {
-      title: "LinkedIn ads alone don't build trust",
-      description: "Ads interrupt. Without thought leadership content behind them, you're just another vendor competing on features and price.",
+      title: "Most LinkedIn ad campaigns burn budget on the wrong audience",
+      description: "Broad targeting, no signal intelligence, no follow-up on who engaged. You're paying for impressions that go nowhere.",
     },
     {
-      title: "Organic content alone doesn't reach your ICP",
-      description: "Your posts reach your existing network, not your target buyers. The algorithm favours engagement, not business development.",
+      title: "LinkedIn's organic reach has dropped significantly",
+      description: "Posts reach your existing network, not your target buyers. Paid amplification is no longer optional — it's how you reach new pipeline.",
     },
   ];
 
   const processSteps = [
     {
       num: 1,
-      title: "Extract",
-      description: "Weekly insight call. Your expertise becomes the content.",
+      title: "Target",
+      description: "We build a precision audience of B2B SaaS companies. You reach founders and marketers at the right companies, not a generic LinkedIn audience.",
     },
     {
       num: 2,
       title: "Amplify",
-      description: "Best posts boosted as thought leader ads to your exact ICP.",
+      description: "Your best posts boosted as thought leader ads to your exact ICP. We manage bidding, scheduling, and creative testing.",
     },
     {
       num: 3,
       title: "Identify",
-      description: "We track who engages. Every liker, commenter, profile visitor.",
+      description: "We track who engages. Every liker, commenter, and profile visitor identified and enriched.",
     },
     {
       num: 4,
       title: "Deliver",
-      description: "Monthly warm prospect dashboard. People who've already seen you.",
+      description: "Monthly warm prospect dashboard. Named contacts who've already seen you — ready for outreach.",
     },
   ];
 
   const services = [
     {
-      name: "Thought Leadership Engine",
-      price: "£749",
+      name: "Amplified",
+      price: "£999",
       period: "/month",
       features: [
-        "20 LinkedIn posts/month",
-        "AI voice extraction",
-        "Weekly content batches",
-        "Performance reporting",
+        "LinkedIn thought leader ad management",
+        "Audience build using your ICP company list",
+        "Campaign setup, bidding, scheduling optimisation",
+        "Monthly performance report",
       ],
+      note: "Minimum recommended client ad spend: £500/month",
       highlight: false,
     },
     {
-      name: "Thought Leadership Studio",
+      name: "Intelligence",
       price: "£1,499",
       period: "/month",
       features: [
-        "Everything in Engine",
-        "Thought leader ad management",
-        "Engager identification",
-        "Monthly warm prospect dashboard",
+        "Everything in Amplified",
+        "Engager identification and enrichment",
+        "ICP scoring (job title, company size, seniority)",
+        "Monthly warm prospect dashboard — named contacts with LinkedIn profiles and email where available",
       ],
+      note: "Minimum recommended client ad spend: £500/month",
       highlight: true,
-    },
-    {
-      name: "Paid Amplification Add-on",
-      price: "£500",
-      period: "/month + ad spend",
-      features: [
-        "Managed thought leader ad campaigns",
-        "Audience targeting",
-        "Performance optimisation",
-      ],
-      highlight: false,
     },
   ];
 
@@ -99,13 +90,13 @@ export default function Index() {
           <div>
             <div className="inline-flex items-center gap-2 bg-lime-400/10 border border-lime-400/30 rounded-full px-4 py-1.5 text-sm font-medium text-lime-400 mb-6">
               <span className="w-2 h-2 bg-lime-400 rounded-full"></span>
-              UK-Based LinkedIn Thought Leadership Agency
+              LinkedIn Ads Management for B2B SaaS
             </div>
             <h1 className="text-[48px] lg:text-[54px] font-extrabold leading-[1.08] tracking-tight mb-6">
               Turn Your LinkedIn Content Into a Pipeline of Warm Prospects
             </h1>
             <p className="text-lg text-[#8a9099] leading-relaxed mb-9 max-w-[560px]">
-              We write your posts, boost the best ones as thought leader ads to your exact ICP, then identify everyone who engages. You get a monthly dashboard of warm prospects who already know who you are.
+              We run LinkedIn thought leader ad campaigns for B2B SaaS founders and marketers. Precision targeting, engager identification, and a monthly dashboard of warm prospects who've already seen your content.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a href="#contact" className="bg-lime-400 text-black px-7 py-3.5 rounded-lg font-bold text-[15px] hover:bg-lime-300 transition-all hover:-translate-y-0.5 cursor-pointer">
@@ -179,7 +170,7 @@ export default function Index() {
         <div className="max-w-[1100px] mx-auto">
           <div className="text-xs font-semibold uppercase tracking-widest text-lime-400 mb-4 text-center">How It Works</div>
           <h2 className="text-[32px] lg:text-[38px] font-extrabold tracking-tight mb-16 text-center">
-            Content + Amplification + Intelligence
+            Targeting + Amplification + Intelligence + Outreach
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
             {processSteps.map((step, i) => (
@@ -206,9 +197,9 @@ export default function Index() {
             Choose your package
           </h2>
           <p className="text-[17px] text-[#8a9099] text-center max-w-[560px] mx-auto mb-14">
-            Transparent pricing. No setup fees. Cancel anytime after the first 3 months.
+            Transparent pricing. 3-month minimum commitment.
           </p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-[800px] mx-auto">
             {services.map((service, i) => (
               <div
                 key={i}
@@ -226,7 +217,7 @@ export default function Index() {
                   <span className="text-[36px] font-extrabold">{service.price}</span>
                   <span className="text-[#8a9099] text-sm">{service.period}</span>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-6">
                   {service.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-3 text-sm text-[#8a9099]">
                       <span className="w-1.5 h-1.5 bg-lime-400 rounded-full mt-1.5 shrink-0"></span>
@@ -234,6 +225,9 @@ export default function Index() {
                     </li>
                   ))}
                 </ul>
+                {service.note && (
+                  <p className="text-xs text-[#6b7280] mb-6 italic">{service.note}</p>
+                )}
                 <a
                   href="#contact"
                   className={`block w-full text-center px-6 py-3 rounded-lg font-semibold text-[15px] transition-colors cursor-pointer ${
@@ -242,7 +236,7 @@ export default function Index() {
                       : 'bg-[#1e2229] text-white hover:bg-[#252a33]'
                   }`}
                 >
-                  Get Started
+                  Book a Call
                 </a>
               </div>
             ))}
@@ -287,7 +281,7 @@ export default function Index() {
             Built by a B2B product leader
           </h2>
           <p className="text-lg text-[#8a9099] leading-relaxed">
-            Built by a B2B product leader with 27 years of experience across Hearst, Tesco, Harvey Nichols and Informa. ProspectFly exists because LinkedIn thought leadership works — but most B2B companies have no system to turn that engagement into pipeline.
+            Built by a B2B product leader with 27 years of experience across Hearst, Tesco, Harvey Nichols and Informa. ProspectFly exists because LinkedIn paid amplification works — but most B2B SaaS companies are running it wrong. Wrong audience size, no signal intelligence, no follow-up on who engaged. We fix that.
           </p>
         </div>
       </section>
