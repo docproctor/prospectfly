@@ -16,7 +16,7 @@ export function AdminHelp() {
                         </a>
                         <a href="https://prospectfly.com" target="_blank" rel="noopener noreferrer" className="block p-3 bg-amber-50 rounded-lg hover:bg-amber-100 transition-colors">
                             <div className="font-medium text-amber-800">Public Site</div>
-                            <div className="text-sm text-amber-600">prospectfly.com</div>
+                            <div className="text-sm text-amber-600">Prospect Fly</div>
                         </a>
                         <a href="https://app.prospectfly.com" target="_blank" rel="noopener noreferrer" className="block p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                             <div className="font-medium text-blue-800">CMS App</div>
@@ -150,7 +150,7 @@ export function AdminHelp() {
 
                     <div className="space-y-4">
                         <div className="bg-blue-50 rounded p-3 text-sm text-blue-800">
-                            <strong>Shared Supabase Instance:</strong> All ProspectFly tables use <code>pf_</code> prefix to avoid conflicts with prospectracker tables.
+                            <strong>Shared Supabase Instance:</strong> All Prospect Fly tables use <code>pf_</code> prefix to avoid conflicts with prospectracker tables.
                         </div>
 
                         <div>
@@ -282,8 +282,8 @@ export function AdminHelp() {
                         <div>
                             <h3 className="font-semibold text-gray-700 mb-2">Public Site (site/app/)</h3>
                             <div className="bg-gray-50 rounded p-3 font-mono text-sm space-y-1">
-                                <div>root.tsx - Layout, Header, Footer</div>
-                                <div>routes/_index.tsx - Homepage</div>
+                                <div>root.tsx - Layout with sticky nav, Footer</div>
+                                <div>routes/_index.tsx - Homepage (LinkedIn Ads theme)</div>
                                 <div>routes/$.tsx - Dynamic page loader</div>
                                 <div>routes/blog.tsx - Blog index</div>
                                 <div>routes/blog.$slug.tsx - Blog post</div>
@@ -326,18 +326,18 @@ export function AdminHelp() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="border rounded-lg p-4">
-                                <h3 className="font-bold text-gray-800 mb-2">prospectfly-cms</h3>
+                                <h3 className="font-bold text-gray-800 mb-2">prospect-fly-cms</h3>
                                 <div className="text-sm text-gray-600 space-y-1">
-                                    <div><strong>Domain:</strong> app.prospectfly.com</div>
+                                    <div><strong>Domain:</strong> app.prospect-fly.com</div>
                                     <div><strong>Root Directory:</strong> / (project root)</div>
                                     <div><strong>Build Command:</strong> vite build</div>
                                     <div><strong>Output:</strong> dist</div>
                                 </div>
                             </div>
                             <div className="border rounded-lg p-4">
-                                <h3 className="font-bold text-gray-800 mb-2">prospectfly-site</h3>
+                                <h3 className="font-bold text-gray-800 mb-2">prospect-fly-site</h3>
                                 <div className="text-sm text-gray-600 space-y-1">
-                                    <div><strong>Domain:</strong> prospectfly.com</div>
+                                    <div><strong>Domain:</strong> prospect-fly.com</div>
                                     <div><strong>Root Directory:</strong> /site</div>
                                     <div><strong>Build Command:</strong> react-router build</div>
                                     <div><strong>Output:</strong> build/client</div>
@@ -371,10 +371,12 @@ export function AdminHelp() {
                         <div>
                             <h3 className="font-semibold text-gray-700 mb-2">Static Routes</h3>
                             <div className="bg-gray-50 rounded p-3 font-mono text-sm space-y-1">
-                                <div>/ - Homepage</div>
-                                <div>/services - Services page</div>
-                                <div>/about - About page</div>
-                                <div>/contact - Contact form</div>
+                                <div>/ - Homepage (Hero, Services, Process, FAQ, CTA)</div>
+                                <div>/#services - Services section (anchor)</div>
+                                <div>/#process - Process section (anchor)</div>
+                                <div>/#results - Why Us section (anchor)</div>
+                                <div>/#faq - FAQ section (anchor)</div>
+                                <div>/#contact - Contact form (anchor)</div>
                                 <div>/blog - Blog index</div>
                                 <div>/case-studies - Case studies index</div>
                             </div>
