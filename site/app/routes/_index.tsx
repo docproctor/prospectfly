@@ -107,7 +107,7 @@ export default function Index() {
               LinkedIn Engagement Intelligence for B2B Founders
             </div>
             <h1 className="text-[48px] lg:text-[54px] font-extrabold leading-[1.08] tracking-tight mb-6">
-              Know Exactly Who's Watching Your LinkedIn Content
+              Know Exactly Who's Engaged On LinkedIn
             </h1>
             <p className="text-lg text-[#8a9099] leading-relaxed mb-9 max-w-[560px]">
               We help B2B founders get more leads from LinkedIn. Get warm prospects direct to your inbox. Weekly. Done for you.
