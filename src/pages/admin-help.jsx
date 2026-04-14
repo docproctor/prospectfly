@@ -283,7 +283,7 @@ export function AdminHelp() {
                             <h3 className="font-semibold text-gray-700 mb-2">Public Site (site/app/)</h3>
                             <div className="bg-gray-50 rounded p-3 font-mono text-sm space-y-1">
                                 <div>root.tsx - Layout with sticky nav, Footer</div>
-                                <div>routes/_index.tsx - Homepage (LinkedIn Ads theme)</div>
+                                <div>routes/_index.tsx - Homepage (Engagement Intelligence theme)</div>
                                 <div>routes/$.tsx - Dynamic page loader</div>
                                 <div>routes/blog.tsx - Blog index</div>
                                 <div>routes/blog.$slug.tsx - Blog post</div>
@@ -371,12 +371,12 @@ export function AdminHelp() {
                         <div>
                             <h3 className="font-semibold text-gray-700 mb-2">Static Routes</h3>
                             <div className="bg-gray-50 rounded p-3 font-mono text-sm space-y-1">
-                                <div>/ - Homepage (Hero, Services, Process, FAQ, CTA)</div>
-                                <div>/#services - Services section (anchor)</div>
+                                <div>/ - Homepage (Hero, Problem, Process, Pricing, Results, About, CTA)</div>
                                 <div>/#process - Process section (anchor)</div>
-                                <div>/#results - Why Us section (anchor)</div>
-                                <div>/#faq - FAQ section (anchor)</div>
-                                <div>/#contact - Contact form (anchor)</div>
+                                <div>/#services - Pricing section (anchor)</div>
+                                <div>/#results - Results section (anchor)</div>
+                                <div>/#about - About section (anchor)</div>
+                                <div>/#contact - Contact CTA (anchor)</div>
                                 <div>/blog - Blog index</div>
                                 <div>/case-studies - Case studies index</div>
                             </div>
