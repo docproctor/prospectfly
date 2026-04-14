@@ -2,8 +2,8 @@ import type { MetaFunction } from "react-router";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "ProspectFly | LinkedIn Ads Management for B2B SaaS" },
-    { name: "description", content: "We run LinkedIn thought leader ad campaigns for B2B SaaS founders and marketers. Precision targeting, engager identification, and a monthly dashboard of warm prospects." },
+    { title: "ProspectFly | LinkedIn Engagement Intelligence for B2B Founders" },
+    { name: "description", content: "We run LinkedIn thought leader ads for B2B founders - then scrape every like and comment to tell you who engaged, their job title, company and LinkedIn profile. Weekly. Done for you." },
   ];
 };
 
@@ -18,8 +18,8 @@ export default function Index() {
       description: "Broad targeting, no signal intelligence, no follow-up on who engaged. You're paying for impressions that go nowhere.",
     },
     {
-      title: "LinkedIn's organic reach has dropped significantly",
-      description: "Posts reach your existing network, not your target buyers. Paid amplification is no longer optional — it's how you reach new pipeline.",
+      title: "You post. People engage. You never find out who.",
+      description: "Every like and comment is a buying signal you're ignoring. Without a system to identify and act on engagers, your content budget produces brand awareness at best.",
     },
   ];
 
@@ -27,7 +27,7 @@ export default function Index() {
     {
       num: 1,
       title: "Target",
-      description: "We build a precision audience of B2B SaaS companies. You reach founders and marketers at the right companies, not a generic LinkedIn audience.",
+      description: "We build a precision audience of B2B companies. You reach founders at the right companies, not a generic LinkedIn audience.",
     },
     {
       num: 2,
@@ -48,10 +48,24 @@ export default function Index() {
 
   const services = [
     {
+      name: "Signal",
+      price: "£299",
+      period: "/month",
+      features: [
+        "We scrape likes and comments from your existing posts weekly",
+        "Engager identification: name, job title, LinkedIn URL",
+        "ICP scoring and priority flagging",
+        "Weekly email digest of warm prospects",
+      ],
+      note: "No ad spend required to get started",
+      highlight: false,
+    },
+    {
       name: "Amplified",
       price: "£999",
       period: "/month",
       features: [
+        "Everything in Signal",
         "LinkedIn thought leader ad management",
         "Audience build using your ICP company list",
         "Campaign setup, bidding, scheduling optimisation",
@@ -66,7 +80,7 @@ export default function Index() {
       period: "/month",
       features: [
         "Everything in Amplified",
-        "Engager identification and enrichment",
+        "Enhanced engager enrichment",
         "ICP scoring (job title, company size, seniority)",
         "Monthly warm prospect dashboard — named contacts with LinkedIn profiles and email where available",
       ],
@@ -90,13 +104,13 @@ export default function Index() {
           <div>
             <div className="inline-flex items-center gap-2 bg-lime-400/10 border border-lime-400/30 rounded-full px-4 py-1.5 text-sm font-medium text-lime-400 mb-6">
               <span className="w-2 h-2 bg-lime-400 rounded-full"></span>
-              LinkedIn Ads Management for B2B SaaS
+              LinkedIn Engagement Intelligence for B2B Founders
             </div>
             <h1 className="text-[48px] lg:text-[54px] font-extrabold leading-[1.08] tracking-tight mb-6">
-              Turn Your LinkedIn Content Into a Pipeline of Warm Prospects
+              Know Exactly Who's Watching Your LinkedIn Content
             </h1>
             <p className="text-lg text-[#8a9099] leading-relaxed mb-9 max-w-[560px]">
-              We run LinkedIn thought leader ad campaigns for B2B SaaS founders and marketers. Precision targeting, engager identification, and a monthly dashboard of warm prospects who've already seen your content.
+              We run LinkedIn thought leader ads for B2B founders — then scrape every like and comment to tell you who engaged, their job title, company and LinkedIn profile. Weekly. Done for you.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a href="#contact" className="bg-lime-400 text-black px-7 py-3.5 rounded-lg font-bold text-[15px] hover:bg-lime-300 transition-all hover:-translate-y-0.5 cursor-pointer">
@@ -199,7 +213,7 @@ export default function Index() {
           <p className="text-[17px] text-[#8a9099] text-center max-w-[560px] mx-auto mb-14">
             Transparent pricing. 3-month minimum commitment.
           </p>
-          <div className="grid md:grid-cols-2 gap-6 max-w-[800px] mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-[1000px] mx-auto">
             {services.map((service, i) => (
               <div
                 key={i}
@@ -281,7 +295,7 @@ export default function Index() {
             Built by a B2B product leader
           </h2>
           <p className="text-lg text-[#8a9099] leading-relaxed">
-            Built by a B2B product leader with 27 years of experience across Hearst, Tesco, Harvey Nichols and Informa. ProspectFly exists because LinkedIn paid amplification works — but most B2B SaaS companies are running it wrong. Wrong audience size, no signal intelligence, no follow-up on who engaged. We fix that.
+            Built by a B2B product leader with 27 years of experience across Hearst, Tesco, Harvey Nichols and Informa. ProspectFly exists because LinkedIn paid amplification works — but most B2B founders are running it wrong. Most founders post and move on. We build the system that tells you who stopped scrolling — and why it matters.
           </p>
         </div>
       </section>
