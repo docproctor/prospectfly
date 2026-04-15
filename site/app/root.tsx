@@ -1,9 +1,12 @@
+import { useState } from "react";
 import {
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  Link,
+  useLocation,
 } from "react-router";
 import type { LinksFunction } from "react-router";
 
@@ -15,28 +18,185 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" },
 ];
 
-function Header() {
+const strategyLinks = [
+  { label: "LinkedIn Ads Strategy", href: "/strategy", desc: "Objectives, formats & campaign structure" },
+  { label: "Audience Targeting", href: "/targeting", desc: "ICP scoring and account qualification" },
+  { label: "Ad Creative & Formats", href: "/creative", desc: "Thought Leader Ads and sponsored content" },
+  { label: "Tracking & Attribution", href: "/tracking", desc: "Insight Tag, conversions, reporting" },
+  { label: "Retargeting & Lead Gen", href: "/retargeting", desc: "Matched audiences and warm follow-up" },
+];
+
+function Nav() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const homeLink = (anchor: string) => (isHome ? anchor : `/${anchor}`);
+
+  const closeMobile = () => setMobileOpen(false);
+
   return (
-    <header className="sticky top-0 z-50 bg-[#0a0a0a]/92 backdrop-blur-md border-b border-[#1e2229]">
-      <nav className="max-w-[1100px] mx-auto px-10 h-[68px] flex items-center justify-between">
-        <a href="/" className="text-white text-[22px] font-extrabold font-display tracking-tight">
-          Prospect <span className="text-amber-500">Fly</span>
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0a0a0a]/80 border-b border-white/5">
+      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        {/* Logo */}
+        <Link to="/" className="font-display font-bold text-lg tracking-tight text-white">
+          Prospect<span className="text-amber-500">Fly</span>
+        </Link>
+
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
+          {/* Strategy dropdown */}
+          <div className="relative group">
+            <button className="flex items-center gap-1 hover:text-white transition-colors duration-200 py-2 cursor-pointer">
+              Strategy
+              <svg
+                className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+
+            {/* Dropdown panel */}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="bg-[#16191f] border border-white/10 rounded-2xl p-2 w-64 shadow-xl shadow-black/40">
+                {strategyLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="flex flex-col px-4 py-3 rounded-xl hover:bg-white/5 transition-colors duration-150 group/item"
+                  >
+                    <span className="text-white text-sm font-medium group-hover/item:text-lime-400 transition-colors">
+                      {item.label}
+                    </span>
+                    <span className="text-gray-500 text-xs mt-0.5">{item.desc}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <Link to="/approach" className="hover:text-white transition-colors duration-200">
+            Approach
+          </Link>
+
+          <a href={homeLink("#services")} className="hover:text-white transition-colors duration-200">
+            Pricing
+          </a>
+
+          <a href={homeLink("#results")} className="hover:text-white transition-colors duration-200">
+            Results
+          </a>
+
+          <a href={homeLink("#about")} className="hover:text-white transition-colors duration-200">
+            About
+          </a>
+        </div>
+
+        {/* Desktop CTA */}
+        <a
+          href={homeLink("#contact")}
+          className="hidden md:block bg-lime-400 text-black font-display font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
+        >
+          Book a Call
         </a>
-        <ul className="flex items-center gap-9">
-          <li><a href="#services" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">Services</a></li>
-          <li><a href="#process" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">Process</a></li>
-          <li><a href="#results" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">Results</a></li>
-          <li><a href="#about" className="text-[#8a9099] hover:text-white text-sm font-medium transition-colors">About</a></li>
-          <li>
-            <a
-              href="#contact"
-              className="bg-lime-400 text-black px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-lime-300 transition-colors cursor-pointer"
-            >
-              Book a Call
-            </a>
-          </li>
-        </ul>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="md:hidden w-10 h-10 flex items-center justify-center text-white cursor-pointer"
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+          )}
+        </button>
       </nav>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="md:hidden bg-[#16191f] border-t border-white/5">
+          <div className="max-w-6xl mx-auto px-6 py-6 space-y-1">
+            <Link
+              to="/"
+              onClick={closeMobile}
+              className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
+            >
+              Home
+            </Link>
+
+            {/* Strategy section */}
+            <div className="py-3">
+              <span className="text-gray-500 text-xs uppercase tracking-widest font-semibold">Strategy</span>
+              <div className="mt-2 ml-4 space-y-1 border-l border-white/10 pl-4">
+                {strategyLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    onClick={closeMobile}
+                    className="block py-2 text-gray-400 hover:text-lime-400 transition-colors text-sm"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <Link
+              to="/approach"
+              onClick={closeMobile}
+              className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
+            >
+              Approach
+            </Link>
+
+            <a
+              href={homeLink("#services")}
+              onClick={closeMobile}
+              className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
+            >
+              Pricing
+            </a>
+
+            <a
+              href={homeLink("#results")}
+              onClick={closeMobile}
+              className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
+            >
+              Results
+            </a>
+
+            <a
+              href={homeLink("#about")}
+              onClick={closeMobile}
+              className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
+            >
+              About
+            </a>
+
+            <div className="pt-4">
+              <a
+                href={homeLink("#contact")}
+                onClick={closeMobile}
+                className="block w-full text-center bg-lime-400 text-black font-display font-semibold text-sm px-5 py-3 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
+              >
+                Book a Call
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
@@ -73,7 +233,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="min-h-screen flex flex-col font-body text-[#111111] bg-white">
-        <Header />
+        <Nav />
         <main className="flex-1 flex flex-col">
           {children}
         </main>

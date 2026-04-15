@@ -98,7 +98,7 @@ export default function Index() {
   return (
     <div className="bg-[#0a0a0a] text-white">
       {/* Hero */}
-      <section className="pt-24 pb-20 px-10">
+      <section className="pt-32 pb-20 px-10">
         <div className="max-w-[1100px] mx-auto grid lg:grid-cols-[1fr_400px] gap-16 items-center">
           {/* Left */}
           <div>
