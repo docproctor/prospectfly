@@ -85,17 +85,17 @@ function Nav() {
             Approach
           </Link>
 
-          <a href={homeLink("#services")} className="hover:text-white transition-colors duration-200">
+          <Link to="/pricing" className="hover:text-white transition-colors duration-200">
             Pricing
-          </a>
+          </Link>
 
-          <a href={homeLink("#results")} className="hover:text-white transition-colors duration-200">
+          <Link to="/results" className="hover:text-white transition-colors duration-200">
             Results
-          </a>
+          </Link>
 
-          <a href={homeLink("#about")} className="hover:text-white transition-colors duration-200">
+          <Link to="/about" className="hover:text-white transition-colors duration-200">
             About
-          </a>
+          </Link>
         </div>
 
         {/* Desktop CTA */}
@@ -161,29 +161,29 @@ function Nav() {
               Approach
             </Link>
 
-            <a
-              href={homeLink("#services")}
+            <Link
+              to="/pricing"
               onClick={closeMobile}
               className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
             >
               Pricing
-            </a>
+            </Link>
 
-            <a
-              href={homeLink("#results")}
+            <Link
+              to="/results"
               onClick={closeMobile}
               className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
             >
               Results
-            </a>
+            </Link>
 
-            <a
-              href={homeLink("#about")}
+            <Link
+              to="/about"
               onClick={closeMobile}
               className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
             >
               About
-            </a>
+            </Link>
 
             <div className="pt-4">
               <a
@@ -205,15 +205,17 @@ function Footer() {
   return (
     <footer className="bg-[#0a0a0a] text-white border-t border-[#1e2229]">
       <div className="max-w-[1100px] mx-auto px-10 py-10 flex flex-wrap items-center justify-between gap-5">
-        <a href="/" className="text-lg font-extrabold font-display tracking-tight">
+        <Link to="/" className="text-lg font-extrabold font-display tracking-tight">
           Prospect <span className="text-amber-500">Fly</span>
-        </a>
+        </Link>
         <div className="flex gap-7">
-          <a href="#services" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Services</a>
-          <a href="#process" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Process</a>
-          <a href="#results" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Results</a>
-          <a href="#about" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">About</a>
-          <a href="#contact" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Contact</a>
+          <Link to="/" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Home</Link>
+          <Link to="/strategy" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Strategy</Link>
+          <Link to="/approach" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Approach</Link>
+          <Link to="/pricing" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Pricing</Link>
+          <Link to="/results" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Results</Link>
+          <Link to="/about" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">About</Link>
+          <a href="/#contact" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Contact</a>
         </div>
         <div className="text-[13px] text-[#8a9099]">
           &copy; 2026 ProspectFly. All rights reserved. UK-based.

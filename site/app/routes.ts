@@ -9,5 +9,8 @@ export default [
   route("creative", "routes/creative.tsx"),
   route("tracking", "routes/tracking.tsx"),
   route("retargeting", "routes/retargeting.tsx"),
+  route("pricing", "routes/pricing.tsx"),
+  route("results", "routes/results.tsx"),
+  route("about", "routes/about.tsx"),
   route("*", "routes/$.tsx"),
 ] satisfies RouteConfig;
