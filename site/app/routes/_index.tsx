@@ -3,7 +3,7 @@ import type { MetaFunction } from "react-router";
 export const meta: MetaFunction = () => {
   return [
     { title: "ProspectFly | LinkedIn Engagement Intelligence for B2B Founders" },
-    { name: "description", content: "We help B2B founders get more leads from LinkedIn. Get warm prospects direct to your inbox. Weekly. Done for you." },
+    { name: "description", content: "We help B2B founders get more leads from LinkedIn. Warm prospects direct to your inbox. Weekly. Done for you." },
   ];
 };
 
@@ -61,7 +61,7 @@ export default function Index() {
               Know Exactly Who's Engaged On LinkedIn
             </h1>
             <p className="text-lg text-[#8a9099] leading-relaxed mb-9 max-w-[560px]">
-              We help B2B founders get more leads from LinkedIn. Get warm prospects direct to your inbox. Weekly. Done for you.
+              We help B2B founders get more leads from LinkedIn. Warm prospects direct to your inbox. Weekly. Done for you.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a href="#contact" className="bg-lime-400 text-black px-7 py-3.5 rounded-lg font-bold text-[15px] hover:bg-lime-300 transition-all hover:-translate-y-0.5 cursor-pointer">
@@ -73,41 +73,62 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Right - Stats Card */}
-          <div className="bg-[#16191f] border border-[#1e2229] rounded-2xl p-8 hidden lg:block">
-            <div className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-6">
-              Early Campaign Results
+          {/* Right - Dashboard Mockup */}
+          <div className="bg-[#16191f] border border-[#1e2229] rounded-2xl p-6 hidden lg:block">
+            {/* Mockup header */}
+            <div className="mb-4">
+              <div className="text-xs font-semibold uppercase tracking-widest text-lime-400">Your Warm Prospects</div>
             </div>
-            <div className="space-y-5">
-              <div className="flex items-start gap-4 pb-5 border-b border-[#1e2229]">
-                <div className="w-10 h-10 bg-lime-400/10 rounded-lg flex items-center justify-center text-lime-400 font-bold text-lg shrink-0">
-                  %
-                </div>
-                <div>
-                  <div className="font-bold text-2xl text-lime-400">5.1% CTR</div>
-                  <div className="text-[13px] text-[#8a9099]">vs 0.4% LinkedIn benchmark</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 pb-5 border-b border-[#1e2229]">
-                <div className="w-10 h-10 bg-cyan-400/10 rounded-lg flex items-center justify-center text-cyan-400 font-bold text-lg shrink-0">
-                  £
-                </div>
-                <div>
-                  <div className="font-bold text-2xl text-cyan-400">£0.32 cost per click</div>
-                  <div className="text-[13px] text-[#8a9099]">vs £4-10 industry average</div>
+
+            {/* Prospect rows */}
+            <div className="space-y-3 mb-5">
+              {/* Prospect 1 */}
+              <div className="bg-[#0a0a0a] rounded-lg p-3 border border-[#1e2229]">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center text-white text-xs font-bold">JH</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-semibold text-white truncate">James Hartley</div>
+                    <div className="text-xs text-[#8a9099] truncate">VP Sales · Nexus Systems</div>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-xs bg-lime-400/10 text-lime-400 px-2 py-0.5 rounded-full">Liked</span>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-lime-400/10 rounded-lg flex items-center justify-center text-lime-400 shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-bold text-xl">Engager identification</div>
-                  <div className="text-[13px] text-[#8a9099]">warm outreach every month</div>
+
+              {/* Prospect 2 */}
+              <div className="bg-[#0a0a0a] rounded-lg p-3 border border-[#1e2229]">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 flex items-center justify-center text-black text-xs font-bold">SR</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-semibold text-white truncate">Sarah Reynolds</div>
+                    <div className="text-xs text-[#8a9099] truncate">Founder · CloudStack AI</div>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-xs bg-cyan-400/10 text-cyan-400 px-2 py-0.5 rounded-full">Commented</span>
+                  </div>
                 </div>
               </div>
+
+              {/* Prospect 3 */}
+              <div className="bg-[#0a0a0a] rounded-lg p-3 border border-[#1e2229]">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-black text-xs font-bold">MP</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-semibold text-white truncate">Michael Park</div>
+                    <div className="text-xs text-[#8a9099] truncate">Head of Growth · Relay</div>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-xs bg-lime-400/10 text-lime-400 px-2 py-0.5 rounded-full">Viewed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer stats */}
+            <div className="flex items-center justify-between pt-4 border-t border-[#1e2229]">
+              <div className="text-xs text-[#8a9099]">+47 more prospects</div>
+              <div className="text-xs text-lime-400 font-medium">Ready for outreach →</div>
             </div>
           </div>
         </div>
