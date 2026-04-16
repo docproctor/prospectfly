@@ -2,6 +2,7 @@ import type { MetaFunction } from "react-router";
 import { Link } from "react-router";
 
 export const meta: MetaFunction = () => [
+  { name: "robots", content: "noindex, nofollow" },
   { title: "LinkedIn Tracking & Attribution for B2B SaaS — ProspectFly" },
   {
     name: "description",

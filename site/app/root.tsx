@@ -18,14 +18,6 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" },
 ];
 
-const strategyLinks = [
-  { label: "LinkedIn Ads Strategy", href: "/strategy", desc: "Objectives, formats & campaign structure" },
-  { label: "Audience Targeting", href: "/targeting", desc: "ICP scoring and account qualification" },
-  { label: "Ad Creative & Formats", href: "/creative", desc: "Thought Leader Ads and sponsored content" },
-  { label: "Tracking & Attribution", href: "/tracking", desc: "Insight Tag, conversions, reporting" },
-  { label: "Retargeting & Lead Gen", href: "/retargeting", desc: "Matched audiences and warm follow-up" },
-];
-
 function Nav() {
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -45,52 +37,12 @@ function Nav() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
-          {/* Strategy dropdown */}
-          <div className="relative group">
-            <button className="flex items-center gap-1 hover:text-white transition-colors duration-200 py-2 cursor-pointer">
-              Strategy
-              <svg
-                className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
-
-            {/* Dropdown panel */}
-            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <div className="bg-[#16191f] border border-white/10 rounded-2xl p-2 w-64 shadow-xl shadow-black/40">
-                {strategyLinks.map((item) => (
-                  <Link
-                    key={item.href}
-                    to={item.href}
-                    className="flex flex-col px-4 py-3 rounded-xl hover:bg-white/5 transition-colors duration-150 group/item"
-                  >
-                    <span className="text-white text-sm font-medium group-hover/item:text-lime-400 transition-colors">
-                      {item.label}
-                    </span>
-                    <span className="text-gray-500 text-xs mt-0.5">{item.desc}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <Link to="/approach" className="hover:text-white transition-colors duration-200">
-            Approach
-          </Link>
+          <a href={homeLink("#services")} className="hover:text-white transition-colors duration-200">
+            Services
+          </a>
 
           <Link to="/pricing" className="hover:text-white transition-colors duration-200">
             Pricing
-          </Link>
-
-          <Link to="/results" className="hover:text-white transition-colors duration-200">
-            Results
           </Link>
 
           <Link to="/about" className="hover:text-white transition-colors duration-200">
@@ -136,30 +88,13 @@ function Nav() {
               Home
             </Link>
 
-            {/* Strategy section */}
-            <div className="py-3">
-              <span className="text-gray-500 text-xs uppercase tracking-widest font-semibold">Strategy</span>
-              <div className="mt-2 ml-4 space-y-1 border-l border-white/10 pl-4">
-                {strategyLinks.map((item) => (
-                  <Link
-                    key={item.href}
-                    to={item.href}
-                    onClick={closeMobile}
-                    className="block py-2 text-gray-400 hover:text-lime-400 transition-colors text-sm"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <Link
-              to="/approach"
+            <a
+              href={homeLink("#services")}
               onClick={closeMobile}
               className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
             >
-              Approach
-            </Link>
+              Services
+            </a>
 
             <Link
               to="/pricing"
@@ -167,14 +102,6 @@ function Nav() {
               className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
             >
               Pricing
-            </Link>
-
-            <Link
-              to="/results"
-              onClick={closeMobile}
-              className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
-            >
-              Results
             </Link>
 
             <Link
@@ -210,10 +137,8 @@ function Footer() {
         </Link>
         <div className="flex gap-7">
           <Link to="/" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Home</Link>
-          <Link to="/strategy" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Strategy</Link>
-          <Link to="/approach" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Approach</Link>
+          <a href="/#services" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Services</a>
           <Link to="/pricing" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Pricing</Link>
-          <Link to="/results" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Results</Link>
           <Link to="/about" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">About</Link>
           <a href="/#contact" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Contact</a>
         </div>
