@@ -40,9 +40,9 @@ function Nav() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
-          <a href={homeLink("#services")} className="hover:text-white transition-colors duration-200">
+          <Link to="/services" className="hover:text-white transition-colors duration-200">
             Services
-          </a>
+          </Link>
 
           <Link to="/pricing" className="hover:text-white transition-colors duration-200">
             Pricing
@@ -91,13 +91,13 @@ function Nav() {
               Home
             </Link>
 
-            <a
-              href={homeLink("#services")}
+            <Link
+              to="/services"
               onClick={closeMobile}
               className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
             >
               Services
-            </a>
+            </Link>
 
             <Link
               to="/pricing"
@@ -145,7 +145,7 @@ function Footer() {
         </Link>
         <div className="flex gap-7">
           <Link to="/" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Home</Link>
-          <a href="/#services" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Services</a>
+          <Link to="/services" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Services</Link>
           <Link to="/pricing" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Pricing</Link>
           <Link to="/about" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">About</Link>
           <Link to="/contact" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Contact</Link>

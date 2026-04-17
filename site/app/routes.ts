@@ -4,6 +4,7 @@ export default [
   index("routes/_index.tsx"),
   route("beta", "routes/beta.tsx"),
   route("approach", "routes/approach.tsx"),
+  route("services", "routes/services.tsx"),
   route("contact", "routes/contact.tsx"),
   route("thank-you", "routes/thank-you.tsx"),
   route("get-started/google-ads", "routes/get-started.google-ads.tsx"),
