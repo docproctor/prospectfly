@@ -75,7 +75,7 @@ export default function Index() {
             Paid ads and content marketing, supercharged with AI.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <a href="#contact" className="bg-lime-400 text-black px-7 py-3.5 rounded-lg font-bold text-[15px] hover:bg-lime-300 transition-all hover:-translate-y-0.5 cursor-pointer">
+            <a href="/contact" className="bg-lime-400 text-black px-7 py-3.5 rounded-lg font-bold text-[15px] hover:bg-lime-300 transition-all hover:-translate-y-0.5 cursor-pointer">
               Get a free audit →
             </a>
             <a href="#process" className="text-[#8a9099] text-sm flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer">
@@ -182,7 +182,7 @@ export default function Index() {
             Book a free 30-minute audit call. I'll look at your current setup - or your competitors' - and tell you honestly what I'd do differently.
           </p>
           <a
-            href="#contact"
+            href="/contact"
             className="inline-block bg-lime-400 text-black px-8 py-4 rounded-lg font-bold text-[15px] hover:bg-lime-300 transition-all hover:-translate-y-0.5 cursor-pointer"
           >
             Book a free audit →

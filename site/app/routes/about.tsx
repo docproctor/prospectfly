@@ -256,7 +256,7 @@ export default function About() {
           Book a call and let's talk about whether ProspectFly is the right fit for your business.
         </p>
         <Link
-          to="/#contact"
+          to="/contact"
           className="inline-block bg-lime-400 text-black font-display font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
           Book a discovery call →

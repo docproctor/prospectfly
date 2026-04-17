@@ -96,7 +96,7 @@ export default function Approach() {
       {/* CTA */}
       <section className="py-20 px-6 text-center">
         <a
-          href="/#contact"
+          href="/contact"
           className="inline-block bg-lime-400 text-black font-display font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
           Let's have that honest conversation →

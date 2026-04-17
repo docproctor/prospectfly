@@ -96,7 +96,7 @@ export default function Pricing() {
                   ))}
                 </ul>
                 <a
-                  href="/#contact"
+                  href="/contact"
                   className={`block w-full text-center px-6 py-3 rounded-lg font-semibold text-[15px] transition-colors cursor-pointer ${
                     tier.highlight
                       ? 'bg-lime-400 text-black hover:bg-lime-300'
@@ -126,7 +126,7 @@ export default function Pricing() {
             Book a free audit call. We'll look at your situation and recommend the right starting point - even if that means starting smaller than you expected.
           </p>
           <a
-            href="/#contact"
+            href="/contact"
             className="inline-block bg-lime-400 text-black px-8 py-4 rounded-lg font-bold text-[15px] hover:bg-lime-300 transition-all hover:-translate-y-0.5 cursor-pointer"
           >
             Book a free audit →

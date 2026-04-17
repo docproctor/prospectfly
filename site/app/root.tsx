@@ -21,11 +21,14 @@ export const links: LinksFunction = () => [
 function Nav() {
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const isLandingPage = location.pathname.startsWith("/get-started");
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const homeLink = (anchor: string) => (isHome ? anchor : `/${anchor}`);
 
   const closeMobile = () => setMobileOpen(false);
+
+  if (isLandingPage) return null;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0a0a0a]/80 border-b border-white/5">
@@ -51,12 +54,12 @@ function Nav() {
         </div>
 
         {/* Desktop CTA */}
-        <a
-          href={homeLink("#contact")}
+        <Link
+          to="/contact"
           className="hidden md:block bg-lime-400 text-black font-display font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
           Book a Call
-        </a>
+        </Link>
 
         {/* Mobile hamburger */}
         <button
@@ -113,13 +116,13 @@ function Nav() {
             </Link>
 
             <div className="pt-4">
-              <a
-                href={homeLink("#contact")}
+              <Link
+                to="/contact"
                 onClick={closeMobile}
                 className="block w-full text-center bg-lime-400 text-black font-display font-semibold text-sm px-5 py-3 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
               >
                 Book a Call
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -129,6 +132,11 @@ function Nav() {
 }
 
 function Footer() {
+  const location = useLocation();
+  const isLandingPage = location.pathname.startsWith("/get-started");
+
+  if (isLandingPage) return null;
+
   return (
     <footer className="bg-[#0a0a0a] text-white border-t border-[#1e2229]">
       <div className="max-w-[1100px] mx-auto px-10 py-10 flex flex-wrap items-center justify-between gap-5">
@@ -140,7 +148,7 @@ function Footer() {
           <a href="/#services" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Services</a>
           <Link to="/pricing" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Pricing</Link>
           <Link to="/about" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">About</Link>
-          <a href="/#contact" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Contact</a>
+          <Link to="/contact" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Contact</Link>
         </div>
         <div className="text-[13px] text-[#8a9099]">
           &copy; 2026 ProspectFly. All rights reserved. UK-based.
@@ -154,12 +162,29 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MJ6KB4R');`,
+          }}
+        />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
       <body className="min-h-screen flex flex-col font-body text-[#111111] bg-white">
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MJ6KB4R"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <Nav />
         <main className="flex-1 flex flex-col">
           {children}

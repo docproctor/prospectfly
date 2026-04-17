@@ -204,7 +204,7 @@ export default function Targeting() {
           Book a call and we'll run a live audience build in LinkedIn Sales Navigator based on your ICP. You'll leave with a realistic number before committing to anything.
         </p>
         <Link
-          to="/#contact"
+          to="/contact"
           className="inline-block bg-lime-400 text-black font-display font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
           Book a discovery call →

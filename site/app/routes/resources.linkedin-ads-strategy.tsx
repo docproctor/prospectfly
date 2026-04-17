@@ -205,7 +205,7 @@ export default function Strategy() {
           Book a free 30-minute call. We'll look at your campaign structure, objective, targeting and creative — and tell you exactly what's costing you performance.
         </p>
         <Link
-          to="/#contact"
+          to="/contact"
           className="inline-block bg-lime-400 text-black font-display font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
           Book a free audit →

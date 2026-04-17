@@ -165,7 +165,7 @@ export default function Tracking() {
           Book a free call and we'll check your Insight Tag, conversion events and attribution setup. Most accounts have at least one gap that's costing them signal.
         </p>
         <Link
-          to="/#contact"
+          to="/contact"
           className="inline-block bg-lime-400 text-black font-display font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
           Check my tracking setup →

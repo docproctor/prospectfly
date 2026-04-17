@@ -228,7 +228,7 @@ export default function Retargeting() {
           Book a free call to see how the full awareness-to-retargeting sequence works for your specific ICP and budget.
         </p>
         <Link
-          to="/#contact"
+          to="/contact"
           className="inline-block bg-lime-400 text-black font-display font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
           Book a discovery call →

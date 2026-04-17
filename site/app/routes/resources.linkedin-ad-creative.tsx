@@ -194,7 +194,7 @@ export default function Creative() {
           Book a free call and bring your current LinkedIn posts or ads. We'll tell you which formats are worth promoting and what copy angles are missing.
         </p>
         <Link
-          to="/#contact"
+          to="/contact"
           className="inline-block bg-lime-400 text-black font-display font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
           Book a creative review →
