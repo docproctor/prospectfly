@@ -1,0 +1,367 @@
+{
+  "buildManifest": {
+    "serverBundles": {
+      "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0": {
+        "id": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+        "file": "build/server/nodejs_eyJydW50aW1lIjoibm9kZWpzIn0/index.js",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    },
+    "routeIdToServerBundleId": {
+      "routes/_index": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/beta": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/approach": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/contact": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/thank-you": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/get-started.google-ads": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/get-started.linkedin-ads": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/resources.linkedin-ads-strategy": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/resources.linkedin-audience-targeting": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/resources.linkedin-ad-creative": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/resources.linkedin-tracking-attribution": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/resources.linkedin-retargeting": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/pricing": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/about": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/$": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0"
+    },
+    "routes": {
+      "root": {
+        "id": "root",
+        "file": "app/root.tsx",
+        "path": "",
+        "config": {}
+      },
+      "routes/_index": {
+        "id": "routes/_index",
+        "parentId": "root",
+        "file": "app/routes/_index.tsx",
+        "index": true,
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/beta": {
+        "id": "routes/beta",
+        "parentId": "root",
+        "file": "app/routes/beta.tsx",
+        "path": "beta",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/approach": {
+        "id": "routes/approach",
+        "parentId": "root",
+        "file": "app/routes/approach.tsx",
+        "path": "approach",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/contact": {
+        "id": "routes/contact",
+        "parentId": "root",
+        "file": "app/routes/contact.tsx",
+        "path": "contact",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/thank-you": {
+        "id": "routes/thank-you",
+        "parentId": "root",
+        "file": "app/routes/thank-you.tsx",
+        "path": "thank-you",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/get-started.google-ads": {
+        "id": "routes/get-started.google-ads",
+        "parentId": "root",
+        "file": "app/routes/get-started.google-ads.tsx",
+        "path": "get-started/google-ads",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/get-started.linkedin-ads": {
+        "id": "routes/get-started.linkedin-ads",
+        "parentId": "root",
+        "file": "app/routes/get-started.linkedin-ads.tsx",
+        "path": "get-started/linkedin-ads",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/resources.linkedin-ads-strategy": {
+        "id": "routes/resources.linkedin-ads-strategy",
+        "parentId": "root",
+        "file": "app/routes/resources.linkedin-ads-strategy.tsx",
+        "path": "resources/linkedin-ads-strategy",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/resources.linkedin-audience-targeting": {
+        "id": "routes/resources.linkedin-audience-targeting",
+        "parentId": "root",
+        "file": "app/routes/resources.linkedin-audience-targeting.tsx",
+        "path": "resources/linkedin-audience-targeting",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/resources.linkedin-ad-creative": {
+        "id": "routes/resources.linkedin-ad-creative",
+        "parentId": "root",
+        "file": "app/routes/resources.linkedin-ad-creative.tsx",
+        "path": "resources/linkedin-ad-creative",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/resources.linkedin-tracking-attribution": {
+        "id": "routes/resources.linkedin-tracking-attribution",
+        "parentId": "root",
+        "file": "app/routes/resources.linkedin-tracking-attribution.tsx",
+        "path": "resources/linkedin-tracking-attribution",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/resources.linkedin-retargeting": {
+        "id": "routes/resources.linkedin-retargeting",
+        "parentId": "root",
+        "file": "app/routes/resources.linkedin-retargeting.tsx",
+        "path": "resources/linkedin-retargeting",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/pricing": {
+        "id": "routes/pricing",
+        "parentId": "root",
+        "file": "app/routes/pricing.tsx",
+        "path": "pricing",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/about": {
+        "id": "routes/about",
+        "parentId": "root",
+        "file": "app/routes/about.tsx",
+        "path": "about",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/$": {
+        "id": "routes/$",
+        "parentId": "root",
+        "file": "app/routes/$.tsx",
+        "path": "*",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    }
+  },
+  "reactRouterConfig": {
+    "appDirectory": "/Volumes/DEV-2/z_dev/prospectfly-001/site/app",
+    "basename": "/",
+    "buildDirectory": "/Volumes/DEV-2/z_dev/prospectfly-001/site/build",
+    "future": {
+      "unstable_optimizeDeps": false,
+      "unstable_passThroughRequests": false,
+      "unstable_subResourceIntegrity": false,
+      "unstable_trailingSlashAwareDataRequests": false,
+      "unstable_previewServerPrerendering": false,
+      "v8_middleware": false,
+      "v8_splitRouteModules": false,
+      "v8_viteEnvironmentApi": false
+    },
+    "routes": {
+      "root": {
+        "id": "root",
+        "file": "root.tsx",
+        "path": ""
+      },
+      "routes/_index": {
+        "id": "routes/_index",
+        "parentId": "root",
+        "file": "routes/_index.tsx",
+        "index": true
+      },
+      "routes/beta": {
+        "id": "routes/beta",
+        "parentId": "root",
+        "file": "routes/beta.tsx",
+        "path": "beta"
+      },
+      "routes/approach": {
+        "id": "routes/approach",
+        "parentId": "root",
+        "file": "routes/approach.tsx",
+        "path": "approach"
+      },
+      "routes/contact": {
+        "id": "routes/contact",
+        "parentId": "root",
+        "file": "routes/contact.tsx",
+        "path": "contact"
+      },
+      "routes/thank-you": {
+        "id": "routes/thank-you",
+        "parentId": "root",
+        "file": "routes/thank-you.tsx",
+        "path": "thank-you"
+      },
+      "routes/get-started.google-ads": {
+        "id": "routes/get-started.google-ads",
+        "parentId": "root",
+        "file": "routes/get-started.google-ads.tsx",
+        "path": "get-started/google-ads"
+      },
+      "routes/get-started.linkedin-ads": {
+        "id": "routes/get-started.linkedin-ads",
+        "parentId": "root",
+        "file": "routes/get-started.linkedin-ads.tsx",
+        "path": "get-started/linkedin-ads"
+      },
+      "routes/resources.linkedin-ads-strategy": {
+        "id": "routes/resources.linkedin-ads-strategy",
+        "parentId": "root",
+        "file": "routes/resources.linkedin-ads-strategy.tsx",
+        "path": "resources/linkedin-ads-strategy"
+      },
+      "routes/resources.linkedin-audience-targeting": {
+        "id": "routes/resources.linkedin-audience-targeting",
+        "parentId": "root",
+        "file": "routes/resources.linkedin-audience-targeting.tsx",
+        "path": "resources/linkedin-audience-targeting"
+      },
+      "routes/resources.linkedin-ad-creative": {
+        "id": "routes/resources.linkedin-ad-creative",
+        "parentId": "root",
+        "file": "routes/resources.linkedin-ad-creative.tsx",
+        "path": "resources/linkedin-ad-creative"
+      },
+      "routes/resources.linkedin-tracking-attribution": {
+        "id": "routes/resources.linkedin-tracking-attribution",
+        "parentId": "root",
+        "file": "routes/resources.linkedin-tracking-attribution.tsx",
+        "path": "resources/linkedin-tracking-attribution"
+      },
+      "routes/resources.linkedin-retargeting": {
+        "id": "routes/resources.linkedin-retargeting",
+        "parentId": "root",
+        "file": "routes/resources.linkedin-retargeting.tsx",
+        "path": "resources/linkedin-retargeting"
+      },
+      "routes/pricing": {
+        "id": "routes/pricing",
+        "parentId": "root",
+        "file": "routes/pricing.tsx",
+        "path": "pricing"
+      },
+      "routes/about": {
+        "id": "routes/about",
+        "parentId": "root",
+        "file": "routes/about.tsx",
+        "path": "about"
+      },
+      "routes/$": {
+        "id": "routes/$",
+        "parentId": "root",
+        "file": "routes/$.tsx",
+        "path": "*"
+      }
+    },
+    "routeDiscovery": {
+      "mode": "lazy",
+      "manifestPath": "/__manifest"
+    },
+    "serverBuildFile": "index.js",
+    "serverModuleFormat": "esm",
+    "ssr": true,
+    "allowedActionOrigins": false,
+    "unstable_routeConfig": [
+      {
+        "id": "root",
+        "path": "",
+        "file": "root.tsx",
+        "children": [
+          {
+            "file": "routes/_index.tsx",
+            "index": true
+          },
+          {
+            "file": "routes/beta.tsx",
+            "path": "beta"
+          },
+          {
+            "file": "routes/approach.tsx",
+            "path": "approach"
+          },
+          {
+            "file": "routes/contact.tsx",
+            "path": "contact"
+          },
+          {
+            "file": "routes/thank-you.tsx",
+            "path": "thank-you"
+          },
+          {
+            "file": "routes/get-started.google-ads.tsx",
+            "path": "get-started/google-ads"
+          },
+          {
+            "file": "routes/get-started.linkedin-ads.tsx",
+            "path": "get-started/linkedin-ads"
+          },
+          {
+            "file": "routes/resources.linkedin-ads-strategy.tsx",
+            "path": "resources/linkedin-ads-strategy"
+          },
+          {
+            "file": "routes/resources.linkedin-audience-targeting.tsx",
+            "path": "resources/linkedin-audience-targeting"
+          },
+          {
+            "file": "routes/resources.linkedin-ad-creative.tsx",
+            "path": "resources/linkedin-ad-creative"
+          },
+          {
+            "file": "routes/resources.linkedin-tracking-attribution.tsx",
+            "path": "resources/linkedin-tracking-attribution"
+          },
+          {
+            "file": "routes/resources.linkedin-retargeting.tsx",
+            "path": "resources/linkedin-retargeting"
+          },
+          {
+            "file": "routes/pricing.tsx",
+            "path": "pricing"
+          },
+          {
+            "file": "routes/about.tsx",
+            "path": "about"
+          },
+          {
+            "file": "routes/$.tsx",
+            "path": "*"
+          }
+        ]
+      }
+    ]
+  },
+  "viteConfig": {
+    "build": {
+      "assetsDir": "assets"
+    }
+  }
+}
