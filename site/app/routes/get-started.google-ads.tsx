@@ -100,12 +100,13 @@ export default function GoogleAdsAudit() {
                 htmlFor="company"
                 className="block text-sm font-medium mb-2"
               >
-                Company
+                Company <span className="text-lime-400">*</span>
               </label>
               <input
                 type="text"
                 id="company"
                 name="company"
+                required
                 className="w-full bg-[#16191f] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400/50"
                 placeholder="Your company"
               />

@@ -20,6 +20,18 @@ type Pages = {
   "/approach": {
     params: {};
   };
+  "/contact": {
+    params: {};
+  };
+  "/thank-you": {
+    params: {};
+  };
+  "/get-started/google-ads": {
+    params: {};
+  };
+  "/get-started/linkedin-ads": {
+    params: {};
+  };
   "/resources/linkedin-ads-strategy": {
     params: {};
   };
@@ -51,7 +63,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/beta" | "/approach" | "/resources/linkedin-ads-strategy" | "/resources/linkedin-audience-targeting" | "/resources/linkedin-ad-creative" | "/resources/linkedin-tracking-attribution" | "/resources/linkedin-retargeting" | "/pricing" | "/about" | "/*";
+    page: "/" | "/beta" | "/approach" | "/contact" | "/thank-you" | "/get-started/google-ads" | "/get-started/linkedin-ads" | "/resources/linkedin-ads-strategy" | "/resources/linkedin-audience-targeting" | "/resources/linkedin-ad-creative" | "/resources/linkedin-tracking-attribution" | "/resources/linkedin-retargeting" | "/pricing" | "/about" | "/*";
   };
   "routes/_index.tsx": {
     id: "routes/_index";
@@ -64,6 +76,22 @@ type RouteFiles = {
   "routes/approach.tsx": {
     id: "routes/approach";
     page: "/approach";
+  };
+  "routes/contact.tsx": {
+    id: "routes/contact";
+    page: "/contact";
+  };
+  "routes/thank-you.tsx": {
+    id: "routes/thank-you";
+    page: "/thank-you";
+  };
+  "routes/get-started.google-ads.tsx": {
+    id: "routes/get-started.google-ads";
+    page: "/get-started/google-ads";
+  };
+  "routes/get-started.linkedin-ads.tsx": {
+    id: "routes/get-started.linkedin-ads";
+    page: "/get-started/linkedin-ads";
   };
   "routes/resources.linkedin-ads-strategy.tsx": {
     id: "routes/resources.linkedin-ads-strategy";
@@ -104,6 +132,10 @@ type RouteModules = {
   "routes/_index": typeof import("./app/routes/_index.tsx");
   "routes/beta": typeof import("./app/routes/beta.tsx");
   "routes/approach": typeof import("./app/routes/approach.tsx");
+  "routes/contact": typeof import("./app/routes/contact.tsx");
+  "routes/thank-you": typeof import("./app/routes/thank-you.tsx");
+  "routes/get-started.google-ads": typeof import("./app/routes/get-started.google-ads.tsx");
+  "routes/get-started.linkedin-ads": typeof import("./app/routes/get-started.linkedin-ads.tsx");
   "routes/resources.linkedin-ads-strategy": typeof import("./app/routes/resources.linkedin-ads-strategy.tsx");
   "routes/resources.linkedin-audience-targeting": typeof import("./app/routes/resources.linkedin-audience-targeting.tsx");
   "routes/resources.linkedin-ad-creative": typeof import("./app/routes/resources.linkedin-ad-creative.tsx");

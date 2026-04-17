@@ -27,13 +27,12 @@ export default function ThankYou() {
             </svg>
           </div>
 
-          <h1 className="font-display text-4xl md:text-5xl font-bold leading-tight mb-4">
-            Thanks for getting in touch.
-          </h1>
+          <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight mb-4">
+            Thanks for getting in touch
+          </h2>
 
           <p className="text-gray-400 text-lg mb-8">
-            We'll review your details and get back to you within one working
-            day. In the meantime, feel free to explore more about how we work.
+            We'll get back to you asap!
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
