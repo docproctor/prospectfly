@@ -14,7 +14,7 @@ export default function Pricing() {
   return (
     <main className="bg-[#0a0a0a] text-white min-h-screen">
       {/* Header */}
-      <section className="pt-24 pb-8 px-6">
+      <section className="pt-24 pb-5 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block mb-6 px-3 py-1 rounded-full border border-lime-400/30 text-lime-400 text-xs tracking-widest uppercase">
             Pricing
@@ -29,7 +29,7 @@ export default function Pricing() {
       </section>
 
       {/* Pricing Card */}
-      <section className="pt-8 pb-16 px-6">
+      <section className="pt-5 pb-16 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="bg-[#16191f] rounded-2xl p-8 border border-white/5">
             <div className="text-3xl font-bold text-white mb-6">

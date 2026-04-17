@@ -46,7 +46,7 @@ export default function About() {
   return (
     <main className="bg-[#0a0a0a] text-white min-h-screen">
       {/* Hero */}
-      <section className="pt-24 pb-8 px-6">
+      <section className="pt-24 pb-6 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block mb-6 px-3 py-1 rounded-full border border-lime-400/30 text-lime-400 text-xs tracking-widest uppercase">
             About ProspectFly
@@ -61,7 +61,7 @@ export default function About() {
       </section>
 
       {/* Origin Story */}
-      <section className="pt-8 pb-6 px-6">
+      <section className="pt-6 pb-6 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex-1">
@@ -94,7 +94,7 @@ export default function About() {
       {/* Who I've Worked With */}
       <section className="pt-8 pb-12 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-display text-xl font-semibold text-gray-400 mb-8">
+          <h2 className="font-display text-xl font-semibold text-white mb-8">
             Brands I've worked with
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

@@ -80,7 +80,7 @@ export default function Services() {
   return (
     <main className="bg-[#0a0a0a] text-white min-h-screen">
       {/* Hero */}
-      <section className="pt-24 pb-8 px-6">
+      <section className="pt-24 pb-6 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block mb-6 px-3 py-1 rounded-full border border-lime-400/30 text-lime-400 text-xs tracking-widest uppercase">
             What we do
@@ -100,7 +100,7 @@ export default function Services() {
       </section>
 
       {/* Platform Comparison Table */}
-      <section className="pt-8 pb-8 px-6">
+      <section className="pt-6 pb-8 px-6">
         <div className="max-w-4xl mx-auto overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
