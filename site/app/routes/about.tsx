@@ -52,30 +52,60 @@ export default function About() {
             About ProspectFly
           </div>
           <h1 className="font-display text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Built by someone who's been doing this since before Google Ads had a quality score.
+            One person. 27 years. Every major platform.
           </h1>
           <p className="text-gray-400 text-xl">
-            27 years. Every major platform. Both sides of the table.
+            I started in digital marketing before most of my clients had a website.
           </p>
         </div>
       </section>
 
       {/* Origin Story */}
-      <section className="pt-8 pb-16 px-6">
+      <section className="pt-8 pb-6 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-display text-3xl font-bold mb-8">
-            Why I started ProspectFly.
+          <div className="flex flex-col md:flex-row gap-10">
+            <div className="flex-1">
+              <h2 className="font-display text-3xl font-bold mb-8">
+                Why I started ProspectFly.
+              </h2>
+              <div className="space-y-6 text-gray-300 text-base leading-relaxed">
+                <p>
+                  I've spent 27 years building digital products and running marketing campaigns for some of the UK's biggest brands.
+                </p>
+                <p>
+                  I kept seeing the same thing. Businesses spending serious money on ads managed by agencies who were optimising for their own dashboards, not their clients' revenue. Impressive reports. Mediocre results.
+                </p>
+                <p>
+                  ProspectFly is the agency I wanted to find but couldn't. Lean, direct, focused on one metric: more customers.
+                </p>
+              </div>
+            </div>
+            <div className="md:w-72 shrink-0">
+              <img
+                src="/mp-portrait-014.webp"
+                alt="Mark Proctor"
+                className="w-full rounded-2xl object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who I've Worked With */}
+      <section className="pt-8 pb-12 px-6 border-t border-white/5">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-display text-xl font-semibold text-gray-400 mb-8">
+            Brands I've worked with
           </h2>
-          <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
-            <p>
-              I've spent 27 years building digital products and running marketing campaigns for some of the UK's biggest brands - Hearst, Tesco, Harvey Nichols, Informa.
-            </p>
-            <p>
-              I kept seeing the same thing. Businesses spending serious money on ads managed by agencies who were optimising for their own dashboards, not their clients' revenue. Impressive reports. Mediocre results.
-            </p>
-            <p>
-              ProspectFly is the agency I wanted to find but couldn't. Lean, direct, focused on one metric: more customers.
-            </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-white font-display font-semibold text-lg">Hearst</div>
+            <div className="text-white font-display font-semibold text-lg">Tesco</div>
+            <div className="text-white font-display font-semibold text-lg">Harvey Nichols</div>
+            <div className="text-white font-display font-semibold text-lg">Informa</div>
+            <div className="text-white font-display font-semibold text-lg">Nestlé</div>
+            <div className="text-white font-display font-semibold text-lg">Co-op</div>
+            <div className="text-white font-display font-semibold text-lg">Omnicom</div>
+            <div className="text-white font-display font-semibold text-lg">Raresocial</div>
           </div>
         </div>
       </section>
@@ -105,7 +135,7 @@ export default function About() {
       </section>
 
       {/* Right Fit */}
-      <section className="py-16 px-6">
+      <section className="pt-8 pb-6 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl font-bold mb-10">
             Who this works for - and who it doesn't.
@@ -152,7 +182,7 @@ export default function About() {
       </section>
 
       {/* How I Work */}
-      <section className="py-16 px-6">
+      <section className="pt-8 pb-16 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl font-bold mb-10">
             What working with me actually looks like.
