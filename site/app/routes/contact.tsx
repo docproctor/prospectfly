@@ -36,19 +36,36 @@ export default function Contact() {
   };
 
   return (
-    <main className="bg-[#0a0a0a] text-white min-h-screen">
-      <section className="pt-32 pb-24 px-6">
-        <div className="max-w-xl mx-auto">
-          <h1 className="font-display text-4xl md:text-5xl font-bold leading-tight mb-4">
-            Let's talk about your business.
-          </h1>
-          <p className="text-gray-400 text-lg mb-12">
-            Fill in the form and we'll get back to you within one working day.
+    <main className="bg-[#0a0a0a] text-white flex-1">
+      <section className="pt-[102px] pb-12 px-6">
+        <div className="max-w-2xl mx-auto">
+          <div className="flex items-center gap-4 mb-8 p-4 bg-[#16191f] rounded-2xl border border-white/5">
+            <img
+              src="/mark-proctor.webp"
+              alt="Mark Proctor"
+              className="w-[72px] h-[72px] rounded-full object-cover shrink-0"
+            />
+            <div>
+              <div className="text-white font-['Space_Grotesk'] font-semibold text-[17px]">
+                Mark Proctor
+              </div>
+              <div className="text-gray-400 text-sm">Founder, ProspectFly</div>
+              <div className="text-gray-400 text-sm mt-1">
+                Typically replies within one working day
+              </div>
+            </div>
+          </div>
+
+          <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight mb-4">
+            Let's talk about your business
+          </h2>
+          <p className="text-gray-400 text-lg mb-5">
+            Fill in the form and we'll be in touch shortly
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-2">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="flex items-center gap-4">
+              <label htmlFor="name" className="text-sm font-medium w-24 shrink-0">
                 Name <span className="text-lime-400">*</span>
               </label>
               <input
@@ -56,13 +73,13 @@ export default function Contact() {
                 id="name"
                 name="name"
                 required
-                className="w-full bg-[#16191f] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400/50"
+                className="flex-1 bg-[#16191f] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400/50"
                 placeholder="Your name"
               />
             </div>
 
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">
+            <div className="flex items-center gap-4">
+              <label htmlFor="email" className="text-sm font-medium w-24 shrink-0">
                 Email <span className="text-lime-400">*</span>
               </label>
               <input
@@ -70,16 +87,13 @@ export default function Contact() {
                 id="email"
                 name="email"
                 required
-                className="w-full bg-[#16191f] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400/50"
+                className="flex-1 bg-[#16191f] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400/50"
                 placeholder="you@company.com"
               />
             </div>
 
-            <div>
-              <label
-                htmlFor="company"
-                className="block text-sm font-medium mb-2"
-              >
+            <div className="flex items-center gap-4">
+              <label htmlFor="company" className="text-sm font-medium w-24 shrink-0">
                 Company <span className="text-lime-400">*</span>
               </label>
               <input
@@ -87,7 +101,7 @@ export default function Contact() {
                 id="company"
                 name="company"
                 required
-                className="w-full bg-[#16191f] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400/50"
+                className="flex-1 bg-[#16191f] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-lime-400/50"
                 placeholder="Your company"
               />
             </div>
