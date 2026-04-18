@@ -55,7 +55,7 @@ export default function GoogleAdsAudit() {
               </p>
 
               {/* Bullets */}
-              <ul className="space-y-4 mb-10">
+              <ul className="space-y-4 mb-[25px]">
                 <li className="flex items-start gap-3 text-gray-300">
                   <svg
                     className="w-5 h-5 text-lime-400 shrink-0 mt-0.5"
@@ -109,7 +109,7 @@ export default function GoogleAdsAudit() {
               </ul>
 
               {/* Trust Strip */}
-              <div className="bg-[#16191f] border border-white/5 rounded-xl p-5">
+              <div className="bg-[#16191f] border border-white/5 rounded-xl py-[18px] px-5">
                 <div className="flex flex-wrap justify-center gap-10 text-sm text-gray-400">
                   <span>27 years experience</span>
                   <span>UK based</span>
