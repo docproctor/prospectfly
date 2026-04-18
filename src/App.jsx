@@ -9,6 +9,8 @@ import Login from './pages/login'
 import Signup from './pages/signup'
 import Dashboard from './pages/dashboard'
 import SitePages from './pages/site-pages'
+import SitePagesAdd from './pages/site-pages-add'
+import SitePagesEdit from './pages/site-pages-edit'
 import { AdminHelp } from './pages/admin-help'
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
         >
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/site-pages" element={<SitePages />} />
+          <Route path="/site-pages/add" element={<SitePagesAdd />} />
+          <Route path="/site-pages/edit/:id" element={<SitePagesEdit />} />
 
           {/* Placeholder routes - to be implemented */}
           <Route path="/blog" element={<Dashboard />} />

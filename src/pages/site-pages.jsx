@@ -60,10 +60,12 @@ export default function SitePages() {
                     <h1 className="text-2xl font-bold text-gray-900">Site Pages</h1>
                     <p className="text-gray-600 mt-1">Manage your marketing and content pages</p>
                 </div>
-                <Button className="bg-amber-500 hover:bg-amber-600">
-                    <Plus className="w-4 h-4 mr-2" />
-                    New Page
-                </Button>
+                <Link to="/site-pages/add">
+                    <Button className="bg-amber-500 hover:bg-amber-600 cursor-pointer">
+                        <Plus className="w-4 h-4 mr-2" />
+                        New Page
+                    </Button>
+                </Link>
             </div>
 
             {error && (
@@ -87,10 +89,12 @@ export default function SitePages() {
                         <p className="text-gray-600 mb-6">
                             Create your first page to get started with your marketing site.
                         </p>
-                        <Button className="bg-amber-500 hover:bg-amber-600">
-                            <Plus className="w-4 h-4 mr-2" />
-                            Create First Page
-                        </Button>
+                        <Link to="/site-pages/add">
+                            <Button className="bg-amber-500 hover:bg-amber-600 cursor-pointer">
+                                <Plus className="w-4 h-4 mr-2" />
+                                Create First Page
+                            </Button>
+                        </Link>
                     </CardContent>
                 </Card>
             )}
@@ -106,7 +110,9 @@ export default function SitePages() {
                                 <div key={page.id} className="py-4 flex items-center justify-between">
                                     <div className="flex-1">
                                         <div className="flex items-center gap-3">
-                                            <h3 className="font-medium text-gray-900">{page.title}</h3>
+                                            <Link to={`/site-pages/edit/${page.id}`} className="font-medium text-gray-900 hover:text-amber-600">
+                                                {page.title}
+                                            </Link>
                                             {getStatusBadge(page.status)}
                                         </div>
                                         <p className="text-sm text-gray-500 mt-1">
@@ -114,12 +120,16 @@ export default function SitePages() {
                                         </p>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <Button variant="outline" size="sm">
-                                            Edit
-                                        </Button>
-                                        <Button variant="outline" size="sm">
-                                            <ExternalLink className="w-4 h-4" />
-                                        </Button>
+                                        <Link to={`/site-pages/edit/${page.id}`}>
+                                            <Button variant="outline" size="sm" className="cursor-pointer">
+                                                Edit
+                                            </Button>
+                                        </Link>
+                                        <a href={`${import.meta.env.VITE_PUBLIC_SITE_URL || 'https://prospect-fly.com'}/${page.slug}`} target="_blank" rel="noopener noreferrer">
+                                            <Button variant="outline" size="sm" className="cursor-pointer">
+                                                <ExternalLink className="w-4 h-4" />
+                                            </Button>
+                                        </a>
                                     </div>
                                 </div>
                             ))}

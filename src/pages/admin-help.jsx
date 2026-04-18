@@ -40,10 +40,10 @@ export function AdminHelp() {
                         <div className="border rounded-lg p-4">
                             <h3 className="font-bold text-gray-800 mb-2">Site Pages</h3>
                             <div className="text-sm text-gray-600 space-y-1">
-                                <div>Manage static pages (About, Services, Contact)</div>
-                                <div>Filter by status: All, Published, Draft</div>
-                                <div>Edit page content, meta tags, CTAs</div>
-                                <div>Uses page_type = 'page'</div>
+                                <div>Manage all content pages via 5-tab editor</div>
+                                <div>Drag-and-drop body sections with live preview</div>
+                                <div>Quality checklist sidebar for SEO validation</div>
+                                <div>Auto-deploy to Vercel on publish</div>
                             </div>
                         </div>
                         <div className="border rounded-lg p-4">
@@ -96,6 +96,74 @@ export function AdminHelp() {
                                 <div>Manage uploaded images and files</div>
                                 <div>Stored in Supabase Storage</div>
                                 <div>Link to pages via featured_image_asset_id</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Page Editor Guide */}
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h2 className="text-xl font-bold text-gray-800 mb-4">Page Editor Guide</h2>
+
+                    <div className="space-y-4">
+                        <div className="bg-amber-50 rounded p-3 text-sm text-amber-800">
+                            <strong>Create:</strong> /site-pages/add | <strong>Edit:</strong> /site-pages/edit/:id
+                        </div>
+
+                        <div>
+                            <h3 className="font-semibold text-gray-700 mb-2">5-Tab Editor Structure</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-5 gap-2">
+                                <div className="bg-blue-50 rounded p-2 text-sm">
+                                    <div className="font-medium text-blue-800">Top Section</div>
+                                    <div className="text-blue-600 text-xs">Title, Slug, Type, Status, Intro, Category</div>
+                                </div>
+                                <div className="bg-green-50 rounded p-2 text-sm">
+                                    <div className="font-medium text-green-800">Body Sections</div>
+                                    <div className="text-green-600 text-xs">Drag-drop content blocks</div>
+                                </div>
+                                <div className="bg-purple-50 rounded p-2 text-sm">
+                                    <div className="font-medium text-purple-800">FAQ</div>
+                                    <div className="text-purple-600 text-xs">Question/Answer pairs</div>
+                                </div>
+                                <div className="bg-pink-50 rounded p-2 text-sm">
+                                    <div className="font-medium text-pink-800">SEO</div>
+                                    <div className="text-pink-600 text-xs">Meta, Keywords, Schema</div>
+                                </div>
+                                <div className="bg-gray-100 rounded p-2 text-sm">
+                                    <div className="font-medium text-gray-800">Settings</div>
+                                    <div className="text-gray-600 text-xs">CTA, Author, Template</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 className="font-semibold text-gray-700 mb-2">Section Types</h3>
+                            <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
+                                <div className="bg-blue-100 text-blue-700 rounded px-3 py-1 text-sm text-center">Text</div>
+                                <div className="bg-green-100 text-green-700 rounded px-3 py-1 text-sm text-center">Bullets</div>
+                                <div className="bg-purple-100 text-purple-700 rounded px-3 py-1 text-sm text-center">Numbered</div>
+                                <div className="bg-amber-100 text-amber-700 rounded px-3 py-1 text-sm text-center">CTA</div>
+                                <div className="bg-pink-100 text-pink-700 rounded px-3 py-1 text-sm text-center">Image</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 className="font-semibold text-gray-700 mb-2">Quality Checklist</h3>
+                            <div className="bg-gray-50 rounded p-3 text-sm space-y-1">
+                                <div>✓ Title filled</div>
+                                <div>✓ Meta title ≤60 chars</div>
+                                <div>✓ Meta description ≤160 chars</div>
+                                <div>✓ Focus keyword filled</div>
+                                <div>✓ At least one body section</div>
+                                <div>✓ Slug is URL-safe</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 className="font-semibold text-gray-700 mb-2">Save Actions</h3>
+                            <div className="flex gap-2">
+                                <span className="px-3 py-1 bg-gray-100 rounded text-sm">Save Draft - Saves without publishing</span>
+                                <span className="px-3 py-1 bg-amber-100 text-amber-800 rounded text-sm">Publish - Saves + triggers Vercel deploy</span>
                             </div>
                         </div>
                     </div>
@@ -269,14 +337,24 @@ export function AdminHelp() {
                             <div className="bg-gray-50 rounded p-3 font-mono text-sm space-y-1">
                                 <div>login.jsx, signup.jsx</div>
                                 <div>dashboard.jsx</div>
-                                <div>site-pages.jsx, site-pages-add.jsx, site-pages-edit.jsx</div>
-                                <div>blog-list.jsx, blog-add.jsx</div>
-                                <div>seo-pages.jsx, seo-pages-generate.jsx</div>
-                                <div>case-studies.jsx, case-studies-add.jsx</div>
-                                <div>categories.jsx</div>
-                                <div>seo-templates.jsx</div>
-                                <div>admin-assets.jsx</div>
+                                <div className="text-green-700">site-pages.jsx, site-pages-add.jsx, site-pages-edit.jsx</div>
                                 <div>admin-help.jsx (this page)</div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-gray-700 mb-2">CMS Components (src/components/)</h3>
+                            <div className="bg-gray-50 rounded p-3 font-mono text-sm space-y-1">
+                                <div className="text-green-700">section-editor-modal.jsx - Section type editor</div>
+                                <div className="text-green-700">quality-checklist.jsx - SEO validation sidebar</div>
+                                <div>ProtectedRoute.jsx, AdminRoute.jsx</div>
+                                <div>Sidebar.jsx, layout.jsx</div>
+                                <div>/ui/* - shadcn components</div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-gray-700 mb-2">Utilities (src/utils/)</h3>
+                            <div className="bg-gray-50 rounded p-3 font-mono text-sm space-y-1">
+                                <div className="text-green-700">deploy-hook.js - Vercel deploy trigger</div>
                             </div>
                         </div>
                         <div>
@@ -371,23 +449,24 @@ export function AdminHelp() {
                         <div>
                             <h3 className="font-semibold text-gray-700 mb-2">Static Routes</h3>
                             <div className="bg-gray-50 rounded p-3 font-mono text-sm space-y-1">
-                                <div>/ - Homepage (Hero, Problem, Process, Pricing, Results, About, CTA)</div>
-                                <div>/#process - Process section (anchor)</div>
-                                <div>/#services - Pricing section (anchor)</div>
-                                <div>/#results - Results section (anchor)</div>
-                                <div>/#about - About section (anchor)</div>
-                                <div>/#contact - Contact CTA (anchor)</div>
-                                <div>/blog - Blog index</div>
-                                <div>/case-studies - Case studies index</div>
+                                <div>/ - Homepage</div>
+                                <div>/services - Platform comparison</div>
+                                <div>/pricing - Pricing page</div>
+                                <div>/about - About Mark Proctor</div>
+                                <div>/approach - How we work</div>
+                                <div>/contact - Contact form</div>
+                                <div>/thank-you - Form success</div>
+                                <div>/privacy, /terms, /refunds - Legal</div>
+                                <div>/get-started/google-ads - Landing page</div>
+                                <div>/get-started/linkedin-ads - Landing page</div>
                             </div>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-gray-700 mb-2">Dynamic Routes</h3>
+                            <h3 className="font-semibold text-gray-700 mb-2">Dynamic Routes (CMS)</h3>
                             <div className="bg-gray-50 rounded p-3 font-mono text-sm space-y-1">
-                                <div>/blog/:slug - Blog post (page_type=blog)</div>
-                                <div>/case-studies/:slug - Case study (page_type=case_study)</div>
-                                <div>/:slug - Generic page (page_type=page)</div>
-                                <div>/:industry/:process - SEO page (page_type=seo)</div>
+                                <div>/* - Catch-all route ($.tsx)</div>
+                                <div className="text-gray-500 text-xs mt-2">Loads from pf_site_pages by slug</div>
+                                <div className="text-gray-500 text-xs">Example: /first-test-page</div>
                             </div>
                         </div>
                     </div>
