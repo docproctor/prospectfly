@@ -130,9 +130,6 @@ export default function LinkedInAdsAudit() {
         </div>
       </main>
 
-      <div className="text-center text-gray-500 text-sm pb-8">
-        ProspectFly · UK-based performance marketing agency
-      </div>
     </div>
   );
 }
