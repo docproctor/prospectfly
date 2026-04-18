@@ -16,5 +16,8 @@ export default [
   route("resources/linkedin-retargeting", "routes/resources.linkedin-retargeting.tsx"),
   route("pricing", "routes/pricing.tsx"),
   route("about", "routes/about.tsx"),
+  route("privacy", "routes/privacy.tsx"),
+  route("terms", "routes/terms.tsx"),
+  route("refunds", "routes/refunds.tsx"),
   route("*", "routes/$.tsx"),
 ] satisfies RouteConfig;

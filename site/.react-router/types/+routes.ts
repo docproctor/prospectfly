@@ -20,6 +20,9 @@ type Pages = {
   "/approach": {
     params: {};
   };
+  "/services": {
+    params: {};
+  };
   "/contact": {
     params: {};
   };
@@ -53,6 +56,15 @@ type Pages = {
   "/about": {
     params: {};
   };
+  "/privacy": {
+    params: {};
+  };
+  "/terms": {
+    params: {};
+  };
+  "/refunds": {
+    params: {};
+  };
   "/*": {
     params: {
       "*": string;
@@ -63,7 +75,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/beta" | "/approach" | "/contact" | "/thank-you" | "/get-started/google-ads" | "/get-started/linkedin-ads" | "/resources/linkedin-ads-strategy" | "/resources/linkedin-audience-targeting" | "/resources/linkedin-ad-creative" | "/resources/linkedin-tracking-attribution" | "/resources/linkedin-retargeting" | "/pricing" | "/about" | "/*";
+    page: "/" | "/beta" | "/approach" | "/services" | "/contact" | "/thank-you" | "/get-started/google-ads" | "/get-started/linkedin-ads" | "/resources/linkedin-ads-strategy" | "/resources/linkedin-audience-targeting" | "/resources/linkedin-ad-creative" | "/resources/linkedin-tracking-attribution" | "/resources/linkedin-retargeting" | "/pricing" | "/about" | "/privacy" | "/terms" | "/refunds" | "/*";
   };
   "routes/_index.tsx": {
     id: "routes/_index";
@@ -76,6 +88,10 @@ type RouteFiles = {
   "routes/approach.tsx": {
     id: "routes/approach";
     page: "/approach";
+  };
+  "routes/services.tsx": {
+    id: "routes/services";
+    page: "/services";
   };
   "routes/contact.tsx": {
     id: "routes/contact";
@@ -121,6 +137,18 @@ type RouteFiles = {
     id: "routes/about";
     page: "/about";
   };
+  "routes/privacy.tsx": {
+    id: "routes/privacy";
+    page: "/privacy";
+  };
+  "routes/terms.tsx": {
+    id: "routes/terms";
+    page: "/terms";
+  };
+  "routes/refunds.tsx": {
+    id: "routes/refunds";
+    page: "/refunds";
+  };
   "routes/$.tsx": {
     id: "routes/$";
     page: "/*";
@@ -132,6 +160,7 @@ type RouteModules = {
   "routes/_index": typeof import("./app/routes/_index.tsx");
   "routes/beta": typeof import("./app/routes/beta.tsx");
   "routes/approach": typeof import("./app/routes/approach.tsx");
+  "routes/services": typeof import("./app/routes/services.tsx");
   "routes/contact": typeof import("./app/routes/contact.tsx");
   "routes/thank-you": typeof import("./app/routes/thank-you.tsx");
   "routes/get-started.google-ads": typeof import("./app/routes/get-started.google-ads.tsx");
@@ -143,5 +172,8 @@ type RouteModules = {
   "routes/resources.linkedin-retargeting": typeof import("./app/routes/resources.linkedin-retargeting.tsx");
   "routes/pricing": typeof import("./app/routes/pricing.tsx");
   "routes/about": typeof import("./app/routes/about.tsx");
+  "routes/privacy": typeof import("./app/routes/privacy.tsx");
+  "routes/terms": typeof import("./app/routes/terms.tsx");
+  "routes/refunds": typeof import("./app/routes/refunds.tsx");
   "routes/$": typeof import("./app/routes/$.tsx");
 };

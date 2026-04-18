@@ -143,12 +143,14 @@ function Footer() {
         <Link to="/" className="text-lg font-extrabold font-display tracking-tight">
           Prospect <span className="text-amber-500">Fly</span>
         </Link>
-        <div className="flex gap-7">
-          <Link to="/" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Home</Link>
+        <div className="flex flex-wrap gap-x-7 gap-y-2">
           <Link to="/services" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Services</Link>
           <Link to="/pricing" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Pricing</Link>
           <Link to="/about" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">About</Link>
           <Link to="/contact" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Contact</Link>
+          <Link to="/privacy" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Privacy</Link>
+          <Link to="/terms" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Terms</Link>
+          <Link to="/refunds" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Refunds</Link>
         </div>
         <div className="text-[13px] text-[#8a9099]">
           &copy; 2026 ProspectFly. All rights reserved. UK-based.
