@@ -17,25 +17,34 @@ interface PageData {
   cta_url: string;
 }
 
-export async function loader({ params }: LoaderFunctionArgs) {
+export async function loader({ params, request }: LoaderFunctionArgs) {
   const slug = params["*"];
+  const url = new URL(request.url);
+  const isPreview = url.searchParams.get("preview") === "true";
 
   if (!slug) {
     throw new Response("Not Found", { status: 404 });
   }
 
-  const { data: page, error } = await supabase
-    .from("pf_site_pages")
-    .select("*")
-    .eq("slug", slug)
-    .eq("status", "published")
-    .single();
+  // Build query - skip status check in preview mode
+  const { data: page, error } = isPreview
+    ? await supabase
+        .from("pf_site_pages")
+        .select("*")
+        .eq("slug", slug)
+        .maybeSingle()
+    : await supabase
+        .from("pf_site_pages")
+        .select("*")
+        .eq("slug", slug)
+        .eq("status", "published")
+        .maybeSingle();
 
   if (error || !page) {
     throw new Response("Not Found", { status: 404 });
   }
 
-  return { page };
+  return { page, isPreview };
 }
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
@@ -84,10 +93,15 @@ function renderSection(section: { type: string; content: string }, index: number
 }
 
 export default function DynamicPage() {
-  const { page } = useLoaderData<typeof loader>();
+  const { page, isPreview } = useLoaderData<typeof loader>();
 
   return (
     <div className="py-16">
+      {isPreview && (
+        <div className="fixed top-4 left-4 z-50 bg-amber-500 text-black px-3 py-1.5 rounded text-xs font-medium shadow-lg">
+          Preview
+        </div>
+      )}
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-4xl font-bold mb-6">{page.title}</h1>
 
