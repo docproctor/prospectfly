@@ -22,6 +22,7 @@ import {
   SelectValue,
 } from '../components/ui/select'
 import { QualityChecklist } from '../components/quality-checklist'
+import { HelpCard } from '../components/help-card'
 import { SectionEditorModal, SectionPreviewCard } from '../components/section-editor-modal'
 import { ArrowLeft, Plus, Trash2, Save, Send } from 'lucide-react'
 
@@ -730,6 +731,7 @@ export default function SitePagesAdd() {
         {/* Sidebar */}
         <div className="w-72 shrink-0">
           <QualityChecklist formData={formData} />
+          <HelpCard />
         </div>
       </div>
 
