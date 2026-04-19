@@ -144,7 +144,7 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
           <div className="space-y-2">
             <Label>Section Type</Label>
             <Select value={data.type} onValueChange={handleTypeChange}>
-              <SelectTrigger>
+              <SelectTrigger className="text-black bg-white">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
@@ -164,6 +164,7 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
               value={data.heading}
               onChange={(e) => updateField('heading', e.target.value)}
               placeholder="Section heading"
+              className="text-black bg-white"
             />
           </div>
 
@@ -171,7 +172,7 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
           <div className="space-y-2">
             <Label>Heading Level</Label>
             <Select value={data.headingLevel} onValueChange={(v) => updateField('headingLevel', v)}>
-              <SelectTrigger>
+              <SelectTrigger className="text-black bg-white">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
@@ -192,9 +193,9 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
                 value={data.content}
                 onChange={(e) => updateField('content', e.target.value)}
                 placeholder="Enter paragraph content. Use <strong> for bold, <em> for italic."
-                className="min-h-[200px]"
+                className="min-h-[200px] text-black bg-white"
               />
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-zinc-400">
                 Allowed HTML: &lt;strong&gt;, &lt;em&gt;, &lt;a href=""&gt;
               </p>
             </div>
@@ -204,7 +205,7 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label>List Items</Label>
-                <Button type="button" variant="outline" size="sm" onClick={addItem}>
+                <Button type="button" variant="outline" size="sm" onClick={addItem} className="cursor-pointer">
                   <Plus className="w-4 h-4 mr-1" />
                   Add Item
                 </Button>
@@ -212,12 +213,12 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
               <div className="space-y-2">
                 {(data.items || []).map((item, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <GripVertical className="w-4 h-4 text-gray-400" />
+                    <GripVertical className="w-4 h-4 text-zinc-500" />
                     <Input
                       value={item}
                       onChange={(e) => updateItem(index, e.target.value)}
                       placeholder={`Item ${index + 1}`}
-                      className="flex-1"
+                      className="flex-1 text-black bg-white"
                     />
                     <Button
                       type="button"
@@ -225,8 +226,9 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
                       size="sm"
                       onClick={() => removeItem(index)}
                       disabled={data.items.length <= 1}
+                      className="cursor-pointer"
                     >
-                      <Trash2 className="w-4 h-4 text-gray-500" />
+                      <Trash2 className="w-4 h-4 text-zinc-400" />
                     </Button>
                   </div>
                 ))}
@@ -242,7 +244,7 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
                   value={data.content}
                   onChange={(e) => updateField('content', e.target.value)}
                   placeholder="Call to action message"
-                  className="min-h-[100px]"
+                  className="min-h-[100px] text-black bg-white"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -252,6 +254,7 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
                     value={data.buttonLabel}
                     onChange={(e) => updateField('buttonLabel', e.target.value)}
                     placeholder="Book a Free Call"
+                    className="text-black bg-white"
                   />
                 </div>
                 <div className="space-y-2">
@@ -260,6 +263,7 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
                     value={data.buttonUrl}
                     onChange={(e) => updateField('buttonUrl', e.target.value)}
                     placeholder="/contact"
+                    className="text-black bg-white"
                   />
                 </div>
               </div>
@@ -271,12 +275,12 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
               <div className="space-y-2">
                 <Label>Select Image</Label>
                 {loadingAssets ? (
-                  <p className="text-sm text-gray-500">Loading assets...</p>
+                  <p className="text-sm text-zinc-400">Loading assets...</p>
                 ) : assets.length === 0 ? (
-                  <p className="text-sm text-gray-500">No images available. Upload images in the Assets section first.</p>
+                  <p className="text-sm text-zinc-400">No images available. Upload images in the Assets section first.</p>
                 ) : (
                   <Select value={data.assetId} onValueChange={(v) => updateField('assetId', v)}>
-                    <SelectTrigger>
+                    <SelectTrigger className="text-black bg-white">
                       <SelectValue placeholder="Select an image" />
                     </SelectTrigger>
                     <SelectContent>
@@ -295,6 +299,7 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
                   value={data.altText}
                   onChange={(e) => updateField('altText', e.target.value)}
                   placeholder="Describe the image for accessibility"
+                  className="text-black bg-white"
                 />
               </div>
               <div className="space-y-2">
@@ -303,6 +308,7 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
                   value={data.caption}
                   onChange={(e) => updateField('caption', e.target.value)}
                   placeholder="Image caption"
+                  className="text-black bg-white"
                 />
               </div>
             </>
@@ -310,10 +316,10 @@ export function SectionEditorModal({ isOpen, section, onSave, onClose }) {
         </div>
 
         <DialogFooter>
-          <Button variant="outline" onClick={onClose}>
+          <Button variant="outline" onClick={onClose} className="cursor-pointer">
             Cancel
           </Button>
-          <Button onClick={handleSave} className="bg-amber-500 hover:bg-amber-600">
+          <Button onClick={handleSave} className="bg-amber-500 hover:bg-amber-600 cursor-pointer">
             {section ? 'Update Section' : 'Add Section'}
           </Button>
         </DialogFooter>
