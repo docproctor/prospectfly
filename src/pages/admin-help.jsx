@@ -40,9 +40,12 @@ export function AdminHelp() {
                         <div className="border rounded-lg p-4">
                             <h3 className="font-bold text-gray-800 mb-2">Site Pages</h3>
                             <div className="text-sm text-gray-600 space-y-1">
+                                <div>Filter tabs: All, Pages, SEO, Blog, Case Studies, Pillar</div>
                                 <div>Manage all content pages via 5-tab editor</div>
                                 <div>Drag-and-drop body sections with live preview</div>
-                                <div>Quality checklist sidebar for SEO validation</div>
+                                <div>Quality checklist + Help card sidebars</div>
+                                <div>Preview draft pages with ?preview=true</div>
+                                <div>Delete pages with confirmation modal</div>
                                 <div>Auto-deploy to Vercel on publish</div>
                             </div>
                         </div>
@@ -164,6 +167,25 @@ export function AdminHelp() {
                             <div className="flex gap-2">
                                 <span className="px-3 py-1 bg-gray-100 rounded text-sm">Save Draft - Saves without publishing</span>
                                 <span className="px-3 py-1 bg-amber-100 text-amber-800 rounded text-sm">Publish - Saves + triggers Vercel deploy</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 className="font-semibold text-gray-700 mb-2">Preview Mode</h3>
+                            <div className="bg-gray-50 rounded p-3 text-sm space-y-2">
+                                <div>Draft pages can be previewed before publishing using <code className="bg-gray-200 px-1 rounded">?preview=true</code></div>
+                                <div>Click the external link button on a draft page - it auto-adds the preview param</div>
+                                <div>Preview pages show a small amber "Preview" badge in the top-left corner</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 className="font-semibold text-gray-700 mb-2">Help Card</h3>
+                            <div className="bg-gray-50 rounded p-3 text-sm space-y-2">
+                                <div>The Help card in the sidebar explains each editor tab</div>
+                                <div>Click any section link to open detailed documentation</div>
+                                <div>Use "Copy to clipboard" to copy individual section help</div>
+                                <div>Use "Copy All Help Text" to copy all documentation at once</div>
                             </div>
                         </div>
                     </div>
@@ -346,6 +368,7 @@ export function AdminHelp() {
                             <div className="bg-gray-50 rounded p-3 font-mono text-sm space-y-1">
                                 <div className="text-green-700">section-editor-modal.jsx - Section type editor</div>
                                 <div className="text-green-700">quality-checklist.jsx - SEO validation sidebar</div>
+                                <div className="text-green-700">help-card.jsx - Section docs with copy-to-clipboard</div>
                                 <div>ProtectedRoute.jsx, AdminRoute.jsx</div>
                                 <div>Sidebar.jsx, layout.jsx</div>
                                 <div>/ui/* - shadcn components</div>
@@ -465,8 +488,9 @@ export function AdminHelp() {
                             <h3 className="font-semibold text-gray-700 mb-2">Dynamic Routes (CMS)</h3>
                             <div className="bg-gray-50 rounded p-3 font-mono text-sm space-y-1">
                                 <div>/* - Catch-all route ($.tsx)</div>
+                                <div>/*?preview=true - Preview draft pages</div>
                                 <div className="text-gray-500 text-xs mt-2">Loads from pf_site_pages by slug</div>
-                                <div className="text-gray-500 text-xs">Example: /first-test-page</div>
+                                <div className="text-gray-500 text-xs">Example: /ppc-agency/london?preview=true</div>
                             </div>
                         </div>
                     </div>
