@@ -35,7 +35,7 @@ function Nav() {
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0a0a0a]/80 border-b border-white/5">
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="font-display font-bold text-lg tracking-tight text-white">
+        <Link to="/" className="font-display font-bold text-xl md:text-2xl tracking-tight text-white">
           Prospect<span className="text-amber-500">Fly</span>
         </Link>
 
@@ -141,7 +141,7 @@ function Footer() {
   return (
     <footer className="bg-[#0a0a0a] text-white border-t border-[#1e2229]">
       <div className="max-w-[1100px] mx-auto px-10 py-10 flex flex-wrap items-center justify-between gap-5">
-        <Link to="/" className="text-lg font-extrabold font-display tracking-tight">
+        <Link to="/" className="text-xl md:text-2xl font-extrabold font-display tracking-tight">
           Prospect <span className="text-amber-500">Fly</span>
         </Link>
         <div className="flex flex-wrap gap-x-7 gap-y-2">

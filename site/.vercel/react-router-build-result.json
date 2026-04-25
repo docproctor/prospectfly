@@ -13,6 +13,7 @@
       "routes/_index": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/beta": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/approach": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/services": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/contact": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/thank-you": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/get-started.google-ads": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
@@ -56,6 +57,15 @@
         "parentId": "root",
         "file": "app/routes/approach.tsx",
         "path": "approach",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/services": {
+        "id": "routes/services",
+        "parentId": "root",
+        "file": "app/routes/services.tsx",
+        "path": "services",
         "config": {
           "runtime": "nodejs"
         }
@@ -208,6 +218,12 @@
         "file": "routes/approach.tsx",
         "path": "approach"
       },
+      "routes/services": {
+        "id": "routes/services",
+        "parentId": "root",
+        "file": "routes/services.tsx",
+        "path": "services"
+      },
       "routes/contact": {
         "id": "routes/contact",
         "parentId": "root",
@@ -306,6 +322,10 @@
           {
             "file": "routes/approach.tsx",
             "path": "approach"
+          },
+          {
+            "file": "routes/services.tsx",
+            "path": "services"
           },
           {
             "file": "routes/contact.tsx",
