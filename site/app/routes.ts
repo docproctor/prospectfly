@@ -19,5 +19,6 @@ export default [
   route("privacy", "routes/privacy.tsx"),
   route("terms", "routes/terms.tsx"),
   route("refunds", "routes/refunds.tsx"),
+  route("free-video-content-1", "routes/free-video-content-1.tsx"),
   route("*", "routes/$.tsx"),
 ] satisfies RouteConfig;

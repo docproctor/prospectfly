@@ -22,7 +22,7 @@ export const links: LinksFunction = () => [
 function Nav() {
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const isLandingPage = location.pathname.startsWith("/get-started");
+  const isLandingPage = location.pathname.startsWith("/get-started") || location.pathname.startsWith("/free-video-content");
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const homeLink = (anchor: string) => (isHome ? anchor : `/${anchor}`);
@@ -134,7 +134,7 @@ function Nav() {
 
 function Footer() {
   const location = useLocation();
-  const isLandingPage = location.pathname.startsWith("/get-started");
+  const isLandingPage = location.pathname.startsWith("/get-started") || location.pathname.startsWith("/free-video-content");
 
   if (isLandingPage) return null;
 
