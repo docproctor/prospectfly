@@ -1,8 +1,7 @@
 import type { MetaFunction } from "react-router";
-import { Link } from "react-router";
+import { BOOKING_URL } from "../lib/booking";
 
 export const meta: MetaFunction = () => [
-  { name: "robots", content: "noindex, nofollow" },
   { title: "LinkedIn Ad Creative & Formats for B2B SaaS — ProspectFly" },
   {
     name: "description",
@@ -52,7 +51,7 @@ const postTypes = [
   },
   {
     type: "Specific insight with a number",
-    hook: "We analysed 40 LinkedIn ad accounts. Here's what the top 10% do differently.",
+    hook: "I analysed 40 LinkedIn ad accounts. Here's what the top 10% do differently.",
     engagement: "Medium reactions",
     pipelineSignal: "High",
     why: "Credibility-building content. The people who engage are usually evaluating whether you know your subject.",
@@ -66,7 +65,7 @@ const postTypes = [
   },
   {
     type: "Transparent results",
-    hook: "We launched a LinkedIn ad campaign this morning. Here's what happened in 24 hours.",
+    hook: "I launched a LinkedIn ad campaign this morning. Here's what happened in 24 hours.",
     engagement: "Medium reactions",
     pipelineSignal: "Very high",
     why: "Real numbers build trust fast. The people who engage are implicitly interested in the outcome — which is your service.",
@@ -110,7 +109,7 @@ export default function Creative() {
               <div className="flex items-start justify-between mb-4">
                 <h3 className="font-display font-semibold text-lg text-white">{format.name}</h3>
                 {format.recommended && (
-                  <span className="text-xs bg-lime-400/10 text-lime-400 px-2 py-0.5 rounded-full shrink-0 ml-2">We use this</span>
+                  <span className="text-xs bg-lime-400/10 text-lime-400 px-2 py-0.5 rounded-full shrink-0 ml-2">I use this</span>
                 )}
               </div>
               <p className="text-sm text-gray-400 leading-relaxed mb-5">{format.description}</p>
@@ -175,30 +174,48 @@ export default function Creative() {
         </div>
       </section>
 
-      {/* Stat */}
+      {/* Why click-through rate misleads here */}
       <section className="py-16 px-6">
-        <div className="max-w-5xl mx-auto bg-[#16191f] rounded-3xl p-12 border border-white/5 text-center">
-          <div className="text-7xl font-display font-bold text-lime-400 mb-4">5.1%</div>
-          <p className="text-xl text-white font-medium mb-3">CTR on our first Thought Leader Ad campaign.</p>
-          <p className="text-sm text-gray-500 max-w-lg mx-auto">
-            LinkedIn's benchmark CTR for sponsored content is 0.4%. Personal voice content
-            against a qualified ICP audience consistently outperforms company page ads.
-          </p>
+        <div className="max-w-5xl mx-auto bg-[#16191f] rounded-3xl p-12 border border-white/5">
+          <h2 className="font-display text-2xl font-bold mb-4 text-center">
+            Read the click-through rate carefully
+          </h2>
+          <div className="max-w-2xl mx-auto space-y-4 text-gray-400 leading-relaxed">
+            <p>
+              LinkedIn records a click when someone expands the text, taps the
+              company name, opens the image or hits &ldquo;see more&rdquo;. All of it
+              arrives in Campaign Manager as a click.
+            </p>
+            <p>
+              On some formats the majority of recorded clicks are on-platform
+              actions that never reach a website at all. So a click-through rate
+              several times the platform benchmark can sit beside almost no
+              sessions in analytics, and the ad looks like the best thing in the
+              account until somebody checks the other end of it.
+            </p>
+            <p className="text-gray-300">
+              Judge creative on conversations started, measured in your own
+              analytics. Treat platform CTR as a signal about the ad unit, not
+              about the business.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-20 px-6 text-center">
-        <h2 className="font-display text-3xl font-bold mb-4">Want us to review your ad creative?</h2>
+        <h2 className="font-display text-3xl font-bold mb-4">Want me to review your ad creative?</h2>
         <p className="text-gray-400 mb-8 max-w-md mx-auto">
-          Book a free call and bring your current LinkedIn posts or ads. We'll tell you which formats are worth promoting and what copy angles are missing.
+          Book a free call and bring your current LinkedIn posts or ads. I'll tell you which formats are worth promoting and what copy angles are missing.
         </p>
-        <Link
-          to="/contact"
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block bg-lime-400 text-black font-display font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
           Book a creative review →
-        </Link>
+        </a>
       </section>
     </main>
   );

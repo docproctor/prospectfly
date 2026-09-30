@@ -11,6 +11,7 @@ import {
 import type { LinksFunction } from "react-router";
 
 import "./app.css";
+import { BOOKING_LABEL, BOOKING_URL } from "./lib/booking";
 
 export const links: LinksFunction = () => [
   { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
@@ -22,7 +23,7 @@ export const links: LinksFunction = () => [
 function Nav() {
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const isLandingPage = location.pathname.startsWith("/get-started") || location.pathname.startsWith("/free-video-content");
+  const isLandingPage = location.pathname.startsWith("/get-started");
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const homeLink = (anchor: string) => (isHome ? anchor : `/${anchor}`);
@@ -45,8 +46,8 @@ function Nav() {
             Services
           </Link>
 
-          <Link to="/pricing" className="hover:text-white transition-colors duration-200">
-            Pricing
+          <Link to="/resources/linkedin-ads-strategy" className="hover:text-white transition-colors duration-200">
+            Resources
           </Link>
 
           <Link to="/about" className="hover:text-white transition-colors duration-200">
@@ -55,12 +56,14 @@ function Nav() {
         </div>
 
         {/* Desktop CTA */}
-        <Link
-          to="/contact"
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:block bg-lime-400 text-black font-display font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
-          Book a Call
-        </Link>
+          {BOOKING_LABEL}
+        </a>
 
         {/* Mobile hamburger */}
         <button
@@ -101,11 +104,11 @@ function Nav() {
             </Link>
 
             <Link
-              to="/pricing"
+              to="/resources/linkedin-ads-strategy"
               onClick={closeMobile}
               className="block py-3 text-white font-medium hover:text-lime-400 transition-colors"
             >
-              Pricing
+              Resources
             </Link>
 
             <Link
@@ -117,13 +120,15 @@ function Nav() {
             </Link>
 
             <div className="pt-4">
-              <Link
-                to="/contact"
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={closeMobile}
                 className="block w-full text-center bg-lime-400 text-black font-display font-semibold text-sm px-5 py-3 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
               >
-                Book a Call
-              </Link>
+                {BOOKING_LABEL}
+              </a>
             </div>
           </div>
         </div>
@@ -134,7 +139,7 @@ function Nav() {
 
 function Footer() {
   const location = useLocation();
-  const isLandingPage = location.pathname.startsWith("/get-started") || location.pathname.startsWith("/free-video-content");
+  const isLandingPage = location.pathname.startsWith("/get-started");
 
   if (isLandingPage) return null;
 
@@ -146,7 +151,7 @@ function Footer() {
         </Link>
         <div className="flex flex-wrap gap-x-7 gap-y-2">
           <Link to="/services" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Services</Link>
-          <Link to="/pricing" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Pricing</Link>
+          <Link to="/resources/linkedin-ads-strategy" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Resources</Link>
           <Link to="/about" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">About</Link>
           <Link to="/contact" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Contact</Link>
           <Link to="/privacy" className="text-[#8a9099] hover:text-white text-[13px] transition-colors">Privacy</Link>

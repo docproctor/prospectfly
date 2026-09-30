@@ -1,4 +1,26 @@
 {
   "framework": "react-router",
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/pricing",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/beta",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/free-video-content-1",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/get-started/google-ads",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }

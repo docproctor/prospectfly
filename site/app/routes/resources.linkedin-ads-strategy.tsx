@@ -1,13 +1,12 @@
 import type { MetaFunction } from "react-router";
-import { Link } from "react-router";
+import { BOOKING_URL } from "../lib/booking";
 
 export const meta: MetaFunction = () => [
-  { name: "robots", content: "noindex, nofollow" },
   { title: "LinkedIn Ads Strategy for B2B SaaS — ProspectFly" },
   {
     name: "description",
     content:
-      "How we structure LinkedIn ad campaigns for B2B SaaS companies. Objectives, formats, campaign architecture and why most strategies fail before they start.",
+      "How I structure LinkedIn ad campaigns for B2B SaaS companies. Objectives, formats, campaign architecture and why most strategies fail before they start.",
   },
 ];
 
@@ -83,7 +82,7 @@ export default function Strategy() {
         </h1>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
           Wrong objective. Wrong audience size. Wrong creative format. The structural decisions
-          made before launch determine 80% of campaign performance. Here's how we think about it.
+          made before launch determine 80% of campaign performance. Here's how I think about it.
         </p>
       </section>
 
@@ -158,7 +157,7 @@ export default function Strategy() {
                 <div className="flex items-center gap-3 mb-1">
                   <span className="font-display font-semibold text-white">{obj.name}</span>
                   {obj.recommended && (
-                    <span className="text-xs bg-lime-400/10 text-lime-400 px-2 py-0.5 rounded-full">We use this</span>
+                    <span className="text-xs bg-lime-400/10 text-lime-400 px-2 py-0.5 rounded-full">I use this</span>
                   )}
                 </div>
                 <div className="text-xs text-gray-500">Billed by {obj.metric}</div>
@@ -175,9 +174,9 @@ export default function Strategy() {
       {/* 6 mistakes */}
       <section className="py-16 px-6 max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-display text-3xl font-bold mb-4">6 structural mistakes we fix</h2>
+          <h2 className="font-display text-3xl font-bold mb-4">6 structural mistakes I fix</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            These show up in nearly every B2B SaaS LinkedIn account we audit.
+            These show up in nearly every B2B SaaS LinkedIn account I audit.
           </p>
         </div>
 
@@ -200,16 +199,18 @@ export default function Strategy() {
 
       {/* CTA */}
       <section className="py-20 px-6 text-center">
-        <h2 className="font-display text-3xl font-bold mb-4">Want us to audit your current strategy?</h2>
+        <h2 className="font-display text-3xl font-bold mb-4">Want me to audit your current strategy?</h2>
         <p className="text-gray-400 mb-8 max-w-md mx-auto">
-          Book a free 30-minute call. We'll look at your campaign structure, objective, targeting and creative — and tell you exactly what's costing you performance.
+          Book a free 30-minute call. I'll look at your campaign structure, objective, targeting and creative — and tell you exactly what's costing you performance.
         </p>
-        <Link
-          to="/contact"
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block bg-lime-400 text-black font-display font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
           Book a free audit →
-        </Link>
+        </a>
       </section>
     </main>
   );

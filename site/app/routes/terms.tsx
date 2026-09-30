@@ -51,8 +51,8 @@ export default function Terms() {
             Services
           </h3>
           <p className="text-gray-300 leading-relaxed">
-            ProspectFly provides performance marketing management services
-            including Google Ads, Meta Ads and LinkedIn Ads campaign management,
+            ProspectFly provides customer acquisition services including LinkedIn
+            Ads campaign management, tracking implementation, creative production,
             strategy and reporting. Services are provided on a monthly retainer
             basis unless otherwise agreed in writing.
           </p>

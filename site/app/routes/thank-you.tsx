@@ -43,10 +43,10 @@ export default function ThankYou() {
               Back to homepage
             </Link>
             <Link
-              to="/approach"
+              to="/services"
               className="text-gray-400 hover:text-white transition-colors cursor-pointer"
             >
-              Learn how we work →
+              What an engagement involves →
             </Link>
           </div>
         </div>

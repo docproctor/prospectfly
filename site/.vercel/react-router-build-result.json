@@ -11,20 +11,20 @@
     },
     "routeIdToServerBundleId": {
       "routes/_index": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
-      "routes/beta": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/approach": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/services": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/contact": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/thank-you": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
-      "routes/get-started.google-ads": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/get-started.linkedin-ads": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/resources.linkedin-ads-strategy": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/resources.linkedin-audience-targeting": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/resources.linkedin-ad-creative": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/resources.linkedin-tracking-attribution": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/resources.linkedin-retargeting": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
-      "routes/pricing": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/about": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/privacy": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/terms": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/refunds": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/$": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0"
     },
     "routes": {
@@ -39,15 +39,6 @@
         "parentId": "root",
         "file": "app/routes/_index.tsx",
         "index": true,
-        "config": {
-          "runtime": "nodejs"
-        }
-      },
-      "routes/beta": {
-        "id": "routes/beta",
-        "parentId": "root",
-        "file": "app/routes/beta.tsx",
-        "path": "beta",
         "config": {
           "runtime": "nodejs"
         }
@@ -84,15 +75,6 @@
         "parentId": "root",
         "file": "app/routes/thank-you.tsx",
         "path": "thank-you",
-        "config": {
-          "runtime": "nodejs"
-        }
-      },
-      "routes/get-started.google-ads": {
-        "id": "routes/get-started.google-ads",
-        "parentId": "root",
-        "file": "app/routes/get-started.google-ads.tsx",
-        "path": "get-started/google-ads",
         "config": {
           "runtime": "nodejs"
         }
@@ -151,20 +133,38 @@
           "runtime": "nodejs"
         }
       },
-      "routes/pricing": {
-        "id": "routes/pricing",
-        "parentId": "root",
-        "file": "app/routes/pricing.tsx",
-        "path": "pricing",
-        "config": {
-          "runtime": "nodejs"
-        }
-      },
       "routes/about": {
         "id": "routes/about",
         "parentId": "root",
         "file": "app/routes/about.tsx",
         "path": "about",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/privacy": {
+        "id": "routes/privacy",
+        "parentId": "root",
+        "file": "app/routes/privacy.tsx",
+        "path": "privacy",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/terms": {
+        "id": "routes/terms",
+        "parentId": "root",
+        "file": "app/routes/terms.tsx",
+        "path": "terms",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/refunds": {
+        "id": "routes/refunds",
+        "parentId": "root",
+        "file": "app/routes/refunds.tsx",
+        "path": "refunds",
         "config": {
           "runtime": "nodejs"
         }
@@ -206,12 +206,6 @@
         "file": "routes/_index.tsx",
         "index": true
       },
-      "routes/beta": {
-        "id": "routes/beta",
-        "parentId": "root",
-        "file": "routes/beta.tsx",
-        "path": "beta"
-      },
       "routes/approach": {
         "id": "routes/approach",
         "parentId": "root",
@@ -235,12 +229,6 @@
         "parentId": "root",
         "file": "routes/thank-you.tsx",
         "path": "thank-you"
-      },
-      "routes/get-started.google-ads": {
-        "id": "routes/get-started.google-ads",
-        "parentId": "root",
-        "file": "routes/get-started.google-ads.tsx",
-        "path": "get-started/google-ads"
       },
       "routes/get-started.linkedin-ads": {
         "id": "routes/get-started.linkedin-ads",
@@ -278,17 +266,29 @@
         "file": "routes/resources.linkedin-retargeting.tsx",
         "path": "resources/linkedin-retargeting"
       },
-      "routes/pricing": {
-        "id": "routes/pricing",
-        "parentId": "root",
-        "file": "routes/pricing.tsx",
-        "path": "pricing"
-      },
       "routes/about": {
         "id": "routes/about",
         "parentId": "root",
         "file": "routes/about.tsx",
         "path": "about"
+      },
+      "routes/privacy": {
+        "id": "routes/privacy",
+        "parentId": "root",
+        "file": "routes/privacy.tsx",
+        "path": "privacy"
+      },
+      "routes/terms": {
+        "id": "routes/terms",
+        "parentId": "root",
+        "file": "routes/terms.tsx",
+        "path": "terms"
+      },
+      "routes/refunds": {
+        "id": "routes/refunds",
+        "parentId": "root",
+        "file": "routes/refunds.tsx",
+        "path": "refunds"
       },
       "routes/$": {
         "id": "routes/$",
@@ -316,10 +316,6 @@
             "index": true
           },
           {
-            "file": "routes/beta.tsx",
-            "path": "beta"
-          },
-          {
             "file": "routes/approach.tsx",
             "path": "approach"
           },
@@ -334,10 +330,6 @@
           {
             "file": "routes/thank-you.tsx",
             "path": "thank-you"
-          },
-          {
-            "file": "routes/get-started.google-ads.tsx",
-            "path": "get-started/google-ads"
           },
           {
             "file": "routes/get-started.linkedin-ads.tsx",
@@ -364,12 +356,20 @@
             "path": "resources/linkedin-retargeting"
           },
           {
-            "file": "routes/pricing.tsx",
-            "path": "pricing"
-          },
-          {
             "file": "routes/about.tsx",
             "path": "about"
+          },
+          {
+            "file": "routes/privacy.tsx",
+            "path": "privacy"
+          },
+          {
+            "file": "routes/terms.tsx",
+            "path": "terms"
+          },
+          {
+            "file": "routes/refunds.tsx",
+            "path": "refunds"
           },
           {
             "file": "routes/$.tsx",

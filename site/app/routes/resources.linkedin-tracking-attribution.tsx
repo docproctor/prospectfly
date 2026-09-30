@@ -1,8 +1,7 @@
 import type { MetaFunction } from "react-router";
-import { Link } from "react-router";
+import { BOOKING_URL } from "../lib/booking";
 
 export const meta: MetaFunction = () => [
-  { name: "robots", content: "noindex, nofollow" },
   { title: "LinkedIn Tracking & Attribution for B2B SaaS — ProspectFly" },
   {
     name: "description",
@@ -144,10 +143,10 @@ export default function Tracking() {
         </div>
 
         <div className="bg-lime-400/5 rounded-2xl p-6 border border-lime-400/20">
-          <h3 className="font-display font-semibold text-white mb-3">What we actually track instead</h3>
+          <h3 className="font-display font-semibold text-white mb-3">What I actually track instead</h3>
           <p className="text-sm text-gray-300 leading-relaxed mb-4">
             For brand awareness Thought Leader Ads, the primary signal isn't click-based attribution — it's
-            engager identification. We track who liked, commented, clicked or visited your profile after
+            engager identification. I track who liked, commented, clicked or visited your profile after
             seeing the ad. These people are your warm list. When your sales team reaches out to someone
             on that list, the conversion rate is meaningfully higher than cold outreach.
           </p>
@@ -162,14 +161,16 @@ export default function Tracking() {
       <section className="py-20 px-6 text-center">
         <h2 className="font-display text-3xl font-bold mb-4">Is your tracking set up correctly?</h2>
         <p className="text-gray-400 mb-8 max-w-md mx-auto">
-          Book a free call and we'll check your Insight Tag, conversion events and attribution setup. Most accounts have at least one gap that's costing them signal.
+          Book a free call and I'll check your Insight Tag, conversion events and attribution setup. Most accounts have at least one gap that's costing them signal.
         </p>
-        <Link
-          to="/contact"
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block bg-lime-400 text-black font-display font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
           Check my tracking setup →
-        </Link>
+        </a>
       </section>
     </main>
   );

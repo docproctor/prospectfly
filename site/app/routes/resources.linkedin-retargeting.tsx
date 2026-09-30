@@ -1,8 +1,7 @@
 import type { MetaFunction } from "react-router";
-import { Link } from "react-router";
+import { BOOKING_URL } from "../lib/booking";
 
 export const meta: MetaFunction = () => [
-  { name: "robots", content: "noindex, nofollow" },
   { title: "LinkedIn Retargeting & Lead Gen for B2B SaaS — ProspectFly" },
   {
     name: "description",
@@ -189,11 +188,11 @@ export default function Retargeting() {
             <div>
               <div className="text-xs text-lime-400 font-mono mb-4">Intelligence tier</div>
               <h2 className="font-display text-3xl font-bold text-white mb-4">
-                We identify who engaged — by name.
+                I identify who engaged — by name.
               </h2>
               <p className="text-sm text-gray-300 leading-relaxed mb-4">
-                LinkedIn tells you aggregate engagement data. Our Intelligence tier goes further —
-                we identify the individual people who engaged with your ads, enrich their profiles,
+                LinkedIn tells you aggregate engagement data. I go further —
+                I identify the individual people who engaged with your ads, enrich their profiles,
                 score them against your ICP and deliver a named warm prospect list every month.
               </p>
               <p className="text-sm text-gray-400 leading-relaxed">
@@ -227,12 +226,14 @@ export default function Retargeting() {
         <p className="text-gray-400 mb-8 max-w-md mx-auto">
           Book a free call to see how the full awareness-to-retargeting sequence works for your specific ICP and budget.
         </p>
-        <Link
-          to="/contact"
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block bg-lime-400 text-black font-display font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
         >
           Book a discovery call →
-        </Link>
+        </a>
       </section>
     </main>
   );
