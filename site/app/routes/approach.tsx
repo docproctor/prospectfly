@@ -1,5 +1,5 @@
 import type { MetaFunction } from "react-router";
-import { Link } from "react-router";
+import { BOOKING_URL } from "../lib/booking";
 
 export const meta: MetaFunction = () => [
   { title: "Our Approach — ProspectFly" },
@@ -117,12 +117,14 @@ export default function Approach() {
             Book a free 30-minute call. We'll tell you whether paid ads make
             sense for your business right now.
           </p>
-          <Link
-            to="/contact"
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-lime-400 text-black font-display font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 cursor-pointer"
           >
             Let's have that honest conversation →
-          </Link>
+          </a>
         </div>
       </section>
     </main>

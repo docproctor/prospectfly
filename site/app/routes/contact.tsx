@@ -117,7 +117,7 @@ export default function Contact() {
               disabled={formState === "submitting"}
               className="w-full bg-lime-400 text-black font-['Space_Grotesk'] font-semibold py-4 rounded-full hover:bg-lime-300 transition-colors duration-200 disabled:opacity-50 cursor-pointer"
             >
-              {formState === "submitting" ? "Sending..." : "Book a free strategy call"}
+              {formState === "submitting" ? "Sending..." : "Send me the details"}
             </button>
           </form>
         </div>
