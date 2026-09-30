@@ -178,13 +178,9 @@ export default function Index() {
       <section className="py-6 px-6 border-t border-b border-white/5">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500">
-            <span>17 years buying Google and Meta before specialising in LinkedIn</span>
+            <span>25 Years Experience</span>
             <span className="text-[#1e2229]">|</span>
-            <span>5 years at Hearst</span>
-            <span className="text-[#1e2229]">|</span>
-            <span>25 years building products</span>
-            <span className="text-[#1e2229]">|</span>
-            <span>UK-based</span>
+            <span>50,000+ Booked Meetings in 27 niches</span>
           </div>
         </div>
       </section>
