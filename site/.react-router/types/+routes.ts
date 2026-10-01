@@ -32,6 +32,9 @@ type Pages = {
   "/linkedin-ads-saas": {
     params: {};
   };
+  "/linkedin-ads-saas/thanks": {
+    params: {};
+  };
   "/linkedin-ads-saas/not-yet": {
     params: {};
   };
@@ -72,7 +75,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/approach" | "/services" | "/contact" | "/thank-you" | "/get-started/linkedin-ads" | "/linkedin-ads-saas" | "/linkedin-ads-saas/not-yet" | "/resources/linkedin-ads-strategy" | "/resources/linkedin-audience-targeting" | "/resources/linkedin-ad-creative" | "/resources/linkedin-tracking-attribution" | "/resources/linkedin-retargeting" | "/about" | "/privacy" | "/terms" | "/refunds" | "/*";
+    page: "/" | "/approach" | "/services" | "/contact" | "/thank-you" | "/get-started/linkedin-ads" | "/linkedin-ads-saas" | "/linkedin-ads-saas/thanks" | "/linkedin-ads-saas/not-yet" | "/resources/linkedin-ads-strategy" | "/resources/linkedin-audience-targeting" | "/resources/linkedin-ad-creative" | "/resources/linkedin-tracking-attribution" | "/resources/linkedin-retargeting" | "/about" | "/privacy" | "/terms" | "/refunds" | "/*";
   };
   "routes/_index.tsx": {
     id: "routes/_index";
@@ -101,6 +104,10 @@ type RouteFiles = {
   "routes/linkedin-ads-saas.tsx": {
     id: "routes/linkedin-ads-saas";
     page: "/linkedin-ads-saas";
+  };
+  "routes/linkedin-ads-saas.thanks.tsx": {
+    id: "routes/linkedin-ads-saas.thanks";
+    page: "/linkedin-ads-saas/thanks";
   };
   "routes/linkedin-ads-saas.not-yet.tsx": {
     id: "routes/linkedin-ads-saas.not-yet";
@@ -157,6 +164,7 @@ type RouteModules = {
   "routes/thank-you": typeof import("./app/routes/thank-you.tsx");
   "routes/get-started.linkedin-ads": typeof import("./app/routes/get-started.linkedin-ads.tsx");
   "routes/linkedin-ads-saas": typeof import("./app/routes/linkedin-ads-saas.tsx");
+  "routes/linkedin-ads-saas.thanks": typeof import("./app/routes/linkedin-ads-saas.thanks.tsx");
   "routes/linkedin-ads-saas.not-yet": typeof import("./app/routes/linkedin-ads-saas.not-yet.tsx");
   "routes/resources.linkedin-ads-strategy": typeof import("./app/routes/resources.linkedin-ads-strategy.tsx");
   "routes/resources.linkedin-audience-targeting": typeof import("./app/routes/resources.linkedin-audience-targeting.tsx");

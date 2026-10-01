@@ -17,6 +17,7 @@
       "routes/thank-you": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/get-started.linkedin-ads": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/linkedin-ads-saas": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/linkedin-ads-saas.thanks": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/linkedin-ads-saas.not-yet": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/resources.linkedin-ads-strategy": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/resources.linkedin-audience-targeting": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
@@ -95,6 +96,15 @@
         "parentId": "root",
         "file": "app/routes/linkedin-ads-saas.tsx",
         "path": "linkedin-ads-saas",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/linkedin-ads-saas.thanks": {
+        "id": "routes/linkedin-ads-saas.thanks",
+        "parentId": "root",
+        "file": "app/routes/linkedin-ads-saas.thanks.tsx",
+        "path": "linkedin-ads-saas/thanks",
         "config": {
           "runtime": "nodejs"
         }
@@ -262,6 +272,12 @@
         "file": "routes/linkedin-ads-saas.tsx",
         "path": "linkedin-ads-saas"
       },
+      "routes/linkedin-ads-saas.thanks": {
+        "id": "routes/linkedin-ads-saas.thanks",
+        "parentId": "root",
+        "file": "routes/linkedin-ads-saas.thanks.tsx",
+        "path": "linkedin-ads-saas/thanks"
+      },
       "routes/linkedin-ads-saas.not-yet": {
         "id": "routes/linkedin-ads-saas.not-yet",
         "parentId": "root",
@@ -370,6 +386,10 @@
           {
             "file": "routes/linkedin-ads-saas.tsx",
             "path": "linkedin-ads-saas"
+          },
+          {
+            "file": "routes/linkedin-ads-saas.thanks.tsx",
+            "path": "linkedin-ads-saas/thanks"
           },
           {
             "file": "routes/linkedin-ads-saas.not-yet.tsx",

@@ -4,15 +4,6 @@ import { Link } from "react-router";
 // Where under-£10k leads land after their details are saved. Not a rejection:
 // explain the maths, give them something useful, leave the door open.
 
-// TODO(Mark): confirm these figures before launch — they drive the maths below.
-const COST_PER_LEAD = 200;
-const LEADS_PER_CUSTOMER = 8;
-const EXAMPLE_ACV = 5000;
-
-const costPerCustomer = COST_PER_LEAD * LEADS_PER_CUSTOMER;
-const shareOfContract = Math.round((costPerCustomer / EXAMPLE_ACV) * 100);
-const gbp = (n: number) => `£${n.toLocaleString("en-GB")}`;
-
 const resources = [
   {
     to: "/resources/linkedin-ads-strategy",
@@ -60,7 +51,7 @@ export default function LinkedInAdsSaasNotYet() {
       <section className="pt-12 lg:pt-16 pb-10 px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-display text-[34px]! lg:text-[44px]! font-bold leading-[1.1]! tracking-tight mb-6 max-w-3xl">
-            Thanks — I've got your details. Honestly, a call wouldn't be worth your time yet.
+            Thanks — I've got your details. Honestly, a video wouldn't be much use to you yet.
           </h1>
           <div className="space-y-5 text-[17px] text-gray-400 leading-relaxed max-w-2xl">
             <p>
@@ -68,14 +59,13 @@ export default function LinkedInAdsSaasNotYet() {
               cost of finding each customer eats the margin.
             </p>
             <p className="text-gray-300 border-l-2 border-lime-400 pl-5">
-              At around {gbp(COST_PER_LEAD)} a lead, and one customer for every {LEADS_PER_CUSTOMER}{" "}
-              leads, each new customer costs about {gbp(costPerCustomer)} in media alone. On a{" "}
-              {gbp(EXAMPLE_ACV)} contract that's {shareOfContract}% of the first year gone before
-              anyone is paid to run it.
+              LinkedIn is one of the most expensive places to buy a lead, and it takes several leads
+              to win one customer. On a smaller contract, most of the first year's revenue goes on
+              acquisition before anyone is paid to run the campaigns.
             </p>
             <p>
-              That isn't something better creative fixes, and I'd rather tell you now than take your
-              money finding it out.
+              That isn't something better creative fixes. So rather than send you a video about ads
+              that wouldn't pay back, I'd rather tell you now.
             </p>
           </div>
         </div>
