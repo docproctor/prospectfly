@@ -89,7 +89,17 @@ type ActionResult = {
 };
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const URL_PATTERN = /^(https?:\/\/)?[^\s/]+\.[^\s]+$/i;
+// A bare domain with an optional path. No "@", so a pasted email is rejected.
+const DOMAIN_PATTERN = /^[a-z0-9-]+(\.[a-z0-9-]+)+(\/\S*)?$/i;
+
+/** "https://www.Acme.com/" → "acme.com/" → "acme.com" — stored clean so it's easy to research. */
+function normaliseCompanyUrl(raw: string) {
+  return raw
+    .replace(/^https?:\/\//i, "")
+    .replace(/^www\./i, "")
+    .replace(/\/+$/, "")
+    .replace(/^[^/]+/, (host) => host.toLowerCase());
+}
 
 async function hashIp(ip: string) {
   const salt = process.env.LEAD_IP_SALT || "prospectfly-leads";
@@ -108,7 +118,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const values = {
     name: field("name", 100),
     email: field("email", 200),
-    company_url: field("company_url", 200),
+    company_url: normaliseCompanyUrl(field("company_url", 200)),
     annual_contract_value: field("annual_contract_value", 50),
     message: field("message", 2000),
   };
@@ -116,7 +126,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const errors: FieldErrors = {};
   if (!values.name) errors.name = "Please add your name.";
   if (!EMAIL_PATTERN.test(values.email)) errors.email = "Please add a valid work email.";
-  if (!URL_PATTERN.test(values.company_url)) errors.company_url = "Please add your company website, e.g. yourcompany.com.";
+  if (!DOMAIN_PATTERN.test(values.company_url)) errors.company_url = "Please add your company website, e.g. yourcompany.com.";
   const band = ACV_BANDS.find((b) => b.value === values.annual_contract_value);
   if (!band) errors.annual_contract_value = "Please choose your average annual contract value.";
 
