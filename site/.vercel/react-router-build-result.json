@@ -16,6 +16,8 @@
       "routes/contact": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/thank-you": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/get-started.linkedin-ads": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/linkedin-ads-saas": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/linkedin-ads-saas.not-yet": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/resources.linkedin-ads-strategy": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/resources.linkedin-audience-targeting": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
       "routes/resources.linkedin-ad-creative": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
@@ -84,6 +86,24 @@
         "parentId": "root",
         "file": "app/routes/get-started.linkedin-ads.tsx",
         "path": "get-started/linkedin-ads",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/linkedin-ads-saas": {
+        "id": "routes/linkedin-ads-saas",
+        "parentId": "root",
+        "file": "app/routes/linkedin-ads-saas.tsx",
+        "path": "linkedin-ads-saas",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/linkedin-ads-saas.not-yet": {
+        "id": "routes/linkedin-ads-saas.not-yet",
+        "parentId": "root",
+        "file": "app/routes/linkedin-ads-saas.not-yet.tsx",
+        "path": "linkedin-ads-saas/not-yet",
         "config": {
           "runtime": "nodejs"
         }
@@ -236,6 +256,18 @@
         "file": "routes/get-started.linkedin-ads.tsx",
         "path": "get-started/linkedin-ads"
       },
+      "routes/linkedin-ads-saas": {
+        "id": "routes/linkedin-ads-saas",
+        "parentId": "root",
+        "file": "routes/linkedin-ads-saas.tsx",
+        "path": "linkedin-ads-saas"
+      },
+      "routes/linkedin-ads-saas.not-yet": {
+        "id": "routes/linkedin-ads-saas.not-yet",
+        "parentId": "root",
+        "file": "routes/linkedin-ads-saas.not-yet.tsx",
+        "path": "linkedin-ads-saas/not-yet"
+      },
       "routes/resources.linkedin-ads-strategy": {
         "id": "routes/resources.linkedin-ads-strategy",
         "parentId": "root",
@@ -334,6 +366,14 @@
           {
             "file": "routes/get-started.linkedin-ads.tsx",
             "path": "get-started/linkedin-ads"
+          },
+          {
+            "file": "routes/linkedin-ads-saas.tsx",
+            "path": "linkedin-ads-saas"
+          },
+          {
+            "file": "routes/linkedin-ads-saas.not-yet.tsx",
+            "path": "linkedin-ads-saas/not-yet"
           },
           {
             "file": "routes/resources.linkedin-ads-strategy.tsx",

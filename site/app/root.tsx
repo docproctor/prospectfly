@@ -12,6 +12,7 @@ import type { LinksFunction } from "react-router";
 
 import "./app.css";
 import { BOOKING_LABEL, BOOKING_URL } from "./lib/booking";
+import { isLandingPath } from "./lib/landing";
 
 export const links: LinksFunction = () => [
   { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
@@ -23,7 +24,7 @@ export const links: LinksFunction = () => [
 function Nav() {
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const isLandingPage = location.pathname.startsWith("/get-started");
+  const isLandingPage = isLandingPath(location.pathname);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const homeLink = (anchor: string) => (isHome ? anchor : `/${anchor}`);
@@ -139,7 +140,7 @@ function Nav() {
 
 function Footer() {
   const location = useLocation();
-  const isLandingPage = location.pathname.startsWith("/get-started");
+  const isLandingPage = isLandingPath(location.pathname);
 
   if (isLandingPage) return null;
 

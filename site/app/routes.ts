@@ -7,6 +7,8 @@ export default [
   route("contact", "routes/contact.tsx"),
   route("thank-you", "routes/thank-you.tsx"),
   route("get-started/linkedin-ads", "routes/get-started.linkedin-ads.tsx"),
+  route("linkedin-ads-saas", "routes/linkedin-ads-saas.tsx"),
+  route("linkedin-ads-saas/not-yet", "routes/linkedin-ads-saas.not-yet.tsx"),
   route("resources/linkedin-ads-strategy", "routes/resources.linkedin-ads-strategy.tsx"),
   route("resources/linkedin-audience-targeting", "routes/resources.linkedin-audience-targeting.tsx"),
   route("resources/linkedin-ad-creative", "routes/resources.linkedin-ad-creative.tsx"),
