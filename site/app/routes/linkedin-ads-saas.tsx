@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { ActionFunctionArgs, MetaFunction } from "react-router";
-import { data, Form, redirect, useActionData, useNavigation } from "react-router";
+import { data, Form, redirect, useActionData } from "react-router";
 import { CheckIcon } from "../components/check-icon";
 import { ACV_BANDS, ATTRIBUTION_KEYS } from "../lib/leads";
 import { getSupabaseAdmin } from "../lib/supabase-admin.server";
@@ -194,9 +194,15 @@ function FieldError({ message }: { message?: string }) {
 
 function LeadForm() {
   const result = useActionData<typeof action>();
-  const navigation = useNavigation();
   const attribution = useAttribution();
-  const submitting = navigation.state !== "idle" && navigation.formMethod === "POST";
+  // reloadDocument means useNavigation never leaves idle, so track it locally.
+  // Reset on bfcache restore so Back doesn't leave the button stuck.
+  const [submitting, setSubmitting] = useState(false);
+  useEffect(() => {
+    const reset = (e: PageTransitionEvent) => e.persisted && setSubmitting(false);
+    window.addEventListener("pageshow", reset);
+    return () => window.removeEventListener("pageshow", reset);
+  }, []);
   const errors = result?.errors ?? {};
   const values = result?.values ?? {};
 
@@ -205,10 +211,14 @@ function LeadForm() {
     const w = window as unknown as { dataLayer?: unknown[] };
     w.dataLayer = w.dataLayer || [];
     w.dataLayer.push({ event: "lead_submit", lead_source: LEAD_SOURCE, acv_band: band });
+    setSubmitting(true);
   };
 
+  // Full document POST, not a fetch: the action's redirect then lands on
+  // /thanks or /not-yet as a real page load, which the LinkedIn Insight Tag
+  // needs to count the page-load conversion. It ignores client-side route changes.
   return (
-    <Form method="post" onSubmit={trackSubmit} className="space-y-4">
+    <Form method="post" reloadDocument onSubmit={trackSubmit} className="space-y-4">
       {/* Honeypot: hidden from people, irresistible to bots */}
       <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
         <label htmlFor={HONEYPOT}>Fax number</label>
