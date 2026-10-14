@@ -36,7 +36,7 @@ export default function LinkedInAdsAudit() {
       <header className="h-16 flex items-center border-b border-white/5">
         <div className="max-w-6xl mx-auto px-6 w-full">
           <span className="font-['Space_Grotesk'] font-bold text-lg tracking-tight text-white">
-            Prospect<span className="text-amber-500">Fly</span>
+            Prospect <span className="text-amber-500">Fly</span>
           </span>
         </div>
       </header>

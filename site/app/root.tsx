@@ -38,7 +38,7 @@ function Nav() {
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="font-display font-bold text-xl md:text-2xl tracking-tight text-white">
-          Prospect<span className="text-amber-500">Fly</span>
+          Prospect <span className="text-amber-500">Fly</span>
         </Link>
 
         {/* Desktop Links */}

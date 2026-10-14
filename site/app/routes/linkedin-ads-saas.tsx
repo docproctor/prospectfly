@@ -355,7 +355,7 @@ export default function LinkedInAdsSaas() {
       <header className="h-16 flex items-center border-b border-white/5 px-6">
         <div className="max-w-4xl mx-auto w-full">
           <span className="font-display font-bold text-xl md:text-2xl tracking-tight">
-            Prospect<span className="text-amber-500">Fly</span>
+            Prospect <span className="text-amber-500">Fly</span>
           </span>
         </div>
       </header>
