@@ -21,7 +21,7 @@ const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const whatYouGet = [
   "A 5-minute video, recorded for your company specifically.",
   "Every LinkedIn ad your competitors are currently running, and why most of them can't produce a lead.",
-  "If nobody in your category is advertising, I'll tell you that instead — and what it means.",
+  "If nobody in your market is advertising, we'll tell you that instead — and what it means.",
 ];
 
 export const meta: MetaFunction = () => [
@@ -29,7 +29,7 @@ export const meta: MetaFunction = () => [
   {
     name: "description",
     content:
-      "Give me your website and I'll send you a video going through every LinkedIn ad your competitors are running.",
+      "Send us your website and we'll send you a video going through every LinkedIn ad your competitors are running.",
   },
   { name: "robots", content: "noindex, nofollow" },
 ];
@@ -81,7 +81,7 @@ export async function action({ request }: ActionFunctionArgs) {
   if (!EMAIL_PATTERN.test(values.email)) errors.email = "Please add a valid work email.";
   if (!DOMAIN_PATTERN.test(values.company_url)) errors.company_url = "Please add your company website, e.g. yourcompany.com.";
   const band = ACV_BANDS.find((b) => b.value === values.annual_contract_value);
-  if (!band) errors.annual_contract_value = "Please choose your average annual contract value.";
+  if (!band) errors.annual_contract_value = "Please choose what a customer is worth to you a year.";
 
   if (Object.keys(errors).length > 0) {
     return data<ActionResult>({ errors, values }, { status: 400 });
@@ -281,7 +281,7 @@ function LeadForm() {
 
       <div>
         <label htmlFor="annual_contract_value" className="block text-sm font-medium text-gray-300 mb-1.5">
-          Average annual contract value
+          Average annual value of a customer
         </label>
         <div className="relative">
           <select
@@ -330,7 +330,7 @@ function LeadForm() {
 
       <p className="text-sm text-gray-400 leading-relaxed">
         This is worth your time if a customer is worth £10,000 or more a year to you. Below that, the
-        maths on LinkedIn doesn't work and I'll say so rather than sell you something.
+        maths on LinkedIn doesn't work and we'll say so rather than sell you something.
       </p>
 
       <p className="text-xs text-gray-500 leading-relaxed">
@@ -368,7 +368,7 @@ export default function LinkedInAdsSaas() {
               Every LinkedIn ad your competitors are running is public.
             </h1>
             <p className="text-[17px] text-gray-400 leading-relaxed mb-4">
-              Give me your website and I'll send you a video going through all of it — what they're
+              Send us your website and Mark will record a video going through all of it — what they're
               running, where it's leaking, and what it would cost you to do it properly.
             </p>
             <p className="font-display font-semibold text-lime-400">

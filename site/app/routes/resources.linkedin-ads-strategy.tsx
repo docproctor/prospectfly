@@ -2,11 +2,11 @@ import type { MetaFunction } from "react-router";
 import { BOOKING_URL } from "../lib/booking";
 
 export const meta: MetaFunction = () => [
-  { title: "LinkedIn Ads Strategy for B2B SaaS — ProspectFly" },
+  { title: "LinkedIn Ads Strategy for Growth — ProspectFly" },
   {
     name: "description",
     content:
-      "How I structure LinkedIn ad campaigns for B2B SaaS companies. Objectives, formats, campaign architecture and why most strategies fail before they start.",
+      "How we structure LinkedIn ad campaigns for growing businesses. Objectives, formats, campaign architecture and why most strategies fail before they start.",
   },
 ];
 
@@ -16,7 +16,7 @@ const objectives = [
     recommended: true,
     metric: "CPM",
     bestFor: "Thought Leader Ads, top-of-funnel warming",
-    why: "Optimises for reach and frequency within your exact ICP. The goal is repeated exposure — not clicks. Most B2B buying decisions start with familiarity.",
+    why: "Optimises for reach and frequency within your exact ICP. The goal is repeated exposure — not clicks. Most buying decisions start with familiarity.",
   },
   {
     name: "Engagement",
@@ -44,7 +44,7 @@ const objectives = [
 const mistakes = [
   {
     mistake: "Targeting 500k+ people",
-    fix: "Your real ICP is probably 2,000–5,000 companies. Broad targeting burns budget on irrelevant audiences and inflates CPMs.",
+    fix: "Your real audience is probably a few thousand well-chosen companies. Broad targeting burns budget on irrelevant audiences and inflates CPMs.",
   },
   {
     mistake: "Running one ad forever",
@@ -52,7 +52,7 @@ const mistakes = [
   },
   {
     mistake: "Optimising for CTR",
-    fix: "For brand awareness, CTR is the wrong metric. Frequency and audience penetration are what drive pipeline.",
+    fix: "For brand awareness, CTR is the wrong metric. Frequency and audience penetration are what drive leads and sales.",
   },
   {
     mistake: "No warming before outreach",
@@ -82,7 +82,7 @@ export default function Strategy() {
         </h1>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
           Wrong objective. Wrong audience size. Wrong creative format. The structural decisions
-          made before launch determine 80% of campaign performance. Here's how I think about it.
+          made before launch determine 80% of campaign performance. Here's how we think about it.
         </p>
       </section>
 
@@ -141,7 +141,7 @@ export default function Strategy() {
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl font-bold mb-4">Choosing the right objective</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            LinkedIn offers 7 campaign objectives. For B2B SaaS Thought Leader Ads, one is usually the right answer.
+            LinkedIn offers 7 campaign objectives. For Thought Leader Ads, one is usually the right answer.
           </p>
         </div>
 
@@ -157,7 +157,7 @@ export default function Strategy() {
                 <div className="flex items-center gap-3 mb-1">
                   <span className="font-display font-semibold text-white">{obj.name}</span>
                   {obj.recommended && (
-                    <span className="text-xs bg-lime-400/10 text-lime-400 px-2 py-0.5 rounded-full">I use this</span>
+                    <span className="text-xs bg-lime-400/10 text-lime-400 px-2 py-0.5 rounded-full">We use this</span>
                   )}
                 </div>
                 <div className="text-xs text-gray-500">Billed by {obj.metric}</div>
@@ -174,9 +174,9 @@ export default function Strategy() {
       {/* 6 mistakes */}
       <section className="py-16 px-6 max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-display text-3xl font-bold mb-4">6 structural mistakes I fix</h2>
+          <h2 className="font-display text-3xl font-bold mb-4">6 structural mistakes we fix</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            These show up in nearly every B2B SaaS LinkedIn account I audit.
+            These show up in nearly every LinkedIn ad account we audit.
           </p>
         </div>
 
@@ -199,9 +199,9 @@ export default function Strategy() {
 
       {/* CTA */}
       <section className="py-20 px-6 text-center">
-        <h2 className="font-display text-3xl font-bold mb-4">Want me to audit your current strategy?</h2>
+        <h2 className="font-display text-3xl font-bold mb-4">Want us to audit your current strategy?</h2>
         <p className="text-gray-400 mb-8 max-w-md mx-auto">
-          Book a free 30-minute call. I'll look at your campaign structure, objective, targeting and creative — and tell you exactly what's costing you performance.
+          Book a free 30-minute call. We'll look at your campaign structure, objective, targeting and creative — and tell you exactly what's costing you performance.
         </p>
         <a
           href={BOOKING_URL}

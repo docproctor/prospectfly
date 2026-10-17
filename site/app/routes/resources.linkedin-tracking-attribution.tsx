@@ -2,11 +2,11 @@ import type { MetaFunction } from "react-router";
 import { BOOKING_URL } from "../lib/booking";
 
 export const meta: MetaFunction = () => [
-  { title: "LinkedIn Tracking & Attribution for B2B SaaS — ProspectFly" },
+  { title: "LinkedIn Tracking & Attribution for Growth — ProspectFly" },
   {
     name: "description",
     content:
-      "How to set up LinkedIn Insight Tag, conversion tracking and attribution for B2B SaaS campaigns. Why most LinkedIn ad accounts are flying blind.",
+      "How to set up LinkedIn Insight Tag, conversion tracking and attribution for your campaigns. Why most LinkedIn ad accounts are flying blind.",
   },
 ];
 
@@ -19,14 +19,14 @@ const steps = [
   },
   {
     title: "Define your conversion events",
-    description: "Tell LinkedIn what actions on your website count as a conversion — demo bookings, free trial signups, contact form submissions. Without this, you have no signal on what's actually working.",
-    detail: "Set up under Account Assets → Conversions. For B2B SaaS, track: demo booked, trial started, contact submitted. Each is a separate conversion event.",
+    description: "Tell LinkedIn what actions on your website count as a conversion: enquiry forms, booked calls, purchases. Without this, you have no signal on what's actually working.",
+    detail: "Set up under Account Assets → Conversions. For most businesses, track: enquiry submitted, call booked, purchase. Each is a separate conversion event.",
     required: true,
   },
   {
     title: "Set conversion windows",
-    description: "LinkedIn attributes conversions within a time window after ad exposure. The default is 30 days post-click, 7 days view-through. For B2B with longer sales cycles, extend post-click to 90 days.",
-    detail: "B2B buying decisions rarely happen the same day someone sees an ad. A 90-day window captures the full influence of your campaign on pipeline.",
+    description: "LinkedIn attributes conversions within a time window after ad exposure. The default is 30 days post-click, 7 days view-through. For businesses with longer sales cycles, extend post-click to 90 days.",
+    detail: "Considered purchases rarely happen the same day someone sees an ad. A 90-day window captures the full influence of your campaign on leads and revenue.",
     required: false,
   },
   {
@@ -57,7 +57,7 @@ const attributionModels = [
   {
     model: "Linear",
     description: "Credit split equally across every touchpoint in the buyer journey.",
-    problem: "Treats a LinkedIn impression the same as a demo booking confirmation email. Most touchpoints aren't equal.",
+    problem: "Treats a LinkedIn impression the same as a booking confirmation email. Most touchpoints aren't equal.",
   },
   {
     model: "Position-based (W-shaped)",
@@ -79,7 +79,7 @@ export default function Tracking() {
           <span className="text-lime-400">are flying completely blind.</span>
         </h1>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-          No Insight Tag. No conversion events. No way to connect ad spend to pipeline.
+          No Insight Tag. No conversion events. No way to connect ad spend to leads and revenue.
           Without tracking infrastructure in place, you're optimising for impressions
           and hoping something shows up in the CRM. It usually doesn't.
         </p>
@@ -143,15 +143,15 @@ export default function Tracking() {
         </div>
 
         <div className="bg-lime-400/5 rounded-2xl p-6 border border-lime-400/20">
-          <h3 className="font-display font-semibold text-white mb-3">What I actually track instead</h3>
+          <h3 className="font-display font-semibold text-white mb-3">What we actually track instead</h3>
           <p className="text-sm text-gray-300 leading-relaxed mb-4">
             For brand awareness Thought Leader Ads, the primary signal isn't click-based attribution — it's
-            engager identification. I track who liked, commented, clicked or visited your profile after
+            engager identification. We track who liked, commented, clicked or visited your profile after
             seeing the ad. These people are your warm list. When your sales team reaches out to someone
             on that list, the conversion rate is meaningfully higher than cold outreach.
           </p>
           <p className="text-sm text-gray-400 leading-relaxed">
-            That's the pipeline signal that standard attribution models miss entirely. It's also why
+            That's the lead signal that standard attribution models miss entirely. It's also why
             frequency and audience penetration matter more than CTR for this ad format.
           </p>
         </div>
@@ -161,7 +161,7 @@ export default function Tracking() {
       <section className="py-20 px-6 text-center">
         <h2 className="font-display text-3xl font-bold mb-4">Is your tracking set up correctly?</h2>
         <p className="text-gray-400 mb-8 max-w-md mx-auto">
-          Book a free call and I'll check your Insight Tag, conversion events and attribution setup. Most accounts have at least one gap that's costing them signal.
+          Book a free call and we'll check your Insight Tag, conversion events and attribution setup. Most accounts have at least one gap that's costing them signal.
         </p>
         <a
           href={BOOKING_URL}

@@ -7,14 +7,14 @@ export const meta: MetaFunction = () => [
   {
     name: "description",
     content:
-      "Prospectfly is Mark Proctor. 17 years buying Google and Meta before specialising in LinkedIn, 5 years at Hearst in advertising creative solutions, 25 years building products.",
+      "ProspectFly is a growth marketing agency founded by Mark Proctor. 17 years buying Google and Meta, 5 years at Hearst in advertising creative solutions, 25 years in digital.",
   },
 ];
 
 const credentials = [
-  { figure: "17 years", label: "buying Google and Meta, before specialising in LinkedIn" },
+  { figure: "17 years", label: "buying Google, Meta and LinkedIn ads" },
   { figure: "5 years", label: "at Hearst, advertising creative solutions" },
-  { figure: "25 years", label: "building products" },
+  { figure: "25 years", label: "in digital marketing" },
   { figure: "Developer, designer", label: "before any of the media buying" },
 ];
 
@@ -29,17 +29,16 @@ const brands = [
 ];
 
 const goodFit = [
-  "UK B2B SaaS, roughly 11 to 200 people",
-  "A customer worth £10,000 or more a year",
+  "An established business with something people already buy",
+  "A customer worth enough that paying to win one makes sense",
   "At least £1,000 a month for media, separate from management",
   "You want to be told when something isn't working, early",
-  "You'd rather have one person who knows the account than a rotating team of juniors",
+  "You'd rather have a senior lead who knows the account than a rotating team of juniors",
 ];
 
 const notGoodFit = [
-  "Solo consultants, coaches and one-person businesses",
-  "Pre-revenue, still working out what the product is",
-  "Seed-stage SaaS on sub-£1,000 annual contracts",
+  "Pre-revenue, still working out what you sell",
+  "Margins too thin to pay for a new customer",
   "Under £1,000 a month of media",
   "You need ten customers by next week",
   "You want a guaranteed number before anyone has seen your data",
@@ -47,19 +46,19 @@ const notGoodFit = [
 
 const howIWork = [
   {
-    title: "You deal with me",
+    title: "You deal with the founder",
     description:
-      "Every email, every call, every decision about where the budget goes. There is no account manager, because there is no account management layer.",
+      "Mark leads every account: the calls, the decisions about where the budget goes. There is no account manager relaying messages, because there is no account management layer.",
   },
   {
     title: "No padding",
     description:
-      "I don't inflate hours or bolt on services to make an invoice look substantial. If something isn't worth doing this month, I'll tell you and it won't appear on the bill.",
+      "We don't inflate hours or bolt on services to make an invoice look substantial. If something isn't worth doing this month, we'll tell you and it won't appear on the bill.",
   },
   {
     title: "Bad news first",
     description:
-      "If something isn't working you'll hear it from me before you spot it yourself, along with what I'm doing about it. This is the whole job, really.",
+      "If something isn't working you'll hear it from us before you spot it yourself, along with what we're doing about it. This is the whole job, really.",
   },
 ];
 
@@ -73,13 +72,13 @@ export default function About() {
             Who's behind this
           </div>
           <h1 className="font-display text-4xl md:text-5xl font-bold leading-tight mb-6">
-            One person who has done
+            Growth marketing, led by
             <br />
-            all three jobs.
+            someone who's done every job.
           </h1>
           <p className="text-gray-400 text-xl max-w-2xl">
-            I started in digital before most of my clients had a website. I've been
-            the developer, the designer and the media buyer, which is why I can tell
+            Our founder, Mark Proctor, started in digital before most clients had a
+            website. Developer, designer and media buyer, which is why we can tell
             you where the problem actually is.
           </p>
         </div>
@@ -91,28 +90,28 @@ export default function About() {
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex-1">
               <h2 className="font-display text-3xl font-bold mb-8">
-                Why I work this way.
+                Why we work this way.
               </h2>
               <div className="space-y-6 text-gray-300 text-base leading-relaxed">
                 <p>
                   Most companies buy this in three pieces. A developer for the
                   tracking, an agency for the campaigns, someone else for the
-                  creative. I've been each of those suppliers at different points,
-                  so I know what happens in the gaps between them: the question of
+                  creative. Mark has been each of those suppliers at different points,
+                  so we know what happens in the gaps between them: the question of
                   why it isn't working belongs to nobody, and it stays unanswered
                   for months while everyone's invoices keep clearing.
                 </p>
                 <p>
-                  The other thing I kept seeing was reports built to survive the
+                  The other thing we kept seeing was reports built to survive the
                   meeting rather than to be true. A cost per lead that looks
                   excellent because somebody quietly changed which event counts as a
                   lead. Nobody is lying exactly. It's just that when the person
                   writing the report is also being judged by it, the number drifts.
                 </p>
                 <p>
-                  So: one person, one number, and the working shown underneath it.
-                  There's an honest limit on how many companies I can take on at
-                  once, and that's the trade.
+                  So: one team, one number, and the working shown underneath it,
+                  all focused on growth. There's an honest limit on how many clients
+                  we take on at once, and that's the trade.
                 </p>
               </div>
             </div>
@@ -147,7 +146,7 @@ export default function About() {
       <section className="pt-8 pb-12 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-xl font-semibold text-white mb-8">
-            Brands I've worked with
+            Brands we've worked with
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {brands.map((brand) => (
@@ -167,7 +166,7 @@ export default function About() {
           </h2>
           <p className="text-gray-400 leading-relaxed mb-10 max-w-2xl">
             Not a judgement on anyone. The work needs certain conditions to produce
-            anything, and below them I'd be charging you to find that out.
+            anything, and below them we'd be charging you to find that out.
           </p>
 
           <div className="grid md:grid-cols-2 gap-10">
@@ -200,11 +199,11 @@ export default function About() {
         </div>
       </section>
 
-      {/* How I work */}
+      {/* How we work */}
       <section className="pt-8 pb-16 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl font-bold mb-10">
-            What working with me actually looks like.
+            What working with us actually looks like.
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {howIWork.map((item, i) => (
@@ -220,7 +219,7 @@ export default function About() {
           </div>
 
           <p className="text-gray-500 text-[15px] mt-10">
-            The longer version of the product and development background lives at{" "}
+            Mark's longer background lives at{" "}
             <a
               href="https://markproctor.co"
               target="_blank"
@@ -237,7 +236,7 @@ export default function About() {
       <CtaBand
         showAvatar
         heading="Find out if this is worth your time."
-        body="Thirty minutes, no hard sell. An honest look at whether this makes sense for you right now, and what I'd do first if it does."
+        body="Thirty minutes, no hard sell. An honest look at whether this makes sense for you right now, and what we'd do first if it does."
       />
     </main>
   );

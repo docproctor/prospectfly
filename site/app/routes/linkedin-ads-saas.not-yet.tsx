@@ -7,7 +7,7 @@ import { Link } from "react-router";
 const resources = [
   {
     to: "/resources/linkedin-ads-strategy",
-    title: "LinkedIn ads strategy for B2B SaaS",
+    title: "LinkedIn ads strategy",
     description: "Where LinkedIn fits, and when it doesn't.",
   },
   {
@@ -51,7 +51,7 @@ export default function LinkedInAdsSaasNotYet() {
       <section className="pt-12 lg:pt-16 pb-10 px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-display text-[34px]! lg:text-[44px]! font-bold leading-[1.1]! tracking-tight mb-6 max-w-3xl">
-            Thanks — I've got your details. Honestly, a video wouldn't be much use to you yet.
+            Thanks — we've got your details. Honestly, a video wouldn't be much use to you yet.
           </h1>
           <div className="space-y-5 text-[17px] text-gray-400 leading-relaxed max-w-2xl">
             <p>
@@ -60,12 +60,12 @@ export default function LinkedInAdsSaasNotYet() {
             </p>
             <p className="text-gray-300 border-l-2 border-lime-400 pl-5">
               LinkedIn is one of the most expensive places to buy a lead, and it takes several leads
-              to win one customer. On a smaller contract, most of the first year's revenue goes on
-              acquisition before anyone is paid to run the campaigns.
+              to win one customer. When each customer is worth less, most of the first year's revenue
+              goes on acquisition before anyone is paid to run the campaigns.
             </p>
             <p>
               That isn't something better creative fixes. So rather than send you a video about ads
-              that wouldn't pay back, I'd rather tell you now.
+              that wouldn't pay back, we'd rather tell you now.
             </p>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function LinkedInAdsSaasNotYet() {
             What's useful in the meantime
           </h2>
           <p className="text-gray-400 leading-relaxed mb-8 max-w-2xl">
-            The method I use, written up in full and free. Most of it applies whatever channel you
+            The method we use, written up in full and free. Most of it applies whatever channel you
             end up using.
           </p>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -98,8 +98,8 @@ export default function LinkedInAdsSaasNotYet() {
       <section className="pt-10 pb-16 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <p className="text-[17px] text-gray-300 leading-relaxed max-w-2xl">
-            The door's open. If your contract value moves past £10,000 — or you know someone already
-            there —{" "}
+            The door's open. If a customer becomes worth more than £10,000 a year to you — or you know
+            someone already there —{" "}
             <Link to="/contact" className="text-lime-400 hover:text-lime-300 cursor-pointer">
               get in touch
             </Link>

@@ -2,11 +2,11 @@ import type { MetaFunction } from "react-router";
 import { BOOKING_URL } from "../lib/booking";
 
 export const meta: MetaFunction = () => [
-  { title: "LinkedIn Audience Targeting for B2B SaaS — ProspectFly" },
+  { title: "LinkedIn Audience Targeting for Growth — ProspectFly" },
   {
     name: "description",
     content:
-      "How I build precision LinkedIn audiences for B2B SaaS companies. ICP scoring, company list targeting and why audience size is the most important campaign decision.",
+      "How we build precision LinkedIn audiences for growing businesses. ICP scoring, company list targeting and why audience size is the most important campaign decision.",
   },
 ];
 
@@ -46,19 +46,19 @@ const audienceSizes = [
     size: "500k+",
     label: "Too broad",
     color: "red",
-    result: "You're paying to reach people who will never buy. CPMs rise as LinkedIn struggles to find relevant inventory. Pipeline stays empty.",
+    result: "You're paying to reach people who will never buy. CPMs rise as LinkedIn struggles to find relevant inventory. Leads stay thin.",
   },
   {
     size: "50k–200k",
     label: "Borderline",
     color: "amber",
-    result: "Better — but still likely to include significant waste. Works if your ICP is genuinely broad, but most B2B SaaS ICPs aren't.",
+    result: "Better — but still likely to include significant waste. Works if your ICP is genuinely broad, but most aren't.",
   },
   {
     size: "5k–30k",
     label: "Recommended",
     color: "lime",
-    result: "Tight enough to build real frequency with your exact ICP. Every impression is a qualified account. This is where pipeline comes from.",
+    result: "Tight enough to build real frequency with your exact ICP. Every impression is a qualified account. This is where leads and sales come from.",
   },
   {
     size: "Under 2k",
@@ -92,7 +92,7 @@ export default function Targeting() {
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl font-bold mb-4">Audience size matters more than you think</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            LinkedIn reports audience size before you launch. Here's what each range actually means for pipeline.
+            LinkedIn reports audience size before you launch. Here's what each range actually means for your results.
           </p>
         </div>
 
@@ -139,7 +139,7 @@ export default function Targeting() {
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-display font-semibold text-white">{opt.method}</h3>
                 {opt.recommended && (
-                  <span className="text-xs bg-lime-400/10 text-lime-400 px-2 py-0.5 rounded-full shrink-0 ml-2">I use this</span>
+                  <span className="text-xs bg-lime-400/10 text-lime-400 px-2 py-0.5 rounded-full shrink-0 ml-2">We use this</span>
                 )}
               </div>
               <div className="flex gap-1 mb-4">
@@ -157,16 +157,16 @@ export default function Targeting() {
         </div>
       </section>
 
-      {/* How I build lists */}
+      {/* How we build lists */}
       <section className="py-16 px-6 max-w-5xl mx-auto">
         <div className="bg-[#16191f] rounded-3xl p-10 border border-white/5">
-          <h2 className="font-display text-3xl font-bold mb-6">How I build your company list</h2>
+          <h2 className="font-display text-3xl font-bold mb-6">How we build your company list</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {[
-                { step: "01", title: "Define your real ICP", body: "Not just industry and headcount. I map your best-fit customers and identify the structural signals — team composition, LinkedIn activity, growth trajectory — that predict conversion." },
-                { step: "02", title: "Source the company universe", body: "I pull a raw list from LinkedIn Sales Navigator using your ICP filters. This is the starting point — not the final list." },
-                { step: "03", title: "Score and qualify", body: "Every company is scored against the 5 qualification signals. Companies that fail on headcount trajectory, team structure or founder activity are removed before a single impression is served." },
+                { step: "01", title: "Define your real ICP", body: "Not just industry and headcount. We map your best-fit customers and identify the structural signals (team composition, LinkedIn activity, growth trajectory) that predict conversion." },
+                { step: "02", title: "Source the company universe", body: "We pull a raw list from LinkedIn Sales Navigator using your ICP filters. This is the starting point — not the final list." },
+                { step: "03", title: "Score and qualify", body: "Every company is scored against the 5 qualification signals. Companies that fail on headcount trajectory, team structure or decision-maker activity are removed before a single impression is served." },
               ].map((item) => (
                 <div key={item.step} className="flex gap-4">
                   <div className="text-xs font-mono text-lime-400 mt-1 shrink-0">{item.step}</div>
@@ -180,8 +180,8 @@ export default function Targeting() {
             <div className="space-y-6">
               {[
                 { step: "04", title: "Upload as a Matched Audience", body: "The qualified company list is uploaded directly to LinkedIn Campaign Manager as a Matched Audience. LinkedIn matches companies against its database and delivers ads only to people at those firms." },
-                { step: "05", title: "Layer job title filters", body: "On top of the company list, I add seniority and function filters to reach the right people within those companies. Decision-makers only." },
-                { step: "06", title: "Monitor and refine", body: "Monthly reporting shows which companies are engaging. I update the list, remove low-performers and add new qualified accounts as your pipeline evolves." },
+                { step: "05", title: "Layer job title filters", body: "On top of the company list, we add seniority and function filters to reach the right people within those companies. Decision-makers only." },
+                { step: "06", title: "Monitor and refine", body: "Monthly reporting shows which companies are engaging. We update the list, remove low-performers and add new qualified accounts as your business grows." },
               ].map((item) => (
                 <div key={item.step} className="flex gap-4">
                   <div className="text-xs font-mono text-lime-400 mt-1 shrink-0">{item.step}</div>
@@ -200,7 +200,7 @@ export default function Targeting() {
       <section className="py-20 px-6 text-center">
         <h2 className="font-display text-3xl font-bold mb-4">Want to see your qualified audience size?</h2>
         <p className="text-gray-400 mb-8 max-w-md mx-auto">
-          Book a call and I'll run a live audience build in LinkedIn Sales Navigator based on your ICP. You'll leave with a realistic number before committing to anything.
+          Book a call and we'll run a live audience build in LinkedIn Sales Navigator based on your ICP. You'll leave with a realistic number before committing to anything.
         </p>
         <a
           href={BOOKING_URL}

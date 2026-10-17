@@ -9,37 +9,37 @@ const faqs: FaqItem[] = [
   {
     question: "What does it cost?",
     answer:
-      "Management is £750 to £1,500 a month, depending on how much has to be built from scratch. Media is at least £1,000 a month, paid directly to LinkedIn — never through me and never marked up. Scope and price are agreed in writing after the audit.",
+      "Management is £750 to £1,500 a month, depending on how much has to be built from scratch. Media is at least £1,000 a month, paid directly to Google, Meta or LinkedIn — never through us and never marked up. Scope and price are agreed in writing after the audit.",
   },
   {
     question: "How long before we see anything?",
     answer:
-      "Tracking and the first campaigns are live inside two weeks. You'll have real data on which message works by about week four. A cost per qualified conversation you can plan against takes six to eight weeks, because it needs enough conversations to be more than a coincidence. Anyone promising you less than that is guessing.",
+      "Tracking and the first campaigns are live inside two weeks. You'll have real data on which message works by about week four. A cost per customer you can plan growth around takes six to eight weeks, because it needs enough results to be more than a coincidence. Anyone promising you less than that is guessing.",
   },
   {
     question: "What if we've already tried ads and it didn't work?",
     answer:
-      "That is the common case. Most accounts I look at failed for one of three reasons: the audience was far too large for the budget, the conversion being counted wasn't a real conversation, or the campaign objective told the platform to optimise for something nobody wanted. None of those mean the channel doesn't work for you — and finding out which one it was takes about ten minutes of the audit.",
+      "That is the common case. Most accounts we look at failed for one of three reasons: the audience was far too broad for the budget, the conversion being counted wasn't a real lead or sale, or the campaign was set up to optimise for something nobody wanted. None of those mean paid ads don't work for you — and finding out which one it was takes about ten minutes of the audit.",
   },
   {
     question: "Do we need a website or tracking set up first?",
     answer:
-      "No. I build the tracking, and I'll build landing pages if the page is what's losing the traffic. Don't fix anything before the audit — it's easier for me to see what's wrong if you leave it as it is.",
+      "No. We build the tracking, and we'll build landing pages if the page is what's losing the traffic. Don't fix anything before the audit — it's easier to see what's wrong if you leave it as it is.",
   },
   {
     question: "Who actually does the work?",
     answer:
-      "I do. There's no account manager, no junior, and nobody you haven't spoken to. That's the point of it, and it's also the honest limit on how many companies I can work with at once.",
+      "Mark Proctor, our founder, leads every account. There's no handover to a junior you've never met and no account manager relaying messages. That's the point of it, and it's also the honest limit on how many clients we take on at once.",
   },
 ];
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Customer acquisition for UK B2B SaaS companies — Prospectfly" },
+    { title: "Growth marketing agency — Google, Meta & LinkedIn | ProspectFly" },
     {
       name: "description",
       content:
-        "LinkedIn customer acquisition for UK B2B SaaS companies with contracts above £10,000 a year. One person doing the tracking, the creative and the media buying.",
+        "ProspectFly is a growth-focused digital marketing agency. Paid ads across Google, Meta and LinkedIn, with the tracking, creative and media buying handled in one place.",
     },
     { "script:ld+json": faqJsonLd(faqs) },
   ];
@@ -47,14 +47,14 @@ export const meta: MetaFunction = () => {
 
 const notThis = [
   {
-    title: "Not brand awareness",
+    title: "Not vanity metrics",
     description:
-      "I'm not here to buy impressions and then tell you about uplift you can't feel.",
+      "We're not here to buy impressions and then tell you about uplift you can't feel.",
   },
   {
     title: "Not a content retainer",
     description:
-      "Nobody in your position needs another twelve posts a month that nobody reads.",
+      "Nobody trying to grow needs another twelve posts a month that nobody reads.",
   },
   {
     title: "Not a dashboard",
@@ -64,40 +64,40 @@ const notThis = [
 ];
 
 const goodFit = [
-  "UK B2B SaaS, roughly 11 to 200 people",
-  "A customer worth £10,000 or more a year",
-  "The founder, CEO or MD is in the room when this gets decided",
+  "An established business with something people already buy",
+  "A customer worth enough that paying to win one makes sense",
+  "The owner, CEO or MD is in the room when this gets decided",
   "At least £1,000 a month for media, separate from management",
   "Someone answers an enquiry inside a working day",
 ];
 
 const notGoodFit = [
-  "Solo consultants, coaches and one-person businesses",
-  "Pre-revenue, still working out what the product is",
-  "Seed-stage SaaS on sub-£1,000 annual contracts",
-  "Under £1,000 a month of media — the frequency maths doesn't work, and I'd be charging you to find that out",
-  "Anyone who wants a guaranteed number before I've seen the account",
+  "Pre-revenue, still working out what you sell",
+  "Margins too thin to pay for a new customer",
+  "Under £1,000 a month of media — there isn't enough data to learn from, and we'd be charging you to find that out",
+  "You need ten customers by next week",
+  "Anyone who wants a guaranteed number before we've seen the account",
 ];
 
 const method = [
   {
     heading: "“Cost per lead” means nothing until you say which lead",
     body: [
-      "A form fill, a webinar registration, someone who actually turns up, and a booked meeting with a qualified buyer are four different things. On the same platform, with the same spend, they can differ by twenty times.",
+      "A form fill, a newsletter sign-up, a phone call, and a customer who actually buys are four different things. On the same platform, with the same spend, they can differ by twenty times.",
       "So “our cost per lead is £40” isn't a fact about your business. It's a fact about which rung of that ladder somebody decided to count. When a report looks surprisingly good, this is usually why: the further down the ladder you count, the better it reads and the less it means.",
-      "The first thing I do is agree which rung we're counting. Then it never moves, including in the months when moving it would flatter me.",
+      "The first thing we do is agree which rung we're counting. Then it never moves, including in the months when moving it would flatter us.",
     ],
     link: {
       to: "/resources/linkedin-tracking-attribution",
-      label: "How I set up tracking and attribution",
+      label: "How we set up tracking and attribution",
     },
   },
   {
-    heading: "Most of your LinkedIn clicks never reach your website",
+    heading: "Ad platforms mark their own homework",
     body: [
-      "LinkedIn records a click when someone expands the text, taps your company name, opens the image, or hits “see more”. All of it lands in Campaign Manager as a click.",
-      "On some formats the majority of recorded clicks are on-platform actions that never touch your site. So a healthy-looking 2% click-through rate can sit next to almost no sessions in your analytics, and the campaign looks fine right up until somebody checks the other end.",
-      "That's why the tracking gets built before the campaign goes live, and why I report from your analytics rather than from the platform marking its own homework.",
+      "Every platform counts a click generously. On LinkedIn, expanding the text or tapping the company name counts. On Meta, a tap on the profile counts. Google will happily take credit for a customer who was already searching for you by name.",
+      "So a healthy-looking click-through rate can sit next to almost no sessions in your analytics, and a campaign looks fine right up until somebody checks the other end.",
+      "That's why the tracking gets built before the campaign goes live, and why we report from your analytics and your sales rather than from the platform's own numbers.",
     ],
     link: {
       to: "/resources/linkedin-ad-creative",
@@ -107,13 +107,13 @@ const method = [
   {
     heading: "Audience size and budget are one decision, not two",
     body: [
-      "Spread £1,000 a month across an audience of 500,000 and each person sees your ad a fraction of one time — below the point where anyone remembers seeing it at all. The money gets spent and nothing compounds.",
-      "Narrow it to the 2,000 to 5,000 companies that are genuinely your buyer and the same budget buys enough frequency to be recognised. Most accounts I'm shown are targeting an audience ten to a hundred times too large for what they're spending on it.",
-      "The campaign objective does the same damage more quietly. It constrains what the algorithm optimises for, so choosing the wrong one doesn't just under-perform — it reliably delivers the wrong audience.",
+      "Spread £1,000 a month across an audience of millions and each person sees your ad a fraction of one time — below the point where anyone remembers seeing it at all. The money gets spent and nothing compounds.",
+      "Narrow it to the people genuinely likely to buy and the same budget buys enough frequency to be recognised. Most accounts we're shown are targeting an audience ten to a hundred times too large for what they're spending on it.",
+      "The campaign objective does the same damage more quietly. It decides what the algorithm optimises for, so choosing the wrong one doesn't just under-perform — it reliably delivers the wrong people.",
     ],
     link: {
       to: "/resources/linkedin-audience-targeting",
-      label: "How I size an audience against a budget",
+      label: "How we size an audience against a budget",
     },
   },
 ];
@@ -124,28 +124,28 @@ const stages = [
     title: "Audit",
     when: "30 minutes, free",
     description:
-      "I look at your account while we talk, or a competitor's if you haven't started. You leave with what I'd change and in what order — and whether I think this is the right call for you at all.",
+      "We look at your account while we talk, or a competitor's if you haven't started. You leave with what we'd change and in what order — and whether we think paid growth is the right call for you at all.",
   },
   {
     num: 2,
     title: "Build",
     when: "Weeks 1–2",
     description:
-      "Tracking built and verified. Audiences constructed and sized against the budget. Three to five messages written and built as ads. Agreement in writing on which conversion we're counting.",
+      "Tracking built and verified. Audiences built and sized against the budget. Three to five messages written and made into ads. Agreement in writing on which conversion we're counting.",
   },
   {
     num: 3,
     title: "Run",
     when: "Weeks 3–6",
     description:
-      "Live, with budget split across the messages. A short note each week on what's moving. Losing messages get switched off as the evidence arrives, not on a reporting schedule.",
+      "Live, with budget split across the messages. A short note each week on what's moving. Losing ads get switched off as the evidence arrives, not on a reporting schedule.",
   },
   {
     num: 4,
     title: "Grow",
     when: "Week 6 onwards",
     description:
-      "Budget concentrates behind what's working. One number a month — what a qualified conversation cost — with the working shown underneath so you can check it rather than trust it.",
+      "Budget concentrates behind what's working and scales from there. One number a month — what a new customer cost — with the working shown underneath so you can check it rather than trust it.",
   },
 ];
 
@@ -156,12 +156,12 @@ export default function Index() {
       <section className="pt-32 pb-10 px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-display text-[42px] lg:text-[58px] font-bold leading-[1.08] tracking-tight mb-6 max-w-3xl">
-            Customer acquisition for UK B2B SaaS companies.
+            Paid growth for businesses ready to scale.
           </h1>
           <p className="text-lg text-gray-400 leading-relaxed mb-9 max-w-2xl">
-            One person doing the three jobs you'd normally buy from three
-            suppliers — the tracking, the creative and the media buying — after 25
-            years building the products being sold.
+            Google, Meta and LinkedIn ads from one team that does the three jobs
+            you'd normally buy from three suppliers: the tracking, the creative
+            and the media buying. Led by 25 years in digital marketing.
           </p>
           <a
             href={BOOKING_URL}
@@ -193,19 +193,19 @@ export default function Index() {
           </h2>
           <div className="space-y-5 text-[17px] text-gray-400 leading-relaxed max-w-2xl">
             <p>
-              Referrals still come in, but they arrive in clumps. Two in March,
-              nothing in April. You can't plan a hire around it and you can't
-              forecast from it.
+              Word of mouth still brings customers in, but it arrives in clumps.
+              A good month, then a quiet one. You can't plan growth around it and
+              you can't forecast from it.
             </p>
             <p>
-              You post on LinkedIn yourself. Some of it lands. It doesn't scale,
-              and it stops completely in the weeks you're busy delivering.
+              You post on social media yourself. Some of it lands. It doesn't
+              scale, and it stops completely in the weeks you're busy.
             </p>
             <p>
               And somewhere in the last two years, money went into ads. An agency,
               a freelancer, or you on a Sunday evening. It produced clicks, a few
-              enquiries from companies you'd never sell to, and a dashboard nobody
-              opens any more.
+              enquiries from people who were never going to buy, and a dashboard
+              nobody opens any more.
             </p>
             <p className="text-gray-300">
               None of that means this won't work for you. It usually means
@@ -223,21 +223,20 @@ export default function Index() {
           </h2>
           <div className="space-y-5 text-[17px] text-gray-400 leading-relaxed max-w-2xl">
             <p>
-              In a company of 11 to 200 people, marketing owns activity and sales
-              owns revenue. What a qualified conversation costs, end to end, sits
-              in the middle and belongs to nobody.
+              In most growing businesses, marketing owns activity and sales owns
+              revenue. What a new customer costs, end to end, sits in the middle
+              and belongs to nobody.
             </p>
             <p>
               So the questions that decide whether any of this works never get
-              answered. What is a conversation with the right buyer actually worth
-              to us? Which of the four things we call a “lead” are we counting?
+              answered. What is a new customer actually worth to us? Which of the four things we call a “lead” are we counting?
               Is the next £1,000 better spent on the audience or the creative,
               and how would we know either way?
             </p>
             <p>
               Nobody is being lazy. The question spans two departments and needs
-              someone who can read an ad account, and most companies this size
-              don't have that person on the payroll.
+              someone who can read an ad account, and most businesses don't have
+              that person on the payroll.
             </p>
           </div>
         </div>
@@ -263,9 +262,9 @@ export default function Index() {
           </div>
           <div className="max-w-2xl">
             <p className="text-[17px] text-gray-300 leading-relaxed">
-              It is three things, in this order. Find which message lands with a
-              specific audience. Put the money behind the one that wins. Report
-              what it cost to get a conversation with someone worth talking to.
+              It is three things, in this order. Find which message lands with the
+              right audience. Put the money behind the one that wins. Report what
+              it cost to win a customer, and keep growing from there.
             </p>
           </div>
         </div>
@@ -279,7 +278,7 @@ export default function Index() {
           </h2>
           <p className="text-gray-400 leading-relaxed mb-10 max-w-2xl">
             None of this is a judgement on anyone. The work needs certain
-            conditions to produce anything at all, and below them I would just be
+            conditions to produce anything at all, and below them we would just be
             charging you to discover that.
           </p>
 
@@ -311,10 +310,10 @@ export default function Index() {
           </div>
 
           <p className="text-[17px] text-gray-300 leading-relaxed mt-10 max-w-2xl">
-            The short version: this works when a customer is worth £10,000 or more
-            a year. Below that, LinkedIn's cost per lead eats your margin and no
-            amount of good creative fixes it. I'll say so on the call rather than
-            take the work.
+            The short version: this works when the numbers on a new customer add
+            up. If a customer is worth less than it costs to win one, no amount of
+            good creative fixes it. We'll say so on the call rather than take the
+            work.
           </p>
         </div>
       </section>
@@ -326,9 +325,9 @@ export default function Index() {
             How this is actually done
           </h2>
           <p className="text-gray-400 leading-relaxed mb-12 max-w-2xl">
-            I'm not going to show you results you have no way of verifying. Here
-            is the reasoning instead. If you buy media yourself, you'll know within
-            a paragraph whether I do too.
+            We're not going to show you results you have no way of verifying.
+            Here is the reasoning instead. If you buy media yourself, you'll know
+            within a paragraph whether we do too.
           </p>
 
           <div className="space-y-12">
@@ -385,7 +384,7 @@ export default function Index() {
       <section className="pt-10 pb-12 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl lg:text-[38px] font-bold tracking-tight mb-8">
-            Why one person instead of three suppliers
+            Why one team instead of three suppliers
           </h2>
           <div className="space-y-5 text-[17px] text-gray-400 leading-relaxed max-w-2xl">
             <p>
@@ -396,13 +395,12 @@ export default function Index() {
               and look.
             </p>
             <p>
-              I've done all three jobs. Ex-developer, so I build the tracking
-              myself. Five years at Hearst in advertising creative solutions, so I
-              make the ads rather than brief them out. 17 years buying Google and
-              Meta before specialising in LinkedIn, which is where this now lives
-              full time. And 25 years building products, which is why I
-              start from what you're actually selling rather than from how to buy
-              impressions for it.
+              Our founder, Mark Proctor, has done all three jobs. Ex-developer, so
+              the tracking gets built in-house. Five years at Hearst in advertising
+              creative solutions, so we make the ads rather than brief them out.
+              17 years buying Google and Meta, plus LinkedIn. And 25 years in
+              digital, which is why we start from what you're actually selling
+              rather than from how to buy impressions for it.
             </p>
             <p>
               The cost comparison is simple enough. Management tops out at £1,500 a
@@ -428,17 +426,17 @@ export default function Index() {
           </h2>
           <div className="space-y-5 text-[17px] text-gray-400 leading-relaxed max-w-2xl">
             <p>
-              Companies buy traffic before they know which message converts. It
+              Businesses buy traffic before they know which message converts. It
               feels like progress, because something is live and the numbers are
               moving.
             </p>
             <p>
-              The pattern goes like this. The offer that works through referral gets
+              The pattern goes like this. The offer that works through word of mouth gets
               built into a campaign and put in front of strangers. But a referral
               arrives with borrowed trust — somebody vouched for you — and the offer
               only ever made sense because of it. Strangers have no reason to
               believe a word of it. So the campaign produces clicks, a few enquiries
-              from the wrong kind of company, and no conversations.
+              from the wrong people, and no sales.
             </p>
             <p>
               Then three months go into bids, keywords and landing pages: the
@@ -467,7 +465,7 @@ export default function Index() {
       <CtaBand
         showAvatar
         heading="Book a 30-minute audit."
-        body="I'll look at your account while we talk — or a competitor's, if you haven't started. You leave with what I'd change, in what order, and an honest answer on whether I'd take it on. No deck, and no proposal chasing you afterwards unless you ask for one."
+        body="We'll look at your account while we talk — or a competitor's, if you haven't started. You leave with what we'd change, in what order, and an honest answer on whether we'd take it on. No deck, and no proposal chasing you afterwards unless you ask for one."
       />
     </div>
   );

@@ -2,11 +2,11 @@ import type { MetaFunction } from "react-router";
 import { BOOKING_URL } from "../lib/booking";
 
 export const meta: MetaFunction = () => [
-  { title: "LinkedIn Ad Creative & Formats for B2B SaaS — ProspectFly" },
+  { title: "LinkedIn Ad Creative & Formats — ProspectFly" },
   {
     name: "description",
     content:
-      "Why Thought Leader Ads outperform company page content and how to write LinkedIn ad copy that generates pipeline, not just impressions.",
+      "Why Thought Leader Ads outperform company page content and how to write LinkedIn ad copy that generates leads and sales, not just impressions.",
   },
 ];
 
@@ -14,7 +14,7 @@ const formats = [
   {
     name: "Thought Leader Ads",
     recommended: true,
-    description: "Sponsored posts from a named individual — founder, executive or team member. Appears in the feed as a personal post, not a company ad.",
+    description: "Sponsored posts from a named individual: owner, executive or team member. Appears in the feed as a personal post, not a company ad.",
     pros: ["Personal voice builds trust faster than brand voice", "Organic-looking — lower ad fatigue", "Works alongside organic posting strategy", "Ideal for brand awareness CPM campaigns"],
     cons: ["Requires an active LinkedIn poster", "Can't edit copy after publishing — you promote the existing post", "Performance tied to quality of the post itself"],
   },
@@ -36,8 +36,8 @@ const formats = [
     name: "Video Ads",
     recommended: false,
     description: "Short-form video in the LinkedIn feed. High attention capture but high production effort.",
-    pros: ["Strong scroll-stopping power", "Good for product demos or founder stories", "View-through data gives signal on interest"],
-    cons: ["Production cost is high", "LinkedIn video CPMs are expensive", "Most B2B audiences watch without sound — captions essential"],
+    pros: ["Strong scroll-stopping power", "Good for product walkthroughs or behind-the-scenes stories", "View-through data gives signal on interest"],
+    cons: ["Production cost is high", "LinkedIn video CPMs are expensive", "Most LinkedIn audiences watch without sound, so captions are essential"],
   },
 ];
 
@@ -51,7 +51,7 @@ const postTypes = [
   },
   {
     type: "Specific insight with a number",
-    hook: "I analysed 40 LinkedIn ad accounts. Here's what the top 10% do differently.",
+    hook: "We analysed 40 LinkedIn ad accounts. Here's what the top 10% do differently.",
     engagement: "Medium reactions",
     pipelineSignal: "High",
     why: "Credibility-building content. The people who engage are usually evaluating whether you know your subject.",
@@ -65,7 +65,7 @@ const postTypes = [
   },
   {
     type: "Transparent results",
-    hook: "I launched a LinkedIn ad campaign this morning. Here's what happened in 24 hours.",
+    hook: "We launched a LinkedIn ad campaign this morning. Here's what happened in 24 hours.",
     engagement: "Medium reactions",
     pipelineSignal: "Very high",
     why: "Real numbers build trust fast. The people who engage are implicitly interested in the outcome — which is your service.",
@@ -96,7 +96,7 @@ export default function Creative() {
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl font-bold mb-4">LinkedIn ad formats compared</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            LinkedIn offers over a dozen ad formats. For B2B SaaS brand awareness, one format consistently outperforms the rest.
+            LinkedIn offers over a dozen ad formats. For brand awareness, one format consistently outperforms the rest.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export default function Creative() {
               <div className="flex items-start justify-between mb-4">
                 <h3 className="font-display font-semibold text-lg text-white">{format.name}</h3>
                 {format.recommended && (
-                  <span className="text-xs bg-lime-400/10 text-lime-400 px-2 py-0.5 rounded-full shrink-0 ml-2">I use this</span>
+                  <span className="text-xs bg-lime-400/10 text-lime-400 px-2 py-0.5 rounded-full shrink-0 ml-2">We use this</span>
                 )}
               </div>
               <p className="text-sm text-gray-400 leading-relaxed mb-5">{format.description}</p>
@@ -145,9 +145,9 @@ export default function Creative() {
       {/* Post types */}
       <section className="py-16 px-6 max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-display text-3xl font-bold mb-4">Post types that generate pipeline</h2>
+          <h2 className="font-display text-3xl font-bold mb-4">Post types that generate leads</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            Not all high-engagement posts produce pipeline. Here's how the formats break down for B2B SaaS.
+            Not all high-engagement posts produce leads. Here's how the formats break down.
           </p>
         </div>
 
@@ -164,7 +164,7 @@ export default function Creative() {
                   <span className="text-gray-300">{item.engagement}</span>
                 </div>
                 <div>
-                  <span className="text-gray-600">Pipeline signal: </span>
+                  <span className="text-gray-600">Lead signal: </span>
                   <span className="text-lime-400">{item.pipelineSignal}</span>
                 </div>
               </div>
@@ -204,9 +204,9 @@ export default function Creative() {
 
       {/* CTA */}
       <section className="py-20 px-6 text-center">
-        <h2 className="font-display text-3xl font-bold mb-4">Want me to review your ad creative?</h2>
+        <h2 className="font-display text-3xl font-bold mb-4">Want us to review your ad creative?</h2>
         <p className="text-gray-400 mb-8 max-w-md mx-auto">
-          Book a free call and bring your current LinkedIn posts or ads. I'll tell you which formats are worth promoting and what copy angles are missing.
+          Book a free call and bring your current LinkedIn posts or ads. We'll tell you which formats are worth promoting and what copy angles are missing.
         </p>
         <a
           href={BOOKING_URL}

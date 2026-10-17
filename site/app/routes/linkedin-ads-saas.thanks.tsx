@@ -25,8 +25,8 @@ export default function LinkedInAdsSaasThanks() {
             Got it.
           </h1>
           <div className="space-y-4 text-[17px] text-gray-400 leading-relaxed max-w-2xl">
-            <p>Your video lands within two working days, sent to the address you gave me.</p>
-            <p>If I need anything else to make it useful, I'll ask — but I probably won't.</p>
+            <p>Your video lands within two working days, sent to the address you gave us.</p>
+            <p>If we need anything else to make it useful, we'll ask — but we probably won't.</p>
           </div>
         </div>
       </section>

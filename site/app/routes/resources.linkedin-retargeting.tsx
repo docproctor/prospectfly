@@ -2,11 +2,11 @@ import type { MetaFunction } from "react-router";
 import { BOOKING_URL } from "../lib/booking";
 
 export const meta: MetaFunction = () => [
-  { title: "LinkedIn Retargeting & Lead Gen for B2B SaaS — ProspectFly" },
+  { title: "LinkedIn Retargeting & Lead Gen for Growth — ProspectFly" },
   {
     name: "description",
     content:
-      "How to retarget LinkedIn ad engagers and warm prospects for B2B SaaS. Matched audiences, engager lists and why warm outreach converts at a fundamentally different rate.",
+      "How to retarget LinkedIn ad engagers and warm prospects for your business. Matched audiences, engager lists and why warm outreach converts at a fundamentally different rate.",
   },
 ];
 
@@ -68,14 +68,14 @@ const sequence = [
     objective: "Engagement",
     audience: "Ad engagers + website visitors (retargeting)",
     content: "More specific posts. Problem-focused. Begins to hint at the solution.",
-    goal: "Build an engager list. These people are your warm pipeline.",
+    goal: "Build an engager list. These people are your warm leads.",
   },
   {
     phase: "Conversion",
     duration: "Week 6+",
     objective: "Website Visits or Lead Gen",
     audience: "Engagers who have seen 5+ impressions",
-    content: "Direct offer. Demo, audit, pilot programme. Clear CTA.",
+    content: "Direct offer. Free consultation, audit or quote. Clear CTA.",
     goal: "Convert warm prospects who already know your name into booked calls.",
   },
 ];
@@ -95,7 +95,7 @@ export default function Retargeting() {
         <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
           The purpose of a brand awareness campaign isn't impressions — it's building
           a warm list. People who've seen your content 4–5 times and engaged with it
-          are not cold prospects. Retargeting turns that audience into pipeline.
+          are not cold prospects. Retargeting turns that audience into leads and sales.
         </p>
       </section>
 
@@ -188,11 +188,11 @@ export default function Retargeting() {
             <div>
               <div className="text-xs text-lime-400 font-mono mb-4">Intelligence tier</div>
               <h2 className="font-display text-3xl font-bold text-white mb-4">
-                I identify who engaged — by name.
+                We identify who engaged, by name.
               </h2>
               <p className="text-sm text-gray-300 leading-relaxed mb-4">
-                LinkedIn tells you aggregate engagement data. I go further —
-                I identify the individual people who engaged with your ads, enrich their profiles,
+                LinkedIn tells you aggregate engagement data. We go further and
+                identify the individual people who engaged with your ads, enrich their profiles,
                 score them against your ICP and deliver a named warm prospect list every month.
               </p>
               <p className="text-sm text-gray-400 leading-relaxed">

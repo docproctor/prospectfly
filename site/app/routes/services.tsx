@@ -8,7 +8,7 @@ export const meta: MetaFunction = () => {
     {
       name: "description",
       content:
-        "What I do, what you own at the end, what I need from you, and what it costs. LinkedIn customer acquisition for UK B2B SaaS, run by one person.",
+        "What we do, what you own at the end, what we need from you, and what it costs. Growth-focused paid ads across Google, Meta and LinkedIn.",
     },
   ];
 };
@@ -17,7 +17,7 @@ const included = [
   {
     title: "Tracking and measurement",
     description:
-      "Conversion tracking that records the thing you care about, not the thing that fires most easily. I build it myself, in your tag manager, on your domain.",
+      "Conversion tracking that records the thing you care about, not the thing that fires most easily. We build it ourselves, in your tag manager, on your domain.",
   },
   {
     title: "Message testing before scale",
@@ -27,7 +27,7 @@ const included = [
   {
     title: "The creative",
     description:
-      "I write the copy and make the ads. Static, document, video cut from a call. Nothing gets briefed out to a third party and waited on for a fortnight.",
+      "We write the copy and make the ads. Static, carousel, short-form video. Nothing gets briefed out to a third party and waited on for a fortnight.",
   },
   {
     title: "Campaign build and management",
@@ -37,12 +37,12 @@ const included = [
   {
     title: "Landing pages, where the page is the problem",
     description:
-      "I was a developer before I bought media. If the ad is working and the page is losing it, I build the page rather than telling you to find someone who can.",
+      "Our founder was a developer before buying media. If the ad is working and the page is losing it, we build the page rather than telling you to find someone who can.",
   },
   {
     title: "Reporting you can read in a minute",
     description:
-      "One number at the top: what a qualified conversation cost. Then the working behind it, so you can check the number rather than trust it.",
+      "One number at the top: what a new customer cost. Then the working behind it, so you can check the number rather than trust it.",
   },
 ];
 
@@ -50,13 +50,13 @@ const youOwn = [
   "The ad account, in your company name, on your billing.",
   "The data — audiences, conversion history, everything the account has learned.",
   "The creative, source files included.",
-  "The tracking, which stays where I built it.",
+  "The tracking, which stays where we built it.",
 ];
 
 const fromYou = [
   "An hour a fortnight on a call. Less once things settle.",
   "Access to the ad accounts and analytics, or permission to create them.",
-  "Someone who answers an enquiry inside a working day. Campaigns that produce conversations nobody follows up waste your money and my time.",
+  "Someone who answers an enquiry inside a working day. Campaigns that produce conversations nobody follows up waste your money and our time.",
   "A straight answer on what a customer is worth to you. Without it, nobody can say whether a lead at £180 is good or terrible.",
 ];
 
@@ -70,13 +70,13 @@ export default function Services() {
             The engagement
           </div>
           <h1 className="font-display text-4xl md:text-5xl font-bold leading-tight mb-6">
-            What I do, what you own,
+            What we do, what you own,
             <br />
             and what it costs.
           </h1>
           <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">
-            There are no packages. Scope is set after the audit, because I can't
-            tell you what you need until I've looked at the account. What doesn't
+            There are no packages. Scope is set after the audit, because we can't
+            tell you what you need until we've looked at the account. What doesn't
             change is the list below.
           </p>
         </div>
@@ -104,7 +104,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* What you own / What I need */}
+      {/* What you own / What we need */}
       <section className="pt-8 pb-12 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
@@ -130,7 +130,7 @@ export default function Services() {
 
           <div>
             <h2 className="font-display text-2xl font-bold mb-3">
-              What I need from you
+              What we need from you
             </h2>
             <p className="text-gray-500 text-[15px] mb-6">
               Short list, but it isn't optional.
@@ -171,8 +171,8 @@ export default function Services() {
                   <span className="text-lg text-gray-500 font-normal"> / month minimum</span>
                 </div>
                 <p className="text-gray-400 text-[15px] leading-relaxed">
-                  Media, paid directly to LinkedIn. It never comes
-                  through me and it is never marked up.
+                  Media, paid directly to Google, Meta or LinkedIn. It
+                  never comes through us and it is never marked up.
                 </p>
               </div>
             </div>
@@ -202,7 +202,7 @@ export default function Services() {
 
       <CtaBand
         heading="Start with the audit."
-        body="Thirty minutes on your account, or a competitor's if you haven't started. You leave with what I'd change, in what order, and whether I think it's worth doing at all."
+        body="Thirty minutes on your account, or a competitor's if you haven't started. You leave with what we'd change, in what order, and whether we think it's worth doing at all."
       />
     </main>
   );
