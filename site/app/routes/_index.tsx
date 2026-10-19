@@ -7,24 +7,19 @@ import { BOOKING_LABEL, BOOKING_URL } from "../lib/booking";
 
 const faqs: FaqItem[] = [
   {
-    question: "What does it cost?",
-    answer:
-      "Management is £750 to £1,500 a month, depending on how much has to be built from scratch. Media is at least £1,000 a month, paid directly to Google, Meta or LinkedIn — never through us and never marked up. Scope and price are agreed in writing after the audit.",
-  },
-  {
     question: "How long before we see anything?",
     answer:
-      "Tracking and the first campaigns are live inside two weeks. You'll have real data on which message works by about week four. A cost per customer you can plan growth around takes six to eight weeks, because it needs enough results to be more than a coincidence. Anyone promising you less than that is guessing.",
+      "Tracking and the first outbound or paid campaigns are live inside two weeks. You'll have real data on which message works by about week four. A cost per customer you can plan growth around takes six to eight weeks, because it needs enough results to be more than a coincidence. Fixes further down the funnel — onboarding, churn, expansion — run alongside once we can see where customers drop out.",
   },
   {
-    question: "What if we've already tried ads and it didn't work?",
+    question: "Is this ads, outbound, or something else?",
     answer:
-      "That is the common case. Most accounts we look at failed for one of three reasons: the audience was far too broad for the budget, the conversion being counted wasn't a real lead or sale, or the campaign was set up to optimise for something nobody wanted. None of those mean paid ads don't work for you — and finding out which one it was takes about ten minutes of the audit.",
+      "Whichever channel fits what you sell. For most B2B businesses that's a mix of cold outbound and paid ads on LinkedIn, Meta or Google, with automation doing the repetitive work in between. We don't start from a favourite channel. We start from what a customer is worth and work backwards.",
   },
   {
-    question: "Do we need a website or tracking set up first?",
+    question: "What if we've already tried this and it didn't work?",
     answer:
-      "No. We build the tracking, and we'll build landing pages if the page is what's losing the traffic. Don't fix anything before the audit — it's easier to see what's wrong if you leave it as it is.",
+      "That is the common case. Most failed attempts we look at broke in one of three places: the audience or list was far too broad, the thing being counted wasn't a real lead, or the leads came in and nobody followed them through to revenue. None of those mean growth isn't possible for you — and finding out which one it was takes about ten minutes of the audit.",
   },
   {
     question: "Who actually does the work?",
@@ -35,11 +30,11 @@ const faqs: FaqItem[] = [
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Growth marketing agency — Google, Meta & LinkedIn | ProspectFly" },
+    { title: "B2B growth agency — outbound, paid ads & automation | ProspectFly" },
     {
       name: "description",
       content:
-        "ProspectFly is a growth-focused digital marketing agency. Paid ads across Google, Meta and LinkedIn, with the tracking, creative and media buying handled in one place.",
+        "ProspectFly is a B2B growth agency. We own the whole loop — acquisition, activation, retention and revenue — using cold outbound, paid ads and AI automation.",
     },
     { "script:ld+json": faqJsonLd(faqs) },
   ];
@@ -47,9 +42,9 @@ export const meta: MetaFunction = () => {
 
 const notThis = [
   {
-    title: "Not vanity metrics",
+    title: "Not a single channel",
     description:
-      "We're not here to buy impressions and then tell you about uplift you can't feel.",
+      "We don't sell ads or outbound as a product. Channels are tools for a number, not the number.",
   },
   {
     title: "Not a content retainer",
@@ -64,27 +59,55 @@ const notThis = [
 ];
 
 const goodFit = [
-  "An established business with something people already buy",
+  "An established B2B business with something people already buy",
   "A customer worth enough that paying to win one makes sense",
   "The owner, CEO or MD is in the room when this gets decided",
-  "At least £1,000 a month for media, separate from management",
+  "A budget to test with, separate from management",
   "Someone answers an enquiry inside a working day",
 ];
 
 const notGoodFit = [
   "Pre-revenue, still working out what you sell",
   "Margins too thin to pay for a new customer",
-  "Under £1,000 a month of media — there isn't enough data to learn from, and we'd be charging you to find that out",
+  "No budget to test with — there isn't enough data to learn from, and we'd be charging you to find that out",
   "You need ten customers by next week",
-  "Anyone who wants a guaranteed number before we've seen the account",
+  "Anyone who wants a guaranteed number before we've seen the business",
+];
+
+const loop = [
+  {
+    title: "Acquisition",
+    description:
+      "Cold outbound and paid ads on LinkedIn, Meta and Google, run against one agreed definition of a lead.",
+  },
+  {
+    title: "Activation",
+    description:
+      "Shorten the gap between first contact and first value — the call booked, the trial started, the first result seen.",
+  },
+  {
+    title: "Retention",
+    description:
+      "Find where customers quietly drift away, and fix onboarding and engagement before it shows up as churn.",
+  },
+  {
+    title: "Referral & expansion",
+    description:
+      "Give happy customers a reason to bring more accounts, more seats and more colleagues with them.",
+  },
+  {
+    title: "Revenue",
+    description:
+      "Pricing, packaging and the sales follow-through that turns all of the above into money in the bank.",
+  },
 ];
 
 const method = [
   {
     heading: "“Cost per lead” means nothing until you say which lead",
     body: [
-      "A form fill, a newsletter sign-up, a phone call, and a customer who actually buys are four different things. On the same platform, with the same spend, they can differ by twenty times.",
-      "So “our cost per lead is £40” isn't a fact about your business. It's a fact about which rung of that ladder somebody decided to count. When a report looks surprisingly good, this is usually why: the further down the ladder you count, the better it reads and the less it means.",
+      "A form fill, a reply to a cold email, a booked call, and a customer who actually signs are four different things. On the same channel, with the same spend, they can differ by twenty times.",
+      "So “our cost per lead is £40” isn't a fact about your business. It's a fact about which rung of that ladder somebody decided to count. The further down the ladder you count, the better a report reads and the less it means.",
       "The first thing we do is agree which rung we're counting. Then it never moves, including in the months when moving it would flatter us.",
     ],
     link: {
@@ -93,28 +116,20 @@ const method = [
     },
   },
   {
-    heading: "Ad platforms mark their own homework",
+    heading: "Most growth problems aren't acquisition problems",
     body: [
-      "Every platform counts a click generously. On LinkedIn, expanding the text or tapping the company name counts. On Meta, a tap on the profile counts. Google will happily take credit for a customer who was already searching for you by name.",
-      "So a healthy-looking click-through rate can sit next to almost no sessions in your analytics, and a campaign looks fine right up until somebody checks the other end.",
-      "That's why the tracking gets built before the campaign goes live, and why we report from your analytics and your sales rather than from the platform's own numbers.",
+      "When growth stalls, the instinct is to buy more leads. But if one in five customers leaves every month, you're refilling a bucket with a hole in it, and every extra pound of acquisition just makes the hole more expensive.",
+      "On our own products we cut monthly churn from 20% to 11% by rebuilding onboarding and scoring account health — which nearly doubled how long a customer stayed and lifted lifetime value by 80%. No new leads required.",
+      "So we look at the whole funnel before deciding where the next pound goes. Sometimes it's the top. Often it isn't.",
     ],
-    link: {
-      to: "/resources/linkedin-ad-creative",
-      label: "Which ad formats actually earn the click",
-    },
   },
   {
-    heading: "Audience size and budget are one decision, not two",
+    heading: "Automation should do the work nobody wants to do",
     body: [
-      "Spread £1,000 a month across an audience of millions and each person sees your ad a fraction of one time — below the point where anyone remembers seeing it at all. The money gets spent and nothing compounds.",
-      "Narrow it to the people genuinely likely to buy and the same budget buys enough frequency to be recognised. Most accounts we're shown are targeting an audience ten to a hundred times too large for what they're spending on it.",
-      "The campaign objective does the same damage more quietly. It decides what the algorithm optimises for, so choosing the wrong one doesn't just under-perform — it reliably delivers the wrong people.",
+      "List building, enrichment, email verification, follow-up sequences, lead routing, reporting. Most B2B teams do these by hand, badly, in the gaps between their actual jobs.",
+      "We build that plumbing with outbound tools, n8n and LLMs, so the repetitive work runs on its own and people spend their time on conversations that might close.",
+      "AI is useful here precisely because it's unglamorous: it removes hours, not judgement.",
     ],
-    link: {
-      to: "/resources/linkedin-audience-targeting",
-      label: "How we size an audience against a budget",
-    },
   },
 ];
 
@@ -124,28 +139,28 @@ const stages = [
     title: "Audit",
     when: "30 minutes, free",
     description:
-      "We look at your account while we talk, or a competitor's if you haven't started. You leave with what we'd change and in what order — and whether we think paid growth is the right call for you at all.",
+      "We look at your funnel while we talk — where leads come from, where they stall, and where customers leave. You leave with what we'd change and in what order, and whether we think we're the right people to do it.",
   },
   {
     num: 2,
     title: "Build",
     when: "Weeks 1–2",
     description:
-      "Tracking built and verified. Audiences built and sized against the budget. Three to five messages written and made into ads. Agreement in writing on which conversion we're counting.",
+      "Tracking built and verified. Lists and audiences built and sized against the budget. Outbound sequences and ads written. Automation wired in. Agreement in writing on which conversion we're counting.",
   },
   {
     num: 3,
     title: "Run",
     when: "Weeks 3–6",
     description:
-      "Live, with budget split across the messages. A short note each week on what's moving. Losing ads get switched off as the evidence arrives, not on a reporting schedule.",
+      "Live, with effort split across messages and channels. A short note each week on what's moving. Losing messages get switched off as the evidence arrives, not on a reporting schedule.",
   },
   {
     num: 4,
     title: "Grow",
     when: "Week 6 onwards",
     description:
-      "Budget concentrates behind what's working and scales from there. One number a month — what a new customer cost — with the working shown underneath so you can check it rather than trust it.",
+      "Budget concentrates behind what's working, and attention moves down the funnel — activation, retention and expansion. One number a month — what a new customer cost and what they're worth — with the working shown underneath.",
   },
 ];
 
@@ -156,12 +171,12 @@ export default function Index() {
       <section className="pt-32 pb-10 px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-display text-[42px] lg:text-[58px] font-bold leading-[1.08] tracking-tight mb-6 max-w-3xl">
-            Paid growth for businesses ready to scale.
+            B2B growth, owned end to end.
           </h1>
           <p className="text-lg text-gray-400 leading-relaxed mb-9 max-w-2xl">
-            Google, Meta and LinkedIn ads from one team that does the three jobs
-            you'd normally buy from three suppliers: the tracking, the creative
-            and the media buying. Led by 25 years in digital marketing.
+            Acquisition, activation, retention and revenue, from one team that
+            owns the whole loop rather than one slice of it. Cold outbound, paid
+            ads and AI automation, led by 25 years in digital product and growth.
           </p>
           <a
             href={BOOKING_URL}
@@ -181,6 +196,8 @@ export default function Index() {
             <span>25 Years Experience</span>
             <span className="text-[#1e2229]">|</span>
             <span>50,000+ Booked Meetings in 27 niches</span>
+            <span className="text-[#1e2229]">|</span>
+            <span>£0 to £30k MRR on our own products</span>
           </div>
         </div>
       </section>
@@ -193,29 +210,28 @@ export default function Index() {
           </h2>
           <div className="space-y-5 text-[17px] text-gray-400 leading-relaxed max-w-2xl">
             <p>
-              Word of mouth still brings customers in, but it arrives in clumps.
-              A good month, then a quiet one. You can't plan growth around it and
-              you can't forecast from it.
+              Referrals and the founder's network still bring most customers in,
+              but they arrive in clumps. A good month, then a quiet one. You can't
+              plan growth around it and you can't forecast from it.
             </p>
             <p>
-              You post on social media yourself. Some of it lands. It doesn't
-              scale, and it stops completely in the weeks you're busy.
+              Somebody has tried outbound or ads. It produced some meetings, a few
+              enquiries from people who were never going to buy, and a tool
+              subscription nobody logs into any more.
             </p>
             <p>
-              And somewhere in the last two years, money went into ads. An agency,
-              a freelancer, or you on a Sunday evening. It produced clicks, a few
-              enquiries from people who were never going to buy, and a dashboard
-              nobody opens any more.
+              And the customers you do win don't all stay. Some churn quietly in
+              the first few months, and nobody is quite sure why.
             </p>
             <p className="text-gray-300">
-              None of that means this won't work for you. It usually means
-              nobody owned the number.
+              None of that means growth isn't possible for you. It usually means
+              nobody owned the whole number.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 3. The decision nobody owns */}
+      {/* 3. The number nobody owns */}
       <section className="pt-10 pb-10 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl lg:text-[38px] font-bold tracking-tight mb-8">
@@ -223,26 +239,56 @@ export default function Index() {
           </h2>
           <div className="space-y-5 text-[17px] text-gray-400 leading-relaxed max-w-2xl">
             <p>
-              In most growing businesses, marketing owns activity and sales owns
-              revenue. What a new customer costs, end to end, sits in the middle
-              and belongs to nobody.
+              In most B2B businesses, marketing owns leads, sales owns deals, and
+              customer success owns renewals. What it costs to win a customer, and
+              what that customer is worth by the time they leave, sits across all
+              three and belongs to nobody.
             </p>
             <p>
-              So the questions that decide whether any of this works never get
-              answered. What is a new customer actually worth to us? Which of the four things we call a “lead” are we counting?
-              Is the next £1,000 better spent on the audience or the creative,
-              and how would we know either way?
+              So the questions that decide whether growth works never get
+              answered. What is a new customer actually worth to us? Where in the
+              funnel are we losing the most? Is the next £1,000 better spent
+              finding new customers or keeping the ones we have, and how would we
+              know either way?
             </p>
             <p>
-              Nobody is being lazy. The question spans two departments and needs
-              someone who can read an ad account, and most businesses don't have
-              that person on the payroll.
+              Nobody is being lazy. The question spans three departments and needs
+              someone who can read the data in all of them, and most businesses
+              don't have that person on the payroll.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 4. What this actually is */}
+      {/* 4. The whole loop */}
+      <section className="pt-10 pb-12 px-6 border-t border-white/5">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-display text-3xl lg:text-[38px] font-bold tracking-tight mb-4">
+            The whole loop, not one slice of it
+          </h2>
+          <p className="text-gray-400 leading-relaxed mb-10 max-w-2xl">
+            Growth is five problems in a row. Fix one in isolation and the next one
+            along eats the gain.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {loop.map((item, i) => (
+              <div key={i} className="bg-[#16191f] rounded-2xl p-6 border border-white/5">
+                <div className="text-sm text-cyan-400 font-display font-semibold mb-2">
+                  0{i + 1}
+                </div>
+                <h3 className="font-display font-semibold text-white text-lg mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-400 text-[15px] leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. What this actually is */}
       <section className="pt-10 pb-12 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl lg:text-[38px] font-bold tracking-tight mb-8">
@@ -262,15 +308,16 @@ export default function Index() {
           </div>
           <div className="max-w-2xl">
             <p className="text-[17px] text-gray-300 leading-relaxed">
-              It is three things, in this order. Find which message lands with the
-              right audience. Put the money behind the one that wins. Report what
-              it cost to win a customer, and keep growing from there.
+              It is three things, in this order. Find where growth is actually
+              leaking. Fix the biggest leak first, with whichever channel or tool
+              fits. Report what a customer cost and what they're worth, and keep
+              going from there.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 5. Who this is for */}
+      {/* 6. Who this is for */}
       <section className="pt-10 pb-12 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl lg:text-[38px] font-bold tracking-tight mb-4">
@@ -310,15 +357,14 @@ export default function Index() {
           </div>
 
           <p className="text-[17px] text-gray-300 leading-relaxed mt-10 max-w-2xl">
-            The short version: this works when the numbers on a new customer add
-            up. If a customer is worth less than it costs to win one, no amount of
-            good creative fixes it. We'll say so on the call rather than take the
-            work.
+            The short version: this works when the numbers on a customer add up.
+            If a customer is worth less than it costs to win one, no channel fixes
+            it. We'll say so on the call rather than take the work.
           </p>
         </div>
       </section>
 
-      {/* 6. How this is done */}
+      {/* 7. How this is done */}
       <section className="pt-12 pb-12 px-6 border-t border-white/5 bg-[#111318]">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl lg:text-[38px] font-bold tracking-tight mb-4">
@@ -326,8 +372,8 @@ export default function Index() {
           </h2>
           <p className="text-gray-400 leading-relaxed mb-12 max-w-2xl">
             We're not going to show you results you have no way of verifying.
-            Here is the reasoning instead. If you buy media yourself, you'll know
-            within a paragraph whether we do too.
+            Here is the reasoning instead. If you've run growth yourself, you'll
+            know within a paragraph whether we have too.
           </p>
 
           <div className="space-y-12">
@@ -341,19 +387,21 @@ export default function Index() {
                     <p key={j}>{para}</p>
                   ))}
                 </div>
-                <Link
-                  to={item.link.to}
-                  className="inline-block mt-4 text-lime-400 text-[15px] font-medium hover:text-lime-300 transition-colors"
-                >
-                  {item.link.label} →
-                </Link>
+                {item.link && (
+                  <Link
+                    to={item.link.to}
+                    className="inline-block mt-4 text-lime-400 text-[15px] font-medium hover:text-lime-300 transition-colors"
+                  >
+                    {item.link.label} →
+                  </Link>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 7. How it works */}
+      {/* 8. How it works */}
       <section className="pt-12 pb-12 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl lg:text-[38px] font-bold tracking-tight mb-10">
@@ -380,33 +428,27 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 8. Why one person */}
+      {/* 9. Why one team */}
       <section className="pt-10 pb-12 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl lg:text-[38px] font-bold tracking-tight mb-8">
-            Why one team instead of three suppliers
+            Why one team instead of five suppliers
           </h2>
           <div className="space-y-5 text-[17px] text-gray-400 leading-relaxed max-w-2xl">
             <p>
-              The normal way to buy this is a developer for the tracking, an agency
-              for the campaigns, and somebody else for the creative. Three
-              contracts, three timelines, and the answer to “why isn't this
-              working” living in the gaps between them, where no one is paid to go
-              and look.
+              The normal way to buy growth is an outbound agency, an ads agency, a
+              developer for the tracking and automation, somebody for the creative,
+              and a consultant for onboarding and retention. Five contracts, five
+              timelines, and the answer to “why isn't this working” living in the
+              gaps between them, where no one is paid to go and look.
             </p>
             <p>
-              Our founder, Mark Proctor, has done all three jobs. Ex-developer, so
-              the tracking gets built in-house. Five years at Hearst in advertising
-              creative solutions, so we make the ads rather than brief them out.
-              17 years buying Google and Meta, plus LinkedIn. And 25 years in
-              digital, which is why we start from what you're actually selling
-              rather than from how to buy impressions for it.
-            </p>
-            <p>
-              The cost comparison is simple enough. Management tops out at £1,500 a
-              month — less than half what a junior marketing hire costs once
-              National Insurance and pension are counted. No recruitment process,
-              no notice period, and nobody learning the job on your budget.
+              Our founder, Mark Proctor, has spent 20 years in product management
+              — Hearst, Tesco, Harvey Nichols, Informa, Nestlé, Co-op and Omnicom —
+              and the last four building and growing ProspectFly's own products. He
+              has owned the whole loop himself: acquisition through outbound and
+              ads, onboarding that cut time-to-first-value from an hour to twenty
+              minutes, and a revenue line that has grown every year.
             </p>
           </div>
           <Link
@@ -418,7 +460,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 9. The mistake to avoid */}
+      {/* 10. The mistake to avoid */}
       <section className="pt-10 pb-12 px-6 border-t border-white/5 bg-[#111318]">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl lg:text-[38px] font-bold tracking-tight mb-8">
@@ -426,20 +468,20 @@ export default function Index() {
           </h2>
           <div className="space-y-5 text-[17px] text-gray-400 leading-relaxed max-w-2xl">
             <p>
-              Businesses buy traffic before they know which message converts. It
-              feels like progress, because something is live and the numbers are
-              moving.
+              Businesses buy more leads before they know which message converts, or
+              whether the customers they already have are staying. It feels like
+              progress, because something is live and the numbers are moving.
             </p>
             <p>
-              The pattern goes like this. The offer that works through word of mouth gets
-              built into a campaign and put in front of strangers. But a referral
-              arrives with borrowed trust — somebody vouched for you — and the offer
-              only ever made sense because of it. Strangers have no reason to
-              believe a word of it. So the campaign produces clicks, a few enquiries
-              from the wrong people, and no sales.
+              The pattern goes like this. The pitch that works through referrals
+              gets turned into a campaign and put in front of strangers. But a
+              referral arrives with borrowed trust — somebody vouched for you — and
+              the pitch only ever made sense because of it. Strangers have no
+              reason to believe a word of it. So the campaign produces meetings
+              with the wrong people, and no sales.
             </p>
             <p>
-              Then three months go into bids, keywords and landing pages: the
+              Then three months go into tools, sequences and landing pages: the
               variables that were never the problem. The message was the problem,
               and it was cheap to test before the budget went in.
             </p>
@@ -451,7 +493,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 10. FAQ */}
+      {/* 11. FAQ */}
       <section className="pt-12 pb-16 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl lg:text-[38px] font-bold tracking-tight mb-10">
@@ -461,11 +503,11 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 11. CTA */}
+      {/* 12. CTA */}
       <CtaBand
         showAvatar
         heading="Book a 30-minute audit."
-        body="We'll look at your account while we talk — or a competitor's, if you haven't started. You leave with what we'd change, in what order, and an honest answer on whether we'd take it on. No deck, and no proposal chasing you afterwards unless you ask for one."
+        body="We'll look at your funnel while we talk — where leads come from, where they stall, and where customers leave. You leave with what we'd change, in what order, and an honest answer on whether we'd take it on. No deck, and no proposal chasing you afterwards unless you ask for one."
       />
     </div>
   );
