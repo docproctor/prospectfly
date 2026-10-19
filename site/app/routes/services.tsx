@@ -8,7 +8,7 @@ export const meta: MetaFunction = () => {
     {
       name: "description",
       content:
-        "What we do, what you own at the end, what we need from you, and what it costs. Growth-focused paid ads across Google, Meta and LinkedIn.",
+        "What we do, what you own at the end, and what we need from you. Growth-focused paid ads across Google, Meta and LinkedIn.",
     },
   ];
 };
@@ -70,9 +70,9 @@ export default function Services() {
             The engagement
           </div>
           <h1 className="font-display text-4xl md:text-5xl font-bold leading-tight mb-6">
-            What we do, what you own,
+            What we do, and
             <br />
-            and what it costs.
+            what you own at the end.
           </h1>
           <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">
             There are no packages. Scope is set after the audit, because we can't
@@ -143,59 +143,6 @@ export default function Services() {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* What this costs */}
-      <section className="pt-8 pb-16 px-6 border-t border-white/5">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-display text-3xl font-bold mb-8">What this costs</h2>
-
-          <div className="bg-[#16191f] rounded-2xl p-8 border border-white/5 mb-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <div className="font-display text-3xl font-bold text-white mb-2">
-                  £750–£1,500
-                  <span className="text-lg text-gray-500 font-normal"> / month</span>
-                </div>
-                <p className="text-gray-400 text-[15px] leading-relaxed">
-                  Management. Where you land in that range depends on how much
-                  of the setup has to be built from scratch, and how much creative
-                  the account gets through.
-                </p>
-              </div>
-              <div>
-                <div className="font-display text-3xl font-bold text-white mb-2">
-                  £1,000
-                  <span className="text-lg text-gray-500 font-normal"> / month minimum</span>
-                </div>
-                <p className="text-gray-400 text-[15px] leading-relaxed">
-                  Media, paid directly to Google, Meta or LinkedIn. It
-                  never comes through us and it is never marked up.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-5 text-gray-400 leading-relaxed max-w-2xl">
-            <p>
-              The media floor is there for a reason. Below about £1,000 a month,
-              the frequency you can buy against an audience worth targeting is too
-              low for anyone to remember the ad. The spend gets used up without
-              compounding, and you conclude that ads don't work when what didn't
-              work was the budget.
-            </p>
-            <p>
-              For comparison: the top of that management range is less than half
-              what a junior marketing hire costs once National Insurance and
-              pension are counted. There's no recruitment process, no notice
-              period, and you aren't training someone on your budget.
-            </p>
-            <p className="text-gray-500 text-[15px]">
-              Price and scope are agreed after the audit, in writing, before
-              anything starts.
-            </p>
           </div>
         </div>
       </section>
